@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>লাভ-ক্ষতি (বিস্তারিত সমাধান)</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f8f9fa;font-family:'SolaimanLipi',Arial,sans-serif;color:#222;line-height:1.8;font-size:17px}
+.container{max-width:850px;margin:0 auto;padding:20px 14px 40px}
+h1{text-align:center;color:#1e7e34;font-size:1.5rem;margin:10px 0 24px}
+.solution-card{background:#ffffff;padding:22px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.06);border-left:6px solid #28a745;margin-bottom:20px;overflow-x:auto}
+.question-title{font-weight:bold;margin:0 0 10px}
+.question-number{display:inline-block;background:#28a745;color:#fff;padding:2px 14px;border-radius:50px;margin-right:8px;font-size:.95rem}
+.given{background:#f1f8f3;border-radius:6px;padding:8px 12px;margin:8px 0}
+.formula{background:#fff8e1;border-left:4px solid #f0ad4e;border-radius:6px;padding:8px 12px;margin:8px 0}
+.step{margin:5px 0}
+.sol{font-weight:bold;color:#1e7e34;margin:10px 0 2px}
+.answer{margin-top:10px;padding:8px 12px;background:#e9f7ee;border-radius:6px;font-weight:bold;color:#155724}
+.f{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1.25;margin:0 2px}
+.f>span:first-child{border-bottom:1.5px solid currentColor;padding:0 3px}
+.f>span:last-child{padding:0 3px}
+@media(max-width:480px){.solution-card{padding:16px}body{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>লাভ-ক্ষতি – বিস্তারিত সমাধান</h1>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">★</span>প্রয়োজনীয় সূত্র ও নিয়ম</p>
+<div class="formula">
+<p class="step">১। লাভ = বিক্রয়মূল্য − ক্রয়মূল্য (যখন বিক্রয়মূল্য > ক্রয়মূল্য)</p>
+<p class="step">২। ক্ষতি = ক্রয়মূল্য − বিক্রয়মূল্য (যখন ক্রয়মূল্য > বিক্রয়মূল্য)</p>
+<p class="step">৩। শতকরা লাভ/ক্ষতি = <span class="f"><span>লাভ/ক্ষতি</span><span>ক্রয়মূল্য</span></span> × 100</p>
+<p class="step">৪। শতকরা লাভে বিক্রয়মূল্য = ক্রয়মূল্য × <span class="f"><span>100 + লাভ%</span><span>100</span></span>; শতকরা ক্ষতিতে বিক্রয়মূল্য = ক্রয়মূল্য × <span class="f"><span>100 − ক্ষতি%</span><span>100</span></span></p>
+<p class="step">৫। 1 ডজন = 12টি, 1 হালি = 4টি</p>
+</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">১</span>একজন দোকানদার প্রতি মিটার 200 টাকা দরে 5 মিটার কাপড় কিনে প্রতি মিটার 225 টাকা দরে বিক্রয় করলে কত লাভ হয়েছে?</p>
+<div class="given">দেওয়া আছে: ক্রয়মূল্য প্রতি মিটার 200 টাকা; বিক্রয়মূল্য প্রতি মিটার 225 টাকা; কাপড় 5 মিটার।<br>নির্ণেয়: মোট লাভ।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">1 মিটার কাপড়ের ক্রয়মূল্য 200 টাকা</p>
+<p class="step">∴ 5 মিটার কাপড়ের ক্রয়মূল্য = 200 × 5 = 1000 টাকা</p>
+<p class="step">1 মিটার কাপড়ের বিক্রয়মূল্য 225 টাকা</p>
+<p class="step">∴ 5 মিটার কাপড়ের বিক্রয়মূল্য = 225 × 5 = 1125 টাকা</p>
+<p class="step">যেহেতু বিক্রয়মূল্য (1125) > ক্রয়মূল্য (1000), তাই লাভ হয়েছে।</p>
+<p class="step">লাভ = বিক্রয়মূল্য − ক্রয়মূল্য = 1125 − 1000 = 125 টাকা</p>
+<div class="answer">উত্তর: 125 টাকা লাভ</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">২</span>একজন কমলা বিক্রেতা প্রতি হালি 60 টাকা দরে 5 ডজন কমলা কিনে প্রতি হালি 50 টাকা দরে বিক্রয় করলে কত ক্ষতি হয়েছে?</p>
+<div class="given">দেওয়া আছে: ক্রয়মূল্য প্রতি হালি 60 টাকা; বিক্রয়মূল্য প্রতি হালি 50 টাকা; কমলা 5 ডজন।<br>নির্ণেয়: মোট ক্ষতি।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">1 ডজন = 12টি এবং 1 হালি = 4টি।</p>
+<p class="step">5 ডজন = 5 × 12 = 60টি কমলা</p>
+<p class="step">60টি কমলা = <span class="f"><span>60</span><span>4</span></span> = 15 হালি</p>
+<p class="step">ক্রয়মূল্য = 60 × 15 = 900 টাকা</p>
+<p class="step">বিক্রয়মূল্য = 50 × 15 = 750 টাকা</p>
+<p class="step">ক্রয়মূল্য (900) > বিক্রয়মূল্য (750), তাই ক্ষতি হয়েছে।</p>
+<p class="step">ক্ষতি = ক্রয়মূল্য − বিক্রয়মূল্য = 900 − 750 = 150 টাকা</p>
+<div class="answer">উত্তর: 150 টাকা ক্ষতি</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">৩</span>রবি প্রতি কেজি 40 টাকা দরে 50 কেজি চাউল কিনে প্রতি কেজি 44 টাকা দরে বিক্রয় করলে কত লাভ বা ক্ষতি হবে?</p>
+<div class="given">দেওয়া আছে: ক্রয়মূল্য প্রতি কেজি 40 টাকা; বিক্রয়মূল্য প্রতি কেজি 44 টাকা; চাউল 50 কেজি।<br>নির্ণেয়: লাভ বা ক্ষতি।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">50 কেজি চাউলের ক্রয়মূল্য = 40 × 50 = 2000 টাকা</p>
+<p class="step">50 কেজি চাউলের বিক্রয়মূল্য = 44 × 50 = 2200 টাকা</p>
+<p class="step">বিক্রয়মূল্য (2200) > ক্রয়মূল্য (2000), অতএব লাভ হবে।</p>
+<p class="step">লাভ = 2200 − 2000 = 200 টাকা</p>
+<div class="answer">উত্তর: 200 টাকা লাভ</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">৪</span>প্রতি লিটার মিল্কভিটা দুধ 52 টাকায় কিনে 55 টাকা দরে বিক্রয় করলে শতকরা কত লাভ হয়?</p>
+<div class="given">দেওয়া আছে: 1 লিটারের ক্রয়মূল্য 52 টাকা; বিক্রয়মূল্য 55 টাকা।<br>নির্ণেয়: শতকরা লাভ।</div>
+<div class="formula">সূত্র: শতকরা লাভ = <span class="f"><span>লাভ</span><span>ক্রয়মূল্য</span></span> × 100</div>
+<p class="sol">সমাধান:</p>
+<p class="step">1 লিটারে লাভ = 55 − 52 = 3 টাকা</p>
+<p class="step">52 টাকা ক্রয়মূল্যে লাভ 3 টাকা</p>
+<p class="step">∴ 1 টাকা ক্রয়মূল্যে লাভ <span class="f"><span>3</span><span>52</span></span> টাকা</p>
+<p class="step">∴ 100 টাকা ক্রয়মূল্যে লাভ <span class="f"><span>3 × 100</span><span>52</span></span> = <span class="f"><span>300</span><span>52</span></span> = <span class="f"><span>75</span><span>13</span></span> = 5<span class="f"><span>10</span><span>13</span></span> টাকা (প্রায় 5.77 টাকা)</p>
+<div class="answer">উত্তর: শতকরা 5<span class="f"><span>10</span><span>13</span></span> % (প্রায় 5.77%) লাভ</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">৫</span>প্রতিটি চকলেট 8 টাকা হিসেবে ক্রয় করে 8.50 টাকা হিসেবে বিক্রয় করে 25 টাকা লাভ হলো, মোট কয়টি চকলেট ক্রয় করা হয়েছিল?</p>
+<div class="given">দেওয়া আছে: প্রতিটির ক্রয়মূল্য 8 টাকা; বিক্রয়মূল্য 8.50 টাকা; মোট লাভ 25 টাকা।<br>নির্ণেয়: ক্রয় করা চকলেটের সংখ্যা।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">প্রতিটি চকলেটে লাভ = 8.50 − 8 = 0.50 টাকা</p>
+<p class="step">0.50 টাকা লাভ হয় 1টি চকলেটে</p>
+<p class="step">∴ 1 টাকা লাভ হয় <span class="f"><span>1</span><span>0.50</span></span> = 2টি চকলেটে</p>
+<p class="step">∴ 25 টাকা লাভ হয় 2 × 25 = 50টি চকলেটে</p>
+<p class="step">যাচাই: 50 × 0.50 = 25 টাকা ✓</p>
+<div class="answer">উত্তর: 50টি চকলেট</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">৬</span>প্রতি মিটার 125 টাকা দরে কাপড় ক্রয় করে 150 টাকা দরে বিক্রয় করলে দোকানদারের 2000 টাকা লাভ হয়। দোকানদার মোট কত মিটার কাপড় ক্রয় করেছিলেন?</p>
+<div class="given">দেওয়া আছে: ক্রয়মূল্য প্রতি মিটার 125 টাকা; বিক্রয়মূল্য প্রতি মিটার 150 টাকা; মোট লাভ 2000 টাকা।<br>নির্ণেয়: ক্রয় করা কাপড়ের পরিমাণ (মিটার)।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">প্রতি মিটারে লাভ = 150 − 125 = 25 টাকা</p>
+<p class="step">25 টাকা লাভ হয় 1 মিটার কাপড়ে</p>
+<p class="step">∴ 1 টাকা লাভ হয় <span class="f"><span>1</span><span>25</span></span> মিটার কাপড়ে</p>
+<p class="step">∴ 2000 টাকা লাভ হয় <span class="f"><span>2000</span><span>25</span></span> = 80 মিটার কাপড়ে</p>
+<p class="step">যাচাই: 80 × 25 = 2000 টাকা ✓</p>
+<div class="answer">উত্তর: 80 মিটার</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">৭</span>একটি দ্রব্য 190 টাকায় ক্রয় করে 175 টাকায় বিক্রয় করলে শতকরা কত লাভ বা ক্ষতি হবে?</p>
+<div class="given">দেওয়া আছে: ক্রয়মূল্য 190 টাকা; বিক্রয়মূল্য 175 টাকা।<br>নির্ণেয়: শতকরা লাভ বা ক্ষতি।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">বিক্রয়মূল্য (175) < ক্রয়মূল্য (190), অতএব ক্ষতি হয়েছে।</p>
+<p class="step">ক্ষতি = 190 − 175 = 15 টাকা</p>
+<p class="step">190 টাকা ক্রয়মূল্যে ক্ষতি 15 টাকা</p>
+<p class="step">∴ 1 টাকা ক্রয়মূল্যে ক্ষতি <span class="f"><span>15</span><span>190</span></span> টাকা</p>
+<p class="step">∴ 100 টাকা ক্রয়মূল্যে ক্ষতি <span class="f"><span>15 × 100</span><span>190</span></span> = <span class="f"><span>1500</span><span>190</span></span> = <span class="f"><span>150</span><span>19</span></span> = 7<span class="f"><span>17</span><span>19</span></span> টাকা (প্রায় 7.89 টাকা)</p>
+<div class="answer">উত্তর: শতকরা 7<span class="f"><span>17</span><span>19</span></span> % (প্রায় 7.89%) ক্ষতি</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">৮</span>25 মিটার কাপড় যে মূল্যে ক্রয় করে, সেই মূল্যে 20 মিটার কাপড় বিক্রয় করলে শতকরা কত লাভ বা ক্ষতি হবে?</p>
+<div class="given">দেওয়া আছে: 25 মিটার কাপড়ের ক্রয়মূল্য = 20 মিটার কাপড়ের বিক্রয়মূল্য।<br>নির্ণেয়: শতকরা লাভ বা ক্ষতি।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">ধরি, 1 মিটার কাপড়ের ক্রয়মূল্য = a টাকা</p>
+<p class="step">∴ 25 মিটার কাপড়ের ক্রয়মূল্য = 25a টাকা</p>
+<p class="step">শর্তমতে, 20 মিটার কাপড়ের বিক্রয়মূল্য = 25a টাকা</p>
+<p class="step">20 মিটার কাপড়ের ক্রয়মূল্য = 20a টাকা</p>
+<p class="step">বিক্রয়মূল্য (25a) > ক্রয়মূল্য (20a), অতএব লাভ হয়েছে।</p>
+<p class="step">লাভ = 25a − 20a = 5a টাকা</p>
+<p class="step">শতকরা লাভ = <span class="f"><span>5a</span><span>20a</span></span> × 100 = <span class="f"><span>1</span><span>4</span></span> × 100 = 25</p>
+<div class="answer">উত্তর: শতকরা 25% লাভ</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">৯</span>5 টাকায় 8টি লেবু ক্রয় করে 5 টাকায় 6টি দরে বিক্রয় করলে শতকরা কত লাভ বা ক্ষতি হবে?</p>
+<div class="given">দেওয়া আছে: ক্রয়: 5 টাকায় 8টি; বিক্রয়: 5 টাকায় 6টি।<br>নির্ণেয়: শতকরা লাভ বা ক্ষতি।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">8 ও 6 এর ল.সা.গু = 24। তাই ধরি, 24টি লেবু ক্রয়-বিক্রয় করা হলো।</p>
+<p class="step">8টি লেবুর ক্রয়মূল্য 5 টাকা ⟹ 24টি লেবুর ক্রয়মূল্য = 5 × <span class="f"><span>24</span><span>8</span></span> = 5 × 3 = 15 টাকা</p>
+<p class="step">6টি লেবুর বিক্রয়মূল্য 5 টাকা ⟹ 24টি লেবুর বিক্রয়মূল্য = 5 × <span class="f"><span>24</span><span>6</span></span> = 5 × 4 = 20 টাকা</p>
+<p class="step">বিক্রয়মূল্য (20) > ক্রয়মূল্য (15), অতএব লাভ = 20 − 15 = 5 টাকা</p>
+<p class="step">শতকরা লাভ = <span class="f"><span>5</span><span>15</span></span> × 100 = <span class="f"><span>100</span><span>3</span></span> = 33<span class="f"><span>1</span><span>3</span></span></p>
+<div class="answer">উত্তর: শতকরা 33<span class="f"><span>1</span><span>3</span></span> % লাভ</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">১০</span>একটি গাড়ির বিক্রয়মূল্য গাড়িটির ক্রয়মূল্যের <span class="f"><span>4</span><span>5</span></span> অংশের সমান। শতকরা লাভ বা ক্ষতি নির্ণয় করো।</p>
+<div class="given">দেওয়া আছে: বিক্রয়মূল্য = ক্রয়মূল্যের <span class="f"><span>4</span><span>5</span></span> অংশ।<br>নির্ণেয়: শতকরা লাভ বা ক্ষতি।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">ধরি, গাড়ির ক্রয়মূল্য = 100 টাকা</p>
+<p class="step">বিক্রয়মূল্য = 100 এর <span class="f"><span>4</span><span>5</span></span> = 100 × <span class="f"><span>4</span><span>5</span></span> = 80 টাকা</p>
+<p class="step">বিক্রয়মূল্য (80) < ক্রয়মূল্য (100), অতএব ক্ষতি হয়েছে।</p>
+<p class="step">ক্ষতি = 100 − 80 = 20 টাকা</p>
+<p class="step">100 টাকায় ক্ষতি 20 টাকা, অর্থাৎ শতকরা ক্ষতি 20</p>
+<div class="answer">উত্তর: শতকরা 20% ক্ষতি</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">১১</span>একটি দ্রব্য 400 টাকায় বিক্রয় করলে যত ক্ষতি হয় 480 টাকায় বিক্রয় করলে, তার তিনগুণ লাভ হয়। দ্রব্যটির ক্রয়মূল্য নির্ণয় করো।</p>
+<div class="given">দেওয়া আছে: 400 টাকায় বিক্রয়ে ক্ষতি = ক; 480 টাকায় বিক্রয়ে লাভ = 3 × ক।<br>নির্ণেয়: ক্রয়মূল্য।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">ধরি, দ্রব্যটির ক্রয়মূল্য = x টাকা</p>
+<p class="step">400 টাকায় বিক্রয়ে ক্ষতি = (x − 400) টাকা [কারণ ক্রয়মূল্য > বিক্রয়মূল্য]</p>
+<p class="step">480 টাকায় বিক্রয়ে লাভ = (480 − x) টাকা [কারণ বিক্রয়মূল্য > ক্রয়মূল্য]</p>
+<p class="step">শর্তমতে, 480 − x = 3(x − 400)</p>
+<p class="step">⟹ 480 − x = 3x − 1200</p>
+<p class="step">⟹ 480 + 1200 = 3x + x</p>
+<p class="step">⟹ 1680 = 4x ⟹ x = <span class="f"><span>1680</span><span>4</span></span> = 420</p>
+<p class="step">যাচাই: ক্ষতি = 420 − 400 = 20 টাকা; লাভ = 480 − 420 = 60 টাকা = 3 × 20 ✓</p>
+<div class="answer">উত্তর: 420 টাকা</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">১২</span>একটি ঘড়ি 625 টাকায় বিক্রয় করলে 10% ক্ষতি হয়। কত টাকায় বিক্রয় করলে 10% লাভ হবে?</p>
+<div class="given">দেওয়া আছে: বিক্রয়মূল্য 625 টাকায় ক্ষতি 10%।<br>নির্ণেয়: কত টাকায় বিক্রয় করলে 10% লাভ হবে।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">ক্রয়মূল্য 100 টাকা হলে 10% ক্ষতিতে বিক্রয়মূল্য = 100 − 10 = 90 টাকা</p>
+<p class="step">বিক্রয়মূল্য 90 টাকা হলে ক্রয়মূল্য 100 টাকা</p>
+<p class="step">∴ বিক্রয়মূল্য 1 টাকা হলে ক্রয়মূল্য <span class="f"><span>100</span><span>90</span></span> টাকা</p>
+<p class="step">∴ বিক্রয়মূল্য 625 টাকা হলে ক্রয়মূল্য <span class="f"><span>100 × 625</span><span>90</span></span> = <span class="f"><span>6250</span><span>9</span></span> টাকা</p>
+<p class="step">ক্রয়মূল্য 100 টাকা হলে বিক্রয়মূল্য 100 + 10 = 110 টাকা</p>
+<p class="step">∴ ক্রয়মূল্য <span class="f"><span>6250</span><span>9</span></span> টাকা হলে বিক্রয়মূল্য = <span class="f"><span>6250</span><span>9</span></span> × <span class="f"><span>110</span><span>100</span></span> = <span class="f"><span>6875</span><span>9</span></span></p>
+<p class="step">= 763<span class="f"><span>8</span><span>9</span></span> টাকা (প্রায় 763.89 টাকা)</p>
+<div class="answer">উত্তর: প্রায় 763.89 টাকায় (763<span class="f"><span>8</span><span>9</span></span> টাকা) বিক্রয় করতে হবে</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">১৩</span>মাইশা প্রতি মিটার 20 টাকা দরে 15 মিটার লাল ফিতা ক্রয় করল। ভ্যাটের হার 4 টাকা। সে দোকানিকে 500 টাকার একটি নোট দিল। দোকানি তাকে কত টাকা ফেরত দেবেন?</p>
+<div class="given">দেওয়া আছে: প্রতি মিটার ফিতার দাম 20 টাকা; ফিতা 15 মিটার; ভ্যাটের হার শতকরা 4 টাকা (100 টাকায় 4 টাকা); দেওয়া নোট 500 টাকা।<br>নির্ণেয়: ফেরত টাকা।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">15 মিটার ফিতার দাম = 20 × 15 = 300 টাকা</p>
+<p class="step">100 টাকায় ভ্যাট 4 টাকা ⟹ 1 টাকায় ভ্যাট <span class="f"><span>4</span><span>100</span></span> টাকা</p>
+<p class="step">∴ 300 টাকায় ভ্যাট = <span class="f"><span>4 × 300</span><span>100</span></span> = 12 টাকা</p>
+<p class="step">ভ্যাটসহ মোট মূল্য = 300 + 12 = 312 টাকা</p>
+<p class="step">ফেরত = 500 − 312 = 188 টাকা</p>
+<div class="answer">উত্তর: 188 টাকা</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">১৪</span>মি. রায় একজন সরকারি কর্মকর্তা। তিনি তীর্থস্থান পরিদর্শনের জন্য ভারতে যাবেন। যদি বাংলাদেশি 1 টাকা সমান ভারতীয় 0.85 রুপি হয়, তবে ভারতীয় 42,500 রুপির জন্য বাংলাদেশের কত টাকা প্রয়োজন হবে?</p>
+<div class="given">দেওয়া আছে: বাংলাদেশি 1 টাকা = ভারতীয় 0.85 রুপি।<br>নির্ণেয়: 42,500 রুপির জন্য প্রয়োজনীয় বাংলাদেশি টাকা।</div>
+<p class="sol">সমাধান (ঐকিক নিয়মে):</p>
+<p class="step">0.85 রুপি পেতে প্রয়োজন 1 টাকা</p>
+<p class="step">∴ 1 রুপি পেতে প্রয়োজন <span class="f"><span>1</span><span>0.85</span></span> টাকা</p>
+<p class="step">∴ 42,500 রুপি পেতে প্রয়োজন <span class="f"><span>42500</span><span>0.85</span></span> = <span class="f"><span>42500 × 100</span><span>85</span></span> = <span class="f"><span>4250000</span><span>85</span></span> = 50,000 টাকা</p>
+<p class="step">যাচাই: 50,000 × 0.85 = 42,500 রুপি ✓</p>
+<div class="answer">উত্তর: 50,000 টাকা</div>
+</div>
+
+<div class="solution-card">
+<p class="question-title"><span class="question-number">১৫</span>নীলিম সাহেব একজন চাকুরিজীবী। তাঁর মাসিক মূল বেতন 22,250 টাকা। বার্ষিক মোট আয়ের প্রথম দুই লক্ষ পঞ্চাশ হাজার টাকার আয়কর 0 (শূন্য) টাকা। পরবর্তী টাকার উপর আয়করের হার 10 টাকা হলে নীলিম কর বাবদ কত টাকা পরিশোধ করেন?</p>
+<div class="given">দেওয়া আছে: মাসিক মূল বেতন 22,250 টাকা; প্রথম 2,50,000 টাকায় কর 0; পরবর্তী আয়ের উপর করের হার শতকরা 10 টাকা।<br>নির্ণেয়: বার্ষিক আয়কর।</div>
+<p class="sol">সমাধান:</p>
+<p class="step">1 বছর = 12 মাস। বার্ষিক আয় = 22,250 × 12 = 2,67,000 টাকা</p>
+<p class="step">করযোগ্য আয় = 2,67,000 − 2,50,000 = 17,000 টাকা</p>
+<p class="step">100 টাকায় কর 10 টাকা ⟹ 1 টাকায় কর <span class="f"><span>10</span><span>100</span></span> টাকা</p>
+<p class="step">∴ 17,000 টাকায় কর = <span class="f"><span>10 × 17000</span><span>100</span></span> = 1,700 টাকা</p>
+<div class="answer">উত্তর: 1,700 টাকা</div>
+</div>
+
+</div>
+<script>
+// ইংরেজি অঙ্ককে বাংলা অঙ্কে রূপান্তর (শুধু টেক্সট নোড)
+(function(){
+  var bn=['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null);
+  var n;
+  while(n=w.nextNode()){
+    if(n.parentNode.nodeName==='SCRIPT'||n.parentNode.nodeName==='STYLE')continue;
+    n.nodeValue=n.nodeValue.replace(/[0-9]/g,function(d){return bn[d]});
+  }
+})();
+</script>
+</body>
+</html>
