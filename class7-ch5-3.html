@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NCTB নবম-দশম শ্রেণির গণিত, অনুশীলনী ৫.৩—বীজগণিতীয় রাশিকে উৎপাদকে বিশ্লেষণের ধাপে ধাপে সমাধান।">
+<title>অনুশীলনী ৫.৩ | বীজগণিতীয় উৎপাদকে বিশ্লেষণ</title>
+<style>
+  :root {
+    --green: #28a745;
+    --green-dark: #218838;
+    --green-soft: #eaf7ed;
+    --page: #f8f9fa;
+    --ink: #24312a;
+    --muted: #647067;
+    --line: #e8eee9;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #eef2ef;
+    color: var(--ink);
+    font-family: 'SolaimanLipi', Arial, sans-serif;
+    line-height: 1.8;
+    font-size: 17px;
+  }
+  .container {
+    width: min(100% - 28px, 850px);
+    margin: 28px auto;
+    padding: 24px;
+    background: var(--page);
+    border-radius: 16px;
+  }
+  .hero {
+    padding: 26px 24px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    color: #fff;
+    background: linear-gradient(130deg, #218838, #28a745);
+    box-shadow: 0 5px 16px rgba(40, 167, 69, .16);
+  }
+  .hero .eyebrow { margin: 0 0 5px; opacity: .9; font-size: .92rem; }
+  .hero h1 { margin: 0; font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.45; }
+  .hero p { margin: 8px 0 0; opacity: .96; }
+  .notice {
+    margin: 0 0 20px;
+    padding: 12px 15px;
+    border: 1px solid #d8ebdc;
+    border-radius: 8px;
+    background: #f0faf2;
+    color: #315d3b;
+  }
+  .solution-card {
+    background: #ffffff;
+    padding: 22px;
+    margin: 0 0 17px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    border-left: 6px solid #28a745;
+    min-width: 0;
+  }
+  .question-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0 0 14px;
+    font-size: 1.12rem;
+    line-height: 1.7;
+  }
+  .question-number {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 32px;
+    padding: 3px 13px;
+    border-radius: 999px;
+    background: #28a745;
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .expression { font-weight: 600; overflow-wrap: anywhere; }
+  .method-label {
+    display: inline-block;
+    margin: 0 0 7px;
+    color: var(--green-dark);
+    font-weight: 700;
+  }
+  .work { margin: 0; }
+  .math-line {
+    display: block;
+    margin: 5px 0;
+    padding: 3px 10px;
+    border-left: 3px solid #d8efdd;
+    overflow-wrap: anywhere;
+    font-family: 'SolaimanLipi', Arial, sans-serif;
+    font-size: 1.04rem;
+  }
+  .result {
+    margin: 12px 0 0;
+    padding: 10px 13px;
+    border-radius: 7px;
+    background: var(--green-soft);
+    color: #1f6b32;
+  }
+  .result strong { color: #175c29; }
+  .footer {
+    padding: 12px 4px 3px;
+    text-align: center;
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .container { width: min(100% - 16px, 850px); margin: 8px auto; padding: 12px; border-radius: 10px; }
+    .hero { padding: 20px 17px; }
+    .solution-card { padding: 17px 15px; margin-bottom: 13px; }
+    .question-heading { gap: 9px; font-size: 1.04rem; }
+    .question-number { min-width: 39px; padding: 2px 10px; }
+    .math-line { padding: 3px 8px; font-size: 1rem; }
+  }
+  @media print {
+    body { background: #fff; font-size: 12pt; }
+    .container { width: 100%; max-width: none; margin: 0; padding: 0; background: #fff; }
+    .hero { color: #111; background: #fff; box-shadow: none; border-bottom: 2px solid #28a745; border-radius: 0; padding: 10px 0; }
+    .hero h1, .hero p, .hero .eyebrow { color: #111; opacity: 1; }
+    .solution-card { box-shadow: none; break-inside: avoid; border: 1px solid #ddd; border-left: 5px solid #28a745; }
+    .question-number { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<main class="container">
+  <header class="hero">
+    <p class="eyebrow">NCTB গণিত · অধ্যায় ৫</p>
+    <h1>অনুশীলনী ৫.৩ — বীজগণিতীয় উৎপাদকে বিশ্লেষণ</h1>
+    <p>প্রতিটি রাশিকে সূত্র ও সাধারণ উৎপাদক ব্যবহার করে ধাপে ধাপে উৎপাদকে বিশ্লেষণ করা হয়েছে।</p>
+  </header>
+  <p class="notice">মনে রাখবে: সাধারণ উৎপাদক বের করা, পদগুলোকে দলবদ্ধ করা এবং বর্গের অন্তর সূত্র প্রয়োগ করাই এই অনুশীলনীর প্রধান কৌশল।</p>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">১</span><span class="expression">x<sup>2</sup> + xy + xz + yz</span></h2>
+    <p class="method-label">দলবদ্ধ করে উৎপাদক বিশ্লেষণ</p>
+    <p class="work">প্রথম দুটি পদ এবং শেষ দুটি পদ একসঙ্গে লিখি।</p>
+    <span class="math-line">= x(x + y) + z(x + y)</span>
+    <p class="work">উভয় পদের সাধারণ উৎপাদক (x + y)।</p>
+    <span class="math-line">= (x + y)(x + z)</span>
+    <p class="result"><strong>উত্তর:</strong> (x + y)(x + z)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">২</span><span class="expression">a<sup>2</sup> + bc + ca + ab</span></h2>
+    <p class="method-label">পদগুলো দলবদ্ধ করি</p>
+    <span class="math-line">= a<sup>2</sup> + ab + ac + bc</span>
+    <span class="math-line">= a(a + b) + c(a + b)</span>
+    <p class="work">এখানে (a + b) সাধারণ উৎপাদক।</p>
+    <span class="math-line">= (a + b)(a + c)</span>
+    <p class="result"><strong>উত্তর:</strong> (a + b)(a + c)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">৩</span><span class="expression">ab(px + qy) + a<sup>2</sup>qx + b<sup>2</sup>py</span></h2>
+    <p class="method-label">প্রথমে বন্ধনী খুলে পদগুলো দলবদ্ধ করি</p>
+    <span class="math-line">= abpx + abqy + a<sup>2</sup>qx + b<sup>2</sup>py</span>
+    <span class="math-line">= (abpx + a<sup>2</sup>qx) + (b<sup>2</sup>py + abqy)</span>
+    <span class="math-line">= ax(bp + aq) + by(bp + aq)</span>
+    <p class="work">এখন (bp + aq) সাধারণ উৎপাদক।</p>
+    <span class="math-line">= (ax + by)(bp + aq)</span>
+    <p class="result"><strong>উত্তর:</strong> (ax + by)(bp + aq)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">৪</span><span class="expression">4x<sup>2</sup> − y<sup>2</sup></span></h2>
+    <p class="method-label">বর্গের অন্তর সূত্র</p>
+    <p class="work">সূত্র: A<sup>2</sup> − B<sup>2</sup> = (A − B)(A + B)। এখানে A = 2x এবং B = y।</p>
+    <span class="math-line">= (2x)<sup>2</sup> − y<sup>2</sup></span>
+    <span class="math-line">= (2x − y)(2x + y)</span>
+    <p class="result"><strong>উত্তর:</strong> (2x − y)(2x + y)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">৫</span><span class="expression">9a<sup>2</sup> − 4b<sup>2</sup></span></h2>
+    <p class="method-label">বর্গের অন্তর সূত্র</p>
+    <span class="math-line">= (3a)<sup>2</sup> − (2b)<sup>2</sup></span>
+    <span class="math-line">= (3a − 2b)(3a + 2b)</span>
+    <p class="result"><strong>উত্তর:</strong> (3a − 2b)(3a + 2b)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">৬</span><span class="expression">a<sup>2</sup>b<sup>2</sup> − 49y<sup>2</sup></span></h2>
+    <p class="method-label">বর্গের অন্তর সূত্র</p>
+    <span class="math-line">= (ab)<sup>2</sup> − (7y)<sup>2</sup></span>
+    <span class="math-line">= (ab − 7y)(ab + 7y)</span>
+    <p class="result"><strong>উত্তর:</strong> (ab − 7y)(ab + 7y)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">৭</span><span class="expression">16x<sup>4</sup> − 81y<sup>4</sup></span></h2>
+    <p class="method-label">পরপর বর্গের অন্তর সূত্র প্রয়োগ</p>
+    <span class="math-line">= (4x<sup>2</sup>)<sup>2</sup> − (9y<sup>2</sup>)<sup>2</sup></span>
+    <span class="math-line">= (4x<sup>2</sup> − 9y<sup>2</sup>)(4x<sup>2</sup> + 9y<sup>2</sup>)</span>
+    <p class="work">প্রথম বন্ধনীর রাশিটিও বর্গের অন্তর।</p>
+    <span class="math-line">= (2x − 3y)(2x + 3y)(4x<sup>2</sup> + 9y<sup>2</sup>)</span>
+    <p class="result"><strong>উত্তর:</strong> (2x − 3y)(2x + 3y)(4x<sup>2</sup> + 9y<sup>2</sup>)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">৮</span><span class="expression">a<sup>2</sup> − (x + y)<sup>2</sup></span></h2>
+    <p class="method-label">বর্গের অন্তর সূত্র</p>
+    <span class="math-line">= a<sup>2</sup> − (x + y)<sup>2</sup></span>
+    <span class="math-line">= [a − (x + y)][a + (x + y)]</span>
+    <p class="work">বন্ধনী খুললে পাওয়া যায়—</p>
+    <span class="math-line">= (a − x − y)(a + x + y)</span>
+    <p class="result"><strong>উত্তর:</strong> (a − x − y)(a + x + y)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">৯</span><span class="expression">(2x − 3y + 5z)<sup>2</sup> − (x − 2y + 3z)<sup>2</sup></span></h2>
+    <p class="method-label">বর্গের অন্তর সূত্র</p>
+    <p class="work">ধরি, A = 2x − 3y + 5z এবং B = x − 2y + 3z। তাহলে A<sup>2</sup> − B<sup>2</sup> = (A − B)(A + B)।</p>
+    <span class="math-line">A − B = 2x − 3y + 5z − (x − 2y + 3z)</span>
+    <span class="math-line">= 2x − 3y + 5z − x + 2y − 3z = x − y + 2z</span>
+    <span class="math-line">A + B = 2x − 3y + 5z + x − 2y + 3z = 3x − 5y + 8z</span>
+    <span class="math-line">সুতরাং, = (x − y + 2z)(3x − 5y + 8z)</span>
+    <p class="result"><strong>উত্তর:</strong> (x − y + 2z)(3x − 5y + 8z)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">১০</span><span class="expression">4 + 8a<sup>2</sup> + 9a<sup>4</sup></span></h2>
+    <p class="method-label">পূর্ণবর্গ তৈরি করে বর্গের অন্তর সূত্র</p>
+    <span class="math-line">= 9a<sup>4</sup> + 8a<sup>2</sup> + 4</span>
+    <p class="work">মাঝের পদকে 12a<sup>2</sup> − 4a<sup>2</sup> হিসেবে লিখি, যাতে পূর্ণবর্গ পাওয়া যায়।</p>
+    <span class="math-line">= 9a<sup>4</sup> + 12a<sup>2</sup> + 4 − 4a<sup>2</sup></span>
+    <span class="math-line">= (3a<sup>2</sup> + 2)<sup>2</sup> − (2a)<sup>2</sup></span>
+    <span class="math-line">= (3a<sup>2</sup> + 2 − 2a)(3a<sup>2</sup> + 2 + 2a)</span>
+    <p class="work">পদগুলো সাজিয়ে লিখলে—</p>
+    <span class="math-line">= (3a<sup>2</sup> − 2a + 2)(3a<sup>2</sup> + 2a + 2)</span>
+    <p class="result"><strong>উত্তর:</strong> (3a<sup>2</sup> − 2a + 2)(3a<sup>2</sup> + 2a + 2)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">১১</span><span class="expression">2a<sup>2</sup> + 6a − 80</span></h2>
+    <p class="method-label">সাধারণ উৎপাদক বের করে ত্রিপদী বিশ্লেষণ</p>
+    <span class="math-line">= 2(a<sup>2</sup> + 3a − 40)</span>
+    <p class="work">এমন দুটি সংখ্যা চাই, যাদের গুণফল −40 এবং যোগফল 3। সংখ্যা দুটি 8 ও −5।</p>
+    <span class="math-line">= 2(a<sup>2</sup> + 8a − 5a − 40)</span>
+    <span class="math-line">= 2[a(a + 8) − 5(a + 8)]</span>
+    <span class="math-line">= 2(a + 8)(a − 5)</span>
+    <p class="result"><strong>উত্তর:</strong> 2(a + 8)(a − 5)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">১২</span><span class="expression">y<sup>2</sup> − 6y − 91</span></h2>
+    <p class="method-label">মধ্যপদ ভেঙে উৎপাদক বিশ্লেষণ</p>
+    <p class="work">এমন দুটি সংখ্যা চাই, যাদের গুণফল −91 এবং যোগফল −6। সংখ্যা দুটি −13 ও 7।</p>
+    <span class="math-line">= y<sup>2</sup> − 13y + 7y − 91</span>
+    <span class="math-line">= y(y − 13) + 7(y − 13)</span>
+    <span class="math-line">= (y − 13)(y + 7)</span>
+    <p class="result"><strong>উত্তর:</strong> (y − 13)(y + 7)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">১৩</span><span class="expression">p<sup>2</sup> − 15p + 56</span></h2>
+    <p class="method-label">মধ্যপদ ভেঙে উৎপাদক বিশ্লেষণ</p>
+    <p class="work">এমন দুটি সংখ্যা চাই, যাদের গুণফল 56 এবং যোগফল −15। সংখ্যা দুটি −7 ও −8।</p>
+    <span class="math-line">= p<sup>2</sup> − 7p − 8p + 56</span>
+    <span class="math-line">= p(p − 7) − 8(p − 7)</span>
+    <span class="math-line">= (p − 7)(p − 8)</span>
+    <p class="result"><strong>উত্তর:</strong> (p − 7)(p − 8)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">১৪</span><span class="expression">45a<sup>8</sup> − 5a<sup>4</sup>x<sup>4</sup></span></h2>
+    <p class="method-label">সাধারণ উৎপাদক ও বর্গের অন্তর সূত্র</p>
+    <span class="math-line">= 5a<sup>4</sup>(9a<sup>4</sup> − x<sup>4</sup>)</span>
+    <p class="work">বন্ধনীর ভেতরের রাশি বর্গের অন্তর।</p>
+    <span class="math-line">= 5a<sup>4</sup>[(3a<sup>2</sup>)<sup>2</sup> − (x<sup>2</sup>)<sup>2</sup>]</span>
+    <span class="math-line">= 5a<sup>4</sup>(3a<sup>2</sup> − x<sup>2</sup>)(3a<sup>2</sup> + x<sup>2</sup>)</span>
+    <p class="result"><strong>উত্তর:</strong> 5a<sup>4</sup>(3a<sup>2</sup> − x<sup>2</sup>)(3a<sup>2</sup> + x<sup>2</sup>)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">১৫</span><span class="expression">a<sup>2</sup> + 3a − 40</span></h2>
+    <p class="method-label">মধ্যপদ ভেঙে উৎপাদক বিশ্লেষণ</p>
+    <p class="work">এমন দুটি সংখ্যা চাই, যাদের গুণফল −40 এবং যোগফল 3। সংখ্যা দুটি 8 ও −5।</p>
+    <span class="math-line">= a<sup>2</sup> + 8a − 5a − 40</span>
+    <span class="math-line">= a(a + 8) − 5(a + 8)</span>
+    <span class="math-line">= (a + 8)(a − 5)</span>
+    <p class="result"><strong>উত্তর:</strong> (a + 8)(a − 5)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">১৬</span><span class="expression">(x<sup>2</sup> + 1)<sup>2</sup> − (y<sup>2</sup> + 1)<sup>2</sup></span></h2>
+    <p class="method-label">বর্গের অন্তর সূত্র</p>
+    <span class="math-line">= [(x<sup>2</sup> + 1) − (y<sup>2</sup> + 1)] [(x<sup>2</sup> + 1) + (y<sup>2</sup> + 1)]</span>
+    <span class="math-line">= (x<sup>2</sup> − y<sup>2</sup>)(x<sup>2</sup> + y<sup>2</sup> + 2)</span>
+    <p class="work">এখন x<sup>2</sup> − y<sup>2</sup> = (x − y)(x + y)।</p>
+    <span class="math-line">= (x − y)(x + y)(x<sup>2</sup> + y<sup>2</sup> + 2)</span>
+    <p class="result"><strong>উত্তর:</strong> (x − y)(x + y)(x<sup>2</sup> + y<sup>2</sup> + 2)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">১৭</span><span class="expression">x<sup>2</sup> + 11x + 30</span></h2>
+    <p class="method-label">মধ্যপদ ভেঙে উৎপাদক বিশ্লেষণ</p>
+    <p class="work">এমন দুটি সংখ্যা চাই, যাদের গুণফল 30 এবং যোগফল 11। সংখ্যা দুটি 5 ও 6।</p>
+    <span class="math-line">= x<sup>2</sup> + 5x + 6x + 30</span>
+    <span class="math-line">= x(x + 5) + 6(x + 5)</span>
+    <span class="math-line">= (x + 5)(x + 6)</span>
+    <p class="result"><strong>উত্তর:</strong> (x + 5)(x + 6)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">১৮</span><span class="expression">a<sup>2</sup> − b<sup>2</sup> + 2bc − c<sup>2</sup></span></h2>
+    <p class="method-label">পূর্ণবর্গ ও বর্গের অন্তর সূত্র</p>
+    <span class="math-line">= a<sup>2</sup> − (b<sup>2</sup> − 2bc + c<sup>2</sup>)</span>
+    <p class="work">যেহেতু b<sup>2</sup> − 2bc + c<sup>2</sup> = (b − c)<sup>2</sup>, তাই—</p>
+    <span class="math-line">= a<sup>2</sup> − (b − c)<sup>2</sup></span>
+    <span class="math-line">= [a − (b − c)][a + (b − c)]</span>
+    <span class="math-line">= (a − b + c)(a + b − c)</span>
+    <p class="result"><strong>উত্তর:</strong> (a − b + c)(a + b − c)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">১৯</span><span class="expression">144x<sup>7</sup> − 25x<sup>3</sup>a<sup>4</sup></span></h2>
+    <p class="method-label">সাধারণ উৎপাদক ও বর্গের অন্তর সূত্র</p>
+    <span class="math-line">= x<sup>3</sup>(144x<sup>4</sup> − 25a<sup>4</sup>)</span>
+    <span class="math-line">= x<sup>3</sup>[(12x<sup>2</sup>)<sup>2</sup> − (5a<sup>2</sup>)<sup>2</sup>]</span>
+    <span class="math-line">= x<sup>3</sup>(12x<sup>2</sup> − 5a<sup>2</sup>)(12x<sup>2</sup> + 5a<sup>2</sup>)</span>
+    <p class="result"><strong>উত্তর:</strong> x<sup>3</sup>(12x<sup>2</sup> − 5a<sup>2</sup>)(12x<sup>2</sup> + 5a<sup>2</sup>)</p>
+  </section>
+
+  <section class="solution-card">
+    <h2 class="question-heading"><span class="question-number">২০</span><span class="expression">4x<sup>2</sup> + 12xy + 9y<sup>2</sup> − 16a<sup>2</sup></span></h2>
+    <p class="method-label">পূর্ণবর্গ ও বর্গের অন্তর সূত্র</p>
+    <p class="work">প্রথম তিনটি পদ একটি পূর্ণবর্গ: 4x<sup>2</sup> + 12xy + 9y<sup>2</sup> = (2x + 3y)<sup>2</sup>। তাই—</p>
+    <span class="math-line">= (2x + 3y)<sup>2</sup> − (4a)<sup>2</sup></span>
+    <span class="math-line">= (2x + 3y − 4a)(2x + 3y + 4a)</span>
+    <p class="result"><strong>উত্তর:</strong> (2x + 3y − 4a)(2x + 3y + 4a)</p>
+  </section>
+
+  <footer class="footer">NCTB গণিত · অনুশীলনী ৫.৩ · নিজে অনুশীলন করে সমাধান মিলিয়ে দেখো।</footer>
+</main>
+</body>
+</html>
