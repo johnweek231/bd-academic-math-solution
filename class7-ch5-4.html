@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>অনুশীলনী ৫.৪ — বীজগণিতের সমাধান | NCTB</title>
+<style>
+  :root { --green:#28a745; --ink:#20252b; --muted:#5d6872; --paper:#f8f9fa; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#edf1ee; color:var(--ink); font-family:'SolaimanLipi',Arial,sans-serif; line-height:1.8; }
+  .container { max-width:850px; width:calc(100% - 28px); margin:28px auto; padding:22px; background:var(--paper); border-radius:14px; }
+  header { text-align:center; padding:12px 8px 22px; }
+  h1 { margin:0 0 6px; font-size:clamp(1.5rem,4vw,2rem); }
+  header p { margin:0; color:var(--muted); }
+  .section-title { margin:28px 0 14px; padding-bottom:7px; border-bottom:2px solid #dce8df; font-size:1.2rem; }
+  .solution-card { background:#ffffff; padding:22px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.06); border-left:6px solid #28a745; margin:0 0 16px; overflow-wrap:anywhere; }
+  .question-title { display:flex; align-items:flex-start; gap:10px; margin:0 0 12px; font-size:1.05rem; font-weight:700; }
+  .question-number { display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; min-width:38px; padding:2px 12px; border-radius:999px; background:#28a745; color:#fff; font-size:.95rem; line-height:1.7; }
+  .options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:5px 14px; margin:10px 0 14px; padding:12px 14px; background:#f5f8f5; border-radius:8px; }
+  .math { font-family:Cambria, "Times New Roman", serif; font-size:1.06em; letter-spacing:.01em; }
+  .work { margin:8px 0; }
+  .formula { background:#f3f8f4; border-radius:7px; padding:9px 12px; margin:10px 0; border-left:3px solid #b6dfbf; }
+  .answer { margin-top:13px; padding:10px 13px; border-radius:8px; background:#eaf7ed; color:#145c28; font-weight:700; }
+  .note { margin-top:10px; padding:10px 12px; border-radius:8px; background:#fff7e6; color:#705019; }
+  .subpart { margin:12px 0; }
+  .subpart strong { color:#176b30; }
+  .footer { text-align:center; color:var(--muted); padding:18px 4px 4px; font-size:.9rem; }
+  @media (max-width:560px) {
+    .container { width:100%; margin:0; padding:14px; border-radius:0; }
+    .solution-card { padding:16px; }
+    .options { grid-template-columns:1fr; }
+    .question-title { font-size:1rem; }
+  }
+  @media print {
+    body { background:#fff; }
+    .container { width:100%; max-width:none; margin:0; padding:0; background:#fff; }
+    .solution-card { box-shadow:none; break-inside:avoid; border:1px solid #ddd; border-left:5px solid #28a745; }
+  }
+</style>
+</head>
+<body>
+<main class="container">
+<header>
+  <h1>অনুশীলনী ৫.৪</h1>
+  <p>বীজগণিতীয় সূত্রাবলি ও প্রয়োগ — NCTB গণিত সমাধান</p>
+</header>
+
+<h2 class="section-title">বহুনির্বাচনি প্রশ্ন</h2>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১</span><span><span class="math">(a − 5)</span> এর বর্গ কোনটি?</span></h3>
+  <div class="options"><div>(ক) <span class="math">a² + 10a + 25</span></div><div>(খ) <span class="math">a² − 10a + 25</span></div><div>(গ) <span class="math">a² + 5a + 25</span></div><div>(ঘ) <span class="math">a² − 5a + 25</span></div></div>
+  <div class="work">সূত্র: <span class="math">(p − q)² = p² − 2pq + q²</span></div>
+  <div class="work"><span class="math">(a − 5)² = a² − 2 × a × 5 + 5² = a² − 10a + 25</span></div>
+  <div class="answer">সঠিক উত্তর: (খ) <span class="math">a² − 10a + 25</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">২</span><span><span class="math">(x + y)² + 2(x + y)(x − y) + (x − y)²</span> এর মান কোনটি?</span></h3>
+  <div class="options"><div>(ক) <span class="math">8x²</span></div><div>(খ) <span class="math">8y²</span></div><div>(গ) <span class="math">4x²</span></div><div>(ঘ) <span class="math">4y²</span></div></div>
+  <div class="work">সূত্র: <span class="math">p² + 2pq + q² = (p + q)²</span></div>
+  <div class="work">এখানে <span class="math">p = x + y</span> এবং <span class="math">q = x − y</span>।</div>
+  <div class="work"><span class="math">= [(x + y) + (x − y)]²</span></div>
+  <div class="work"><span class="math">= (x + y + x − y)² = (2x)² = 4x²</span></div>
+  <div class="answer">সঠিক উত্তর: (গ) <span class="math">4x²</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৩</span><span><span class="math">a + b = 4</span> এবং <span class="math">a − b = 2</span> হলে <span class="math">ab</span> এর মান কত?</span></h3>
+  <div class="options"><div>(ক) 3</div><div>(খ) 8</div><div>(গ) 12</div><div>(ঘ) 16</div></div>
+  <div class="formula math">(a + b)² − (a − b)² = 4ab</div>
+  <div class="work"><span class="math">4² − 2² = 4ab</span></div>
+  <div class="work"><span class="math">16 − 4 = 4ab</span>, তাই <span class="math">12 = 4ab</span>।</div>
+  <div class="work"><span class="math">ab = 12 ÷ 4 = 3</span></div>
+  <div class="answer">সঠিক উত্তর: (ক) 3</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৪</span><span>একটি রাশি অপর একটি রাশি দ্বারা নিঃশেষে বিভাজ্য হলে, ভাজ্যকে ভাজকের কী বলা হয়?</span></h3>
+  <div class="options"><div>(ক) ভাগফল</div><div>(খ) ভাগশেষ</div><div>(গ) গুণিতক</div><div>(ঘ) গুণনীয়ক</div></div>
+  <div class="work">যদি কোনো রাশি অন্য রাশি দিয়ে নিঃশেষে বিভাজ্য হয়, তবে প্রথম রাশিটি দ্বিতীয় রাশির গুণিতক।</div>
+  <div class="answer">সঠিক উত্তর: (গ) গুণিতক</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৫</span><span><span class="math">2a</span> ও <span class="math">3b</span> এর গ.সা.গু. কত?</span></h3>
+  <div class="options"><div>(ক) 1</div><div>(খ) 6</div><div>(গ) <span class="math">ab</span></div><div>(ঘ) <span class="math">6ab</span></div></div>
+  <div class="work"><span class="math">2a</span>-এর সংখ্যাগত সহগ 2 এবং <span class="math">3b</span>-এর সংখ্যাগত সহগ 3। 2 ও 3-এর গ.সা.গু. 1; আর <span class="math">a</span> ও <span class="math">b</span>-এর কোনো সাধারণ চলক গুণনীয়ক নেই।</div>
+  <div class="answer">সঠিক উত্তর: (ক) 1</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৬</span><span><span class="math">9x² − 25y²</span> এবং <span class="math">15ax − 25ay</span> এর গ.সা.গু. কত?</span></h3>
+  <div class="options"><div>(ক) <span class="math">(3x + 5y)</span></div><div>(খ) <span class="math">(3x − 5y)</span></div><div>(গ) <span class="math">(9x² − 25y²)</span></div><div>(ঘ) <span class="math">5a(9x² − 25y²)</span></div></div>
+  <div class="work"><span class="math">9x² − 25y² = (3x − 5y)(3x + 5y)</span></div>
+  <div class="work"><span class="math">15ax − 25ay = 5a(3x − 5y)</span></div>
+  <div class="work">উভয় রাশির সাধারণ গুণনীয়ক <span class="math">(3x − 5y)</span>।</div>
+  <div class="answer">সঠিক উত্তর: (খ) <span class="math">(3x − 5y)</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৭</span><span><span class="math">x³y⁵</span> ও <span class="math">a² − b²</span> এর গ.সা.গু. কত?</span></h3>
+  <div class="options"><div>(ক) <span class="math">x³y⁵</span></div><div>(খ) <span class="math">x²a²</span></div><div>(গ) <span class="math">xy⁴</span></div><div>(ঘ) 1</div></div>
+  <div class="work"><span class="math">x³y⁵</span> রাশিতে <span class="math">x</span> ও <span class="math">y</span> আছে; অন্যদিকে <span class="math">a² − b² = (a − b)(a + b)</span>। দুই রাশিতে কোনো সাধারণ চলক গুণনীয়ক নেই।</div>
+  <div class="answer">সঠিক উত্তর: (ঘ) 1</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৮</span><span><span class="math">x − 1/x = 0</span> হলে—</span></h3>
+  <div class="work"><span class="math">(i) x = 1 &nbsp;&nbsp; (ii) x = −1 &nbsp;&nbsp; (iii) x = ±1</span></div>
+  <div class="work">নিচের কোনটি সঠিক?</div>
+  <div class="options"><div>(ক) i ও ii</div><div>(খ) ii ও iii</div><div>(গ) i ও iii</div><div>(ঘ) i, ii ও iii</div></div>
+  <div class="work"><span class="math">x − 1/x = 0</span>, যেখানে <span class="math">x ≠ 0</span>। উভয় পাশে <span class="math">x</span> গুণ করলে <span class="math">x² − 1 = 0</span>।</div>
+  <div class="work"><span class="math">(x − 1)(x + 1) = 0</span>, সুতরাং <span class="math">x = 1</span> অথবা <span class="math">x = −1</span>। অর্থাৎ <span class="math">x = ±1</span>। তাই (i), (ii), (iii)—তিনটিই সঠিক।</div>
+  <div class="answer">সঠিক উত্তর: (ঘ) i, ii ও iii</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৯</span><span><span class="math">a + 1/a = 4</span> হলে <span class="math">a² − 4a + 1</span> এর মান কত?</span></h3>
+  <div class="options"><div>(ক) 4</div><div>(খ) 3</div><div>(গ) 2</div><div>(ঘ) 0</div></div>
+  <div class="work">প্রদত্ত, <span class="math">a + 1/a = 4</span>। উভয় পাশে <span class="math">a</span> গুণ করলে <span class="math">a² + 1 = 4a</span>।</div>
+  <div class="work">অতএব, <span class="math">a² − 4a + 1 = (a² + 1) − 4a = 4a − 4a = 0</span>।</div>
+  <div class="answer">সঠিক উত্তর: (ঘ) 0</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১০</span><span><span class="math">(a + 5)</span> এর বর্গ কোনটি?</span></h3>
+  <div class="options"><div>(ক) <span class="math">a² + 10a + 25</span></div><div>(খ) <span class="math">a² − 10a + 25</span></div><div>(গ) <span class="math">a² + 5a + 25</span></div><div>(ঘ) <span class="math">a² + 5a − 25</span></div></div>
+  <div class="work">সূত্র: <span class="math">(p + q)² = p² + 2pq + q²</span>।</div>
+  <div class="work"><span class="math">(a + 5)² = a² + 2 × a × 5 + 5² = a² + 10a + 25</span>।</div>
+  <div class="answer">সঠিক উত্তর: (ক) <span class="math">a² + 10a + 25</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১১</span><span><span class="math">a + b = 8</span>, <span class="math">a − b = 4</span> হলে <span class="math">ab</span> কত?</span></h3>
+  <div class="options"><div>(ক) 8</div><div>(খ) 10</div><div>(গ) 12</div><div>(ঘ) 18</div></div>
+  <div class="formula math">(a + b)² − (a − b)² = 4ab</div>
+  <div class="work"><span class="math">8² − 4² = 4ab</span></div>
+  <div class="work"><span class="math">64 − 16 = 4ab</span>, অর্থাৎ <span class="math">48 = 4ab</span>।</div>
+  <div class="work"><span class="math">ab = 48 ÷ 4 = 12</span>।</div>
+  <div class="answer">সঠিক উত্তর: (গ) 12</div>
+</section>
+
+<h2 class="section-title">গ.সা.গু. নির্ণয় করো (১২–২১)</h2>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১২</span><span><span class="math">3a³b²c</span>, <span class="math">6ab²c²</span></span></h3>
+  <div class="work">সহগ 3 ও 6-এর গ.সা.গু. 3। সাধারণ চলকগুলোর সর্বনিম্ন ঘাত: <span class="math">a¹, b², c¹</span>।</div>
+  <div class="work"><span class="math">3a³b²c = 3ab²c · a²</span> এবং <span class="math">6ab²c² = 3ab²c · 2c</span>।</div>
+  <div class="answer">গ.সা.গু. = <span class="math">3ab²c</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১৩</span><span><span class="math">5ab²x²</span>, <span class="math">10a²b²y²</span></span></h3>
+  <div class="work">সহগ 5 ও 10-এর গ.সা.গু. 5। উভয় রাশিতে সাধারণ চলক <span class="math">a</span> ও <span class="math">b²</span> আছে। <span class="math">x</span> এবং <span class="math">y</span> উভয় রাশিতে একসঙ্গে নেই।</div>
+  <div class="answer">গ.সা.গু. = <span class="math">5ab²</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১৪</span><span><span class="math">3a²x²</span>, <span class="math">6axy²</span>, <span class="math">9ay²</span></span></h3>
+  <div class="work">সহগ 3, 6 ও 9-এর গ.সা.গু. 3। তিনটি রাশিতে সাধারণ চলক হলো <span class="math">a</span>; এর সর্বনিম্ন ঘাত <span class="math">a¹</span>। <span class="math">x</span> প্রথম রাশিতে নেই এবং <span class="math">y</span> প্রথম রাশিতে নেই।</div>
+  <div class="answer">গ.সা.গু. = <span class="math">3a</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১৫</span><span><span class="math">16a³x⁴y</span>, <span class="math">40a²y³x</span>, <span class="math">28ax³</span></span></h3>
+  <div class="work">সহগ 16, 40 ও 28-এর গ.সা.গু. 4। তিনটি রাশির সাধারণ চলক <span class="math">a</span> ও <span class="math">x</span>; সর্বনিম্ন ঘাত যথাক্রমে <span class="math">a¹</span> ও <span class="math">x¹</span>। তৃতীয় রাশিতে <span class="math">y</span> নেই, তাই <span class="math">y</span> সাধারণ গুণনীয়ক নয়।</div>
+  <div class="answer">গ.সা.গু. = <span class="math">4ax</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১৬</span><span><span class="math">a² + ab</span>, <span class="math">a² − b²</span></span></h3>
+  <div class="work"><span class="math">a² + ab = a(a + b)</span></div>
+  <div class="work"><span class="math">a² − b² = (a − b)(a + b)</span> — বর্গের অন্তরের সূত্র।</div>
+  <div class="work">উভয় রাশির সাধারণ উৎপাদক <span class="math">(a + b)</span>।</div>
+  <div class="answer">গ.সা.গু. = <span class="math">a + b</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১৭</span><span><span class="math">x³y − xy³</span>, <span class="math">(x − y)²</span></span></h3>
+  <div class="work"><span class="math">x³y − xy³ = xy(x² − y²) = xy(x − y)(x + y)</span></div>
+  <div class="work">অন্য রাশি <span class="math">(x − y)²</span>। উভয়ের সাধারণ উৎপাদক <span class="math">(x − y)</span>; প্রথম রাশিতে এর ঘাত 1, দ্বিতীয় রাশিতে ঘাত 2। সর্বনিম্ন ঘাত 1।</div>
+  <div class="answer">গ.সা.গু. = <span class="math">x − y</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১৮</span><span><span class="math">x² + 7x + 12</span>, <span class="math">x² + 9x + 20</span></span></h3>
+  <div class="work"><span class="math">x² + 7x + 12 = (x + 3)(x + 4)</span>, কারণ 3 ও 4-এর যোগফল 7 এবং গুণফল 12।</div>
+  <div class="work"><span class="math">x² + 9x + 20 = (x + 4)(x + 5)</span>, কারণ 4 ও 5-এর যোগফল 9 এবং গুণফল 20।</div>
+  <div class="answer">গ.সা.গু. = <span class="math">x + 4</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১৯</span><span><span class="math">a³ − ab²</span>, <span class="math">a⁴ + 2a³b + a²b²</span></span></h3>
+  <div class="work"><span class="math">a³ − ab² = a(a² − b²) = a(a − b)(a + b)</span></div>
+  <div class="work"><span class="math">a⁴ + 2a³b + a²b² = a²(a² + 2ab + b²) = a²(a + b)²</span></div>
+  <div class="work">উভয় রাশিতে সাধারণভাবে <span class="math">a(a + b)</span> রয়েছে।</div>
+  <div class="answer">গ.সা.গু. = <span class="math">a(a + b)</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">২০</span><span><span class="math">a² − 16</span>, <span class="math">3a + 12</span>, <span class="math">a² + 5a + 4</span></span></h3>
+  <div class="work"><span class="math">a² − 16 = (a − 4)(a + 4)</span></div>
+  <div class="work"><span class="math">3a + 12 = 3(a + 4)</span></div>
+  <div class="work"><span class="math">a² + 5a + 4 = (a + 1)(a + 4)</span></div>
+  <div class="answer">গ.সা.গু. = <span class="math">a + 4</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">২১</span><span><span class="math">xy − y</span>, <span class="math">x³y − xy</span>, <span class="math">x² − 2x + 1</span></span></h3>
+  <div class="work"><span class="math">xy − y = y(x − 1)</span></div>
+  <div class="work"><span class="math">x³y − xy = xy(x² − 1) = xy(x − 1)(x + 1)</span></div>
+  <div class="work"><span class="math">x² − 2x + 1 = (x − 1)²</span></div>
+  <div class="work">তিনটি রাশির সাধারণ উৎপাদক <span class="math">(x − 1)</span>।</div>
+  <div class="answer">গ.সা.গু. = <span class="math">x − 1</span></div>
+</section>
+
+<h2 class="section-title">ল.সা.গু. নির্ণয় করো (২২–২৯)</h2>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">২২</span><span><span class="math">6a³b²c</span>, <span class="math">9a⁴bd²</span></span></h3>
+  <div class="work">6 ও 9-এর ল.সা.গু. 18। প্রতিটি চলকের সর্বোচ্চ ঘাত নেওয়া হয়: <span class="math">a⁴</span>, <span class="math">b²</span>, <span class="math">c</span>, <span class="math">d²</span>।</div>
+  <div class="answer">ল.সা.গু. = <span class="math">18a⁴b²cd²</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">২৩</span><span><span class="math">5x²y²</span>, <span class="math">10xz³</span>, <span class="math">15y³z⁴</span></span></h3>
+  <div class="work">5, 10 ও 15-এর ল.সা.গু. 30। সর্বোচ্চ ঘাত অনুযায়ী <span class="math">x²</span>, <span class="math">y³</span> এবং <span class="math">z⁴</span> নেওয়া হয়।</div>
+  <div class="answer">ল.সা.গু. = <span class="math">30x²y³z⁴</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">২৪</span><span><span class="math">2p²xy²</span>, <span class="math">3pq²</span>, <span class="math">6pqx²</span></span></h3>
+  <div class="work">2, 3 ও 6-এর ল.সা.গু. 6। চলকগুলোর সর্বোচ্চ ঘাত হলো <span class="math">p²</span>, <span class="math">q²</span>, <span class="math">x²</span> ও <span class="math">y²</span>।</div>
+  <div class="answer">ল.সা.গু. = <span class="math">6p²q²x²y²</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">২৫</span><span><span class="math">(b² − c²)</span>, <span class="math">(b + c)²</span></span></h3>
+  <div class="work"><span class="math">b² − c² = (b − c)(b + c)</span>। অন্য রাশি <span class="math">(b + c)²</span>।</div>
+  <div class="work">ল.সা.গু.তে প্রত্যেক ভিন্ন উৎপাদকের সর্বোচ্চ ঘাত নিতে হয়। তাই <span class="math">(b − c)</span> একবার এবং <span class="math">(b + c)</span> দুইবার থাকবে।</div>
+  <div class="answer">ল.সা.গু. = <span class="math">(b − c)(b + c)²</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">২৬</span><span><span class="math">x² + 2x</span>, <span class="math">x² + 3x + 2</span></span></h3>
+  <div class="work"><span class="math">x² + 2x = x(x + 2)</span></div>
+  <div class="work"><span class="math">x² + 3x + 2 = (x + 1)(x + 2)</span>, কারণ 1 ও 2-এর যোগফল 3 এবং গুণফল 2।</div>
+  <div class="answer">ল.সা.গু. = <span class="math">x(x + 1)(x + 2)</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">২৭</span><span><span class="math">9x² − 25y²</span>, <span class="math">15ax − 25ay</span></span></h3>
+  <div class="work"><span class="math">9x² − 25y² = (3x − 5y)(3x + 5y)</span></div>
+  <div class="work"><span class="math">15ax − 25ay = 5a(3x − 5y)</span></div>
+  <div class="work">ল.সা.গু.তে উভয় রাশির সব ভিন্ন উৎপাদক সর্বোচ্চ ঘাতে নিতে হবে।</div>
+  <div class="answer">ল.সা.গু. = <span class="math">5a(3x − 5y)(3x + 5y)</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">২৮</span><span><span class="math">x² − 3x − 10</span>, <span class="math">x² − 10x + 25</span></span></h3>
+  <div class="work"><span class="math">x² − 3x − 10 = (x − 5)(x + 2)</span>, কারণ −5 ও 2-এর গুণফল −10 এবং যোগফল −3।</div>
+  <div class="work"><span class="math">x² − 10x + 25 = (x − 5)²</span></div>
+  <div class="answer">ল.সা.গু. = <span class="math">(x − 5)²(x + 2)</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">২৯</span><span><span class="math">a² − 7a + 12</span>, <span class="math">a² + a − 20</span>, <span class="math">a² + 2a − 15</span></span></h3>
+  <div class="work"><span class="math">a² − 7a + 12 = (a − 3)(a − 4)</span></div>
+  <div class="work"><span class="math">a² + a − 20 = (a + 5)(a − 4)</span></div>
+  <div class="work"><span class="math">a² + 2a − 15 = (a + 5)(a − 3)</span></div>
+  <div class="work">তিনটি রাশিতে থাকা সব ভিন্ন উৎপাদক একবার করে নিলে ল.সা.গু. পাওয়া যায়।</div>
+  <div class="answer">ল.সা.গু. = <span class="math">(a − 3)(a − 4)(a + 5)</span></div>
+</section>
+
+<h2 class="section-title">উৎপাদকে বিশ্লেষণ</h2>
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৩০</span><span><span class="math">x² − 8x + 15</span>, <span class="math">x² − 25</span>, <span class="math">x² + 2x − 15</span></span></h3>
+  <div class="subpart"><strong>প্রথম রাশি:</strong> এমন দুটি সংখ্যা চাই যাদের গুণফল 15 এবং যোগফল −8। সংখ্যা −3 ও −5।</div>
+  <div class="work math">x² − 8x + 15 = (x − 3)(x − 5)</div>
+  <div class="subpart"><strong>দ্বিতীয় রাশি:</strong> এটি বর্গের অন্তর।</div>
+  <div class="work math">x² − 25 = x² − 5² = (x − 5)(x + 5)</div>
+  <div class="subpart"><strong>তৃতীয় রাশি:</strong> −3 ও 5-এর গুণফল −15 এবং যোগফল 2।</div>
+  <div class="work math">x² + 2x − 15 = (x + 5)(x − 3)</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৩১</span><span><span class="math">x + 5</span>, <span class="math">x² + 5x</span>, <span class="math">x² + 7x + 10</span></span></h3>
+  <div class="work"><span class="math">x + 5</span> ইতিমধ্যেই উৎপাদক আকারে আছে।</div>
+  <div class="work"><span class="math">x² + 5x = x(x + 5)</span></div>
+  <div class="work"><span class="math">x² + 7x + 10 = (x + 5)(x + 2)</span>, কারণ 5 ও 2-এর যোগফল 7 এবং গুণফল 10।</div>
+  <div class="note">ছবিতে ৩০–৩১ নম্বরের জন্য আলাদা নির্দেশনা দেখা যাচ্ছে না। তাই এখানে প্রতিটি রাশিকে উৎপাদকে বিশ্লেষণ করে দেখানো হয়েছে। যদি বইয়ের নির্দেশনা “গ.সা.গু. ও ল.সা.গু. নির্ণয়” হয়, তাহলে সেই অনুযায়ীও সমাধান করা যাবে।</div>
+</section>
+
+<h2 class="section-title">সৃজনশীল প্রশ্ন</h2>
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৩২</span><span>যদি <span class="math">a = 2x − 3</span> এবং <span class="math">b = 2x + 5</span> হয়—</span></h3>
+  <div class="subpart"><strong>(ক) <span class="math">a + b</span> নির্ণয়:</strong></div>
+  <div class="work math">a + b = (2x − 3) + (2x + 5)</div>
+  <div class="work math">= 2x + 2x − 3 + 5 = 4x + 2</div>
+  <div class="answer">উত্তর: <span class="math">a + b = 4x + 2</span></div>
+  <div class="subpart"><strong>(খ) সূত্রের সাহায্যে <span class="math">a²</span> নির্ণয়:</strong></div>
+  <div class="work">সূত্র: <span class="math">(p − q)² = p² − 2pq + q²</span>।</div>
+  <div class="work math">a² = (2x − 3)² = (2x)² − 2 × 2x × 3 + 3²</div>
+  <div class="work math">= 4x² − 12x + 9</div>
+  <div class="answer">উত্তর: <span class="math">a² = 4x² − 12x + 9</span></div>
+  <div class="subpart"><strong>(গ) সূত্রের সাহায্যে <span class="math">a</span> ও <span class="math">b</span>-এর গুণফল এবং <span class="math">x = 2</span> হলে <span class="math">ab</span> নির্ণয়:</strong></div>
+  <div class="work math">ab = (2x − 3)(2x + 5)</div>
+  <div class="work math">= 4x² + 10x − 6x − 15 = 4x² + 4x − 15</div>
+  <div class="work">যখন <span class="math">x = 2</span>, তখন <span class="math">a = 2(2) − 3 = 1</span> এবং <span class="math">b = 2(2) + 5 = 9</span>।</div>
+  <div class="work math">সুতরাং ab = 1 × 9 = 9</div>
+  <div class="answer">উত্তর: <span class="math">ab = 4x² + 4x − 15</span>; <span class="math">x = 2</span> হলে <span class="math">ab = 9</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৩৩</span><span><span class="math">x² − 3x − 10</span>, <span class="math">x³ + 6x² + 8x</span> এবং <span class="math">x⁴ − 5x³ − 14x²</span> তিনটি বীজগাণিতিক রাশি।</span></h3>
+  <div class="subpart"><strong>(ক) <span class="math">(3x − 2y + z)²</span> এর বর্গ নির্ণয়:</strong></div>
+  <div class="work">সূত্র: <span class="math">(p + q + r)² = p² + q² + r² + 2pq + 2pr + 2qr</span>। এখানে <span class="math">p = 3x</span>, <span class="math">q = −2y</span>, <span class="math">r = z</span>।</div>
+  <div class="work math">(3x − 2y + z)² = (3x)² + (−2y)² + z² + 2(3x)(−2y) + 2(3x)z + 2(−2y)z</div>
+  <div class="work math">= 9x² + 4y² + z² − 12xy + 6xz − 4yz</div>
+  <div class="answer">উত্তর: <span class="math">9x² + 4y² + z² − 12xy + 6xz − 4yz</span></div>
+  <div class="subpart"><strong>(খ) প্রথম ও দ্বিতীয় রাশির গ.সা.গু. নির্ণয়:</strong></div>
+  <div class="work"><span class="math">x² − 3x − 10 = (x − 5)(x + 2)</span></div>
+  <div class="work"><span class="math">x³ + 6x² + 8x = x(x² + 6x + 8) = x(x + 2)(x + 4)</span></div>
+  <div class="work">উভয় রাশির সাধারণ উৎপাদক <span class="math">(x + 2)</span>।</div>
+  <div class="answer">গ.সা.গু. = <span class="math">x + 2</span></div>
+  <div class="subpart"><strong>(গ) তিনটি রাশির ল.সা.গু. নির্ণয়:</strong></div>
+  <div class="work"><span class="math">x² − 3x − 10 = (x − 5)(x + 2)</span></div>
+  <div class="work"><span class="math">x³ + 6x² + 8x = x(x + 2)(x + 4)</span></div>
+  <div class="work"><span class="math">x⁴ − 5x³ − 14x² = x²(x² − 5x − 14) = x²(x − 7)(x + 2)</span></div>
+  <div class="work">ল.সা.গু.তে সব ভিন্ন উৎপাদক সর্বোচ্চ ঘাতে নিতে হয়: <span class="math">x²</span>, <span class="math">(x − 5)</span>, <span class="math">(x + 2)</span>, <span class="math">(x + 4)</span> এবং <span class="math">(x − 7)</span>।</div>
+  <div class="answer">ল.সা.গু. = <span class="math">x²(x − 5)(x + 2)(x + 4)(x − 7)</span></div>
+</section>
+
+<div class="footer">NCTB গণিত • অনুশীলনী ৫.৪ • শেখার সুবিধার্থে ধাপে ধাপে সমাধান</div>
+</main>
+</body>
+</html>
