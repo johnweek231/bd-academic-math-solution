@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>অনুশীলনী ৭.২ – সমীকরণ গঠন ও সমাধান | ষষ্ঠ শ্রেণি গণিত (NCTB)</title>
+<meta name="description" content="ষষ্ঠ শ্রেণির গণিত অনুশীলনী ৭.২ এর সকল প্রশ্নের NCTB পাঠ্যবই অনুযায়ী ধাপে ধাপে বিস্তারিত সমাধান।">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'SolaimanLipi', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #212529;
+    line-height: 1.8;
+    font-size: 17px;
+  }
+
+  .container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 28px 16px 48px;
+    background: #f8f9fa;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .page-header h1 {
+    font-size: 30px;
+    color: #1e7e34;
+    margin-bottom: 4px;
+  }
+  .page-header .subtitle {
+    color: #6c757d;
+    font-size: 16px;
+  }
+  .instruction {
+    background: #e9f7ef;
+    border: 1px dashed #28a745;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    color: #155724;
+    text-align: center;
+  }
+
+  .solution-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    border-left: 6px solid #28a745;
+    margin-bottom: 24px;
+  }
+
+  .question-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .question-number {
+    flex-shrink: 0;
+    display: inline-block;
+    background: #28a745;
+    color: #ffffff;
+    padding: 2px 14px;
+    border-radius: 50px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .label {
+    display: inline-block;
+    font-weight: bold;
+    color: #1e7e34;
+    margin: 10px 0 4px;
+  }
+
+  .solution p { margin-bottom: 6px; }
+
+  .steps {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 10px 16px;
+    margin: 8px 0 10px;
+    font-family: 'SolaimanLipi', Arial, sans-serif;
+  }
+  .steps div { padding: 2px 0; }
+  .steps .note {
+    color: #6c757d;
+    font-size: 15px;
+    margin-left: 6px;
+  }
+
+  .math { font-style: italic; font-family: 'Times New Roman', serif; font-size: 18px; }
+
+  .frac {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 3px;
+    font-style: normal;
+    line-height: 1.2;
+  }
+  .frac > span:first-child {
+    border-bottom: 1.5px solid currentColor;
+    padding: 0 3px;
+  }
+  .frac > span:last-child { padding: 0 3px; }
+
+  .verify {
+    background: #fff8e1;
+    border-left: 4px solid #ffc107;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .answer {
+    margin-top: 14px;
+    background: #e9f7ef;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-weight: bold;
+    color: #155724;
+  }
+
+  footer {
+    text-align: center;
+    color: #6c757d;
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .page-header h1 { font-size: 24px; }
+    .solution-card { padding: 16px; }
+    .question-title { font-size: 16px; gap: 8px; }
+    .steps { padding: 8px 10px; overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+<main class="container">
+
+  <header class="page-header">
+    <h1>অনুশীলনী ৭.২</h1>
+    <p class="subtitle">ষষ্ঠ শ্রেণি গণিত — সরল সমীকরণ (NCTB পাঠ্যবই অনুযায়ী সমাধান)</p>
+  </header>
+
+  <p class="instruction">নিচের সমস্যাগুলো থেকে সমীকরণ গঠন করে সমাধান করো।</p>
+
+  <!-- ১ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১</span><span>কোন সংখ্যার দ্বিগুণের সাথে 5 যোগ করলে যোগফল 25 হবে?</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, সংখ্যাটি <span class="math">x</span></p>
+      <p>∴ সংখ্যাটির দ্বিগুণ = <span class="math">2x</span></p>
+      <p>প্রশ্নমতে, <span class="math">2x + 5 = 25</span></p>
+      <div class="steps">
+        <div>বা, <span class="math">2x + 5 − 5 = 25 − 5</span> <span class="note">[উভয় পক্ষ থেকে 5 বিয়োগ করে]</span></div>
+        <div>বা, <span class="math">2x = 20</span></div>
+        <div>বা, <span class="math"><span class="frac"><span>2x</span><span>2</span></span> = <span class="frac"><span>20</span><span>2</span></span></span> <span class="note">[উভয় পক্ষকে 2 দ্বারা ভাগ করে]</span></div>
+        <div>∴ <span class="math">x = 10</span></div>
+      </div>
+      <div class="verify"><strong>যাচাই:</strong> 10 এর দ্বিগুণ = 20; 20 + 5 = 25 ✓</div>
+      <div class="answer">নির্ণেয় সংখ্যাটি 10</div>
+    </div>
+  </article>
+
+  <!-- ২ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ২</span><span>কোন সংখ্যা থেকে 27 বিয়োগ করলে বিয়োগফল −21 হবে?</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, সংখ্যাটি <span class="math">x</span></p>
+      <p>প্রশ্নমতে, <span class="math">x − 27 = −21</span></p>
+      <div class="steps">
+        <div>বা, <span class="math">x − 27 + 27 = −21 + 27</span> <span class="note">[উভয় পক্ষে 27 যোগ করে]</span></div>
+        <div>∴ <span class="math">x = 6</span></div>
+      </div>
+      <div class="verify"><strong>যাচাই:</strong> 6 − 27 = −21 ✓</div>
+      <div class="answer">নির্ণেয় সংখ্যাটি 6</div>
+    </div>
+  </article>
+
+  <!-- ৩ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৩</span><span>কোন সংখ্যার এক-তৃতীয়াংশ 4 এর সমান হবে?</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, সংখ্যাটি <span class="math">x</span></p>
+      <p>∴ সংখ্যাটির এক-তৃতীয়াংশ = <span class="math"><span class="frac"><span>x</span><span>3</span></span></span></p>
+      <p>প্রশ্নমতে, <span class="math"><span class="frac"><span>x</span><span>3</span></span> = 4</span></p>
+      <div class="steps">
+        <div>বা, <span class="math"><span class="frac"><span>x</span><span>3</span></span> × 3 = 4 × 3</span> <span class="note">[উভয় পক্ষকে 3 দ্বারা গুণ করে]</span></div>
+        <div>∴ <span class="math">x = 12</span></div>
+      </div>
+      <div class="verify"><strong>যাচাই:</strong> 12 এর এক-তৃতীয়াংশ = 12 ÷ 3 = 4 ✓</div>
+      <div class="answer">নির্ণেয় সংখ্যাটি 12</div>
+    </div>
+  </article>
+
+  <!-- ৪ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৪</span><span>কোন সংখ্যা থেকে 5 বিয়োগ করলে বিয়োগফলের 5 গুণ সমান 20 হবে?</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, সংখ্যাটি <span class="math">x</span></p>
+      <p>সংখ্যাটি থেকে 5 বিয়োগ করলে বিয়োগফল = <span class="math">x − 5</span></p>
+      <p>বিয়োগফলের 5 গুণ = <span class="math">5(x − 5)</span></p>
+      <p>প্রশ্নমতে, <span class="math">5(x − 5) = 20</span></p>
+      <div class="steps">
+        <div>বা, <span class="math"><span class="frac"><span>5(x − 5)</span><span>5</span></span> = <span class="frac"><span>20</span><span>5</span></span></span> <span class="note">[উভয় পক্ষকে 5 দ্বারা ভাগ করে]</span></div>
+        <div>বা, <span class="math">x − 5 = 4</span></div>
+        <div>বা, <span class="math">x − 5 + 5 = 4 + 5</span> <span class="note">[উভয় পক্ষে 5 যোগ করে]</span></div>
+        <div>∴ <span class="math">x = 9</span></div>
+      </div>
+      <div class="verify"><strong>যাচাই:</strong> 9 − 5 = 4; 4 × 5 = 20 ✓</div>
+      <div class="answer">নির্ণেয় সংখ্যাটি 9</div>
+    </div>
+  </article>
+
+  <!-- ৫ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৫</span><span>কোন সংখ্যার অর্ধেক থেকে তার এক-তৃতীয়াংশ বিয়োগ করলে বিয়োগফল 6 হবে?</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, সংখ্যাটি <span class="math">x</span></p>
+      <p>সংখ্যাটির অর্ধেক = <span class="math"><span class="frac"><span>x</span><span>2</span></span></span> এবং এক-তৃতীয়াংশ = <span class="math"><span class="frac"><span>x</span><span>3</span></span></span></p>
+      <p>প্রশ্নমতে, <span class="math"><span class="frac"><span>x</span><span>2</span></span> − <span class="frac"><span>x</span><span>3</span></span> = 6</span></p>
+      <div class="steps">
+        <div>বা, <span class="math"><span class="frac"><span>3x − 2x</span><span>6</span></span> = 6</span> <span class="note">[হরগুলোর ল.সা.গু. 6]</span></div>
+        <div>বা, <span class="math"><span class="frac"><span>x</span><span>6</span></span> = 6</span></div>
+        <div>বা, <span class="math"><span class="frac"><span>x</span><span>6</span></span> × 6 = 6 × 6</span> <span class="note">[উভয় পক্ষকে 6 দ্বারা গুণ করে]</span></div>
+        <div>∴ <span class="math">x = 36</span></div>
+      </div>
+      <div class="verify"><strong>যাচাই:</strong> 36 এর অর্ধেক = 18, এক-তৃতীয়াংশ = 12; 18 − 12 = 6 ✓</div>
+      <div class="answer">নির্ণেয় সংখ্যাটি 36</div>
+    </div>
+  </article>
+
+  <!-- ৬ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৬</span><span>তিনটি ক্রমিক স্বাভাবিক সংখ্যার সমষ্টি 63 হলে, সংখ্যা তিনটি বের করো।</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, ক্রমিক স্বাভাবিক সংখ্যা তিনটি যথাক্রমে <span class="math">x</span>, <span class="math">x + 1</span> ও <span class="math">x + 2</span></p>
+      <p>প্রশ্নমতে, <span class="math">x + (x + 1) + (x + 2) = 63</span></p>
+      <div class="steps">
+        <div>বা, <span class="math">3x + 3 = 63</span></div>
+        <div>বা, <span class="math">3x = 63 − 3</span> <span class="note">[পক্ষান্তর করে]</span></div>
+        <div>বা, <span class="math">3x = 60</span></div>
+        <div>বা, <span class="math">x = <span class="frac"><span>60</span><span>3</span></span></span></div>
+        <div>∴ <span class="math">x = 20</span></div>
+      </div>
+      <p>সুতরাং, প্রথম সংখ্যা = 20, দ্বিতীয় সংখ্যা = 20 + 1 = 21, তৃতীয় সংখ্যা = 20 + 2 = 22</p>
+      <div class="verify"><strong>যাচাই:</strong> 20 + 21 + 22 = 63 ✓</div>
+      <div class="answer">নির্ণেয় সংখ্যা তিনটি 20, 21 ও 22</div>
+    </div>
+  </article>
+
+  <!-- ৭ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৭</span><span>দুটি সংখ্যার যোগফল 55 এবং বড় সংখ্যাটির 5 গুণ ছোট সংখ্যাটির 6 গুণের সমান। সংখ্যা দুটি নির্ণয় করো।</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, বড় সংখ্যাটি <span class="math">x</span></p>
+      <p>∴ ছোট সংখ্যাটি = <span class="math">55 − x</span></p>
+      <p>প্রশ্নমতে, <span class="math">5x = 6(55 − x)</span></p>
+      <div class="steps">
+        <div>বা, <span class="math">5x = 330 − 6x</span></div>
+        <div>বা, <span class="math">5x + 6x = 330</span> <span class="note">[পক্ষান্তর করে]</span></div>
+        <div>বা, <span class="math">11x = 330</span></div>
+        <div>বা, <span class="math">x = <span class="frac"><span>330</span><span>11</span></span></span></div>
+        <div>∴ <span class="math">x = 30</span></div>
+      </div>
+      <p>বড় সংখ্যা = 30, ছোট সংখ্যা = 55 − 30 = 25</p>
+      <div class="verify"><strong>যাচাই:</strong> 30 + 25 = 55; 30 × 5 = 150 এবং 25 × 6 = 150 ✓</div>
+      <div class="answer">নির্ণেয় সংখ্যা দুটি 30 ও 25</div>
+    </div>
+  </article>
+
+  <!-- ৮ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৮</span><span>দীনা, মিনা ও রিনার একত্রে 180 টাকা আছে। মিনার চেয়ে দীনার 6 টাকা কম ও রিনার 12 টাকা বেশি আছে। কার কত টাকা আছে?</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, মিনার আছে <span class="math">x</span> টাকা</p>
+      <p>∴ দীনার আছে <span class="math">(x − 6)</span> টাকা এবং রিনার আছে <span class="math">(x + 12)</span> টাকা</p>
+      <p>প্রশ্নমতে, <span class="math">x + (x − 6) + (x + 12) = 180</span></p>
+      <div class="steps">
+        <div>বা, <span class="math">3x + 6 = 180</span></div>
+        <div>বা, <span class="math">3x = 180 − 6</span> <span class="note">[পক্ষান্তর করে]</span></div>
+        <div>বা, <span class="math">3x = 174</span></div>
+        <div>বা, <span class="math">x = <span class="frac"><span>174</span><span>3</span></span></span></div>
+        <div>∴ <span class="math">x = 58</span></div>
+      </div>
+      <p>মিনার আছে 58 টাকা, দীনার আছে 58 − 6 = 52 টাকা, রিনার আছে 58 + 12 = 70 টাকা</p>
+      <div class="verify"><strong>যাচাই:</strong> 52 + 58 + 70 = 180 ✓</div>
+      <div class="answer">দীনার 52 টাকা, মিনার 58 টাকা ও রিনার 70 টাকা আছে।</div>
+    </div>
+  </article>
+
+  <!-- ৯ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৯</span><span>একটি খাতা ও একটি কলমের মোট দাম 75 টাকা। খাতার দাম 5 টাকা কম ও কলমের দাম 2 টাকা বেশি হলে, খাতার দাম কলমের দামের দ্বিগুণ হতো। খাতা ও কলমের কোনটির দাম কত?</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, খাতার দাম <span class="math">x</span> টাকা</p>
+      <p>∴ কলমের দাম <span class="math">(75 − x)</span> টাকা</p>
+      <p>খাতার দাম 5 টাকা কম হলে হয় <span class="math">(x − 5)</span> টাকা</p>
+      <p>কলমের দাম 2 টাকা বেশি হলে হয় <span class="math">(75 − x + 2)</span> বা <span class="math">(77 − x)</span> টাকা</p>
+      <p>প্রশ্নমতে, <span class="math">x − 5 = 2(77 − x)</span></p>
+      <div class="steps">
+        <div>বা, <span class="math">x − 5 = 154 − 2x</span></div>
+        <div>বা, <span class="math">x + 2x = 154 + 5</span> <span class="note">[পক্ষান্তর করে]</span></div>
+        <div>বা, <span class="math">3x = 159</span></div>
+        <div>বা, <span class="math">x = <span class="frac"><span>159</span><span>3</span></span></span></div>
+        <div>∴ <span class="math">x = 53</span></div>
+      </div>
+      <p>খাতার দাম 53 টাকা, কলমের দাম 75 − 53 = 22 টাকা</p>
+      <div class="verify"><strong>যাচাই:</strong> 53 − 5 = 48; 22 + 2 = 24; 24 × 2 = 48 ✓</div>
+      <div class="answer">খাতার দাম 53 টাকা এবং কলমের দাম 22 টাকা।</div>
+    </div>
+  </article>
+
+  <!-- ১০ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১০</span><span>একজন ফলবিক্রেতার মোট ফলের <span class="frac"><span>1</span><span>2</span></span> অংশ আপেল, <span class="frac"><span>1</span><span>3</span></span> অংশ কমলালেবু ও 40টি আম আছে। তাঁর নিকট মোট কতগুলো ফল আছে?</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, ফলবিক্রেতার নিকট মোট ফল আছে <span class="math">x</span>টি</p>
+      <p>∴ আপেল আছে <span class="math"><span class="frac"><span>x</span><span>2</span></span></span>টি এবং কমলালেবু আছে <span class="math"><span class="frac"><span>x</span><span>3</span></span></span>টি</p>
+      <p>প্রশ্নমতে, <span class="math"><span class="frac"><span>x</span><span>2</span></span> + <span class="frac"><span>x</span><span>3</span></span> + 40 = x</span></p>
+      <div class="steps">
+        <div>বা, <span class="math"><span class="frac"><span>3x + 2x</span><span>6</span></span> + 40 = x</span> <span class="note">[হরগুলোর ল.সা.গু. 6]</span></div>
+        <div>বা, <span class="math"><span class="frac"><span>5x</span><span>6</span></span> + 40 = x</span></div>
+        <div>বা, <span class="math">5x + 240 = 6x</span> <span class="note">[উভয় পক্ষকে 6 দ্বারা গুণ করে]</span></div>
+        <div>বা, <span class="math">240 = 6x − 5x</span> <span class="note">[পক্ষান্তর করে]</span></div>
+        <div>∴ <span class="math">x = 240</span></div>
+      </div>
+      <div class="verify"><strong>যাচাই:</strong> আপেল = 240 ÷ 2 = 120টি, কমলালেবু = 240 ÷ 3 = 80টি; 120 + 80 + 40 = 240 ✓</div>
+      <div class="answer">ফলবিক্রেতার নিকট মোট 240টি ফল আছে।</div>
+    </div>
+  </article>
+
+  <!-- ১১ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১১</span><span>পিতার বর্তমান বয়স পুত্রের বর্তমান বয়সের 6 গুণ। 5 বছর পর তাদের বয়সের সমষ্টি হবে 45 বছর। পিতা ও পুত্রের বর্তমান বয়স কত?</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, পুত্রের বর্তমান বয়স <span class="math">x</span> বছর</p>
+      <p>∴ পিতার বর্তমান বয়স <span class="math">6x</span> বছর</p>
+      <p>5 বছর পর পুত্রের বয়স হবে <span class="math">(x + 5)</span> বছর এবং পিতার বয়স হবে <span class="math">(6x + 5)</span> বছর</p>
+      <p>প্রশ্নমতে, <span class="math">(x + 5) + (6x + 5) = 45</span></p>
+      <div class="steps">
+        <div>বা, <span class="math">7x + 10 = 45</span></div>
+        <div>বা, <span class="math">7x = 45 − 10</span> <span class="note">[পক্ষান্তর করে]</span></div>
+        <div>বা, <span class="math">7x = 35</span></div>
+        <div>বা, <span class="math">x = <span class="frac"><span>35</span><span>7</span></span></span></div>
+        <div>∴ <span class="math">x = 5</span></div>
+      </div>
+      <p>পুত্রের বর্তমান বয়স 5 বছর, পিতার বর্তমান বয়স 6 × 5 = 30 বছর</p>
+      <div class="verify"><strong>যাচাই:</strong> 5 বছর পর পুত্র 10 বছর, পিতা 35 বছর; 10 + 35 = 45 ✓</div>
+      <div class="answer">পিতার বর্তমান বয়স 30 বছর এবং পুত্রের বর্তমান বয়স 5 বছর।</div>
+    </div>
+  </article>
+
+  <!-- ১২ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১২</span><span>সারা ও সাবার বয়সের অনুপাত 2 : 3। তাদের দুজনের বয়সের সমষ্টি 30 বছর হলে, কার বয়স কত?</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>যেহেতু বয়সের অনুপাত 2 : 3,</p>
+      <p>মনে করি, সারার বয়স <span class="math">2x</span> বছর এবং সাবার বয়স <span class="math">3x</span> বছর</p>
+      <p>প্রশ্নমতে, <span class="math">2x + 3x = 30</span></p>
+      <div class="steps">
+        <div>বা, <span class="math">5x = 30</span></div>
+        <div>বা, <span class="math">x = <span class="frac"><span>30</span><span>5</span></span></span></div>
+        <div>∴ <span class="math">x = 6</span></div>
+      </div>
+      <p>সারার বয়স = 2 × 6 = 12 বছর, সাবার বয়স = 3 × 6 = 18 বছর</p>
+      <div class="verify"><strong>যাচাই:</strong> 12 + 18 = 30 এবং 12 : 18 = 2 : 3 ✓</div>
+      <div class="answer">সারার বয়স 12 বছর এবং সাবার বয়স 18 বছর।</div>
+    </div>
+  </article>
+
+  <!-- ১৩ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১৩</span><span>একটি ক্রিকেট খেলায় ইমন ও সুমনের মোট রানসংখ্যা 58। ইমনের রানসংখ্যা সুমনের রানসংখ্যার দ্বিগুণের চেয়ে 5 রান কম। ঐ খেলায় ইমনের রানসংখ্যা কত?</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, সুমনের রানসংখ্যা <span class="math">x</span></p>
+      <p>∴ ইমনের রানসংখ্যা <span class="math">(2x − 5)</span></p>
+      <p>প্রশ্নমতে, <span class="math">x + (2x − 5) = 58</span></p>
+      <div class="steps">
+        <div>বা, <span class="math">3x − 5 = 58</span></div>
+        <div>বা, <span class="math">3x = 58 + 5</span> <span class="note">[পক্ষান্তর করে]</span></div>
+        <div>বা, <span class="math">3x = 63</span></div>
+        <div>বা, <span class="math">x = <span class="frac"><span>63</span><span>3</span></span></span></div>
+        <div>∴ <span class="math">x = 21</span></div>
+      </div>
+      <p>সুমনের রানসংখ্যা 21, ইমনের রানসংখ্যা = 2 × 21 − 5 = 42 − 5 = 37</p>
+      <div class="verify"><strong>যাচাই:</strong> 37 + 21 = 58 ✓</div>
+      <div class="answer">ঐ খেলায় ইমনের রানসংখ্যা 37।</div>
+    </div>
+  </article>
+
+  <!-- ১৪ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১৪</span><span>একটি ট্রেন ঘণ্টায় 30 কি.মি. বেগে চলে কমলাপুর স্টেশন থেকে নারায়ণগঞ্জ স্টেশনে পৌঁছাল। ট্রেনটির বেগ ঘণ্টায় 25 কি.মি. হলে 10 মিনিট সময় বেশি লাগত। দুই স্টেশনের মধ্যে দূরত্ব কত?</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, দুই স্টেশনের মধ্যে দূরত্ব <span class="math">x</span> কি.মি.</p>
+      <p>আমরা জানি, সময় = <span class="frac"><span>দূরত্ব</span><span>বেগ</span></span></p>
+      <p>ঘণ্টায় 30 কি.মি. বেগে যেতে সময় লাগে <span class="math"><span class="frac"><span>x</span><span>30</span></span></span> ঘণ্টা</p>
+      <p>ঘণ্টায় 25 কি.মি. বেগে যেতে সময় লাগে <span class="math"><span class="frac"><span>x</span><span>25</span></span></span> ঘণ্টা</p>
+      <p>10 মিনিট = <span class="math"><span class="frac"><span>10</span><span>60</span></span></span> ঘণ্টা = <span class="math"><span class="frac"><span>1</span><span>6</span></span></span> ঘণ্টা</p>
+      <p>প্রশ্নমতে, <span class="math"><span class="frac"><span>x</span><span>25</span></span> − <span class="frac"><span>x</span><span>30</span></span> = <span class="frac"><span>1</span><span>6</span></span></span></p>
+      <div class="steps">
+        <div>বা, <span class="math"><span class="frac"><span>6x − 5x</span><span>150</span></span> = <span class="frac"><span>1</span><span>6</span></span></span> <span class="note">[25 ও 30 এর ল.সা.গু. 150]</span></div>
+        <div>বা, <span class="math"><span class="frac"><span>x</span><span>150</span></span> = <span class="frac"><span>1</span><span>6</span></span></span></div>
+        <div>বা, <span class="math">6x = 150</span> <span class="note">[আড়গুণন করে]</span></div>
+        <div>বা, <span class="math">x = <span class="frac"><span>150</span><span>6</span></span></span></div>
+        <div>∴ <span class="math">x = 25</span></div>
+      </div>
+      <div class="verify"><strong>যাচাই:</strong> 30 কি.মি. বেগে সময় = 25/30 ঘণ্টা = 50 মিনিট; 25 কি.মি. বেগে সময় = 25/25 ঘণ্টা = 60 মিনিট; পার্থক্য = 10 মিনিট ✓</div>
+      <div class="answer">দুই স্টেশনের মধ্যে দূরত্ব 25 কি.মি.</div>
+    </div>
+  </article>
+
+  <!-- ১৫ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১৫</span><span>একটি আয়তাকার জমির দৈর্ঘ্য প্রস্থের তিনগুণ এবং জমিটির পরিসীমা 40 মিটার। জমিটির দৈর্ঘ্য ও প্রস্থ নির্ণয় করো।</span></h2>
+    <div class="solution">
+      <span class="label">সমাধান:</span>
+      <p>মনে করি, জমিটির প্রস্থ <span class="math">x</span> মিটার</p>
+      <p>∴ জমিটির দৈর্ঘ্য <span class="math">3x</span> মিটার</p>
+      <p>আমরা জানি, আয়তাকার জমির পরিসীমা = 2(দৈর্ঘ্য + প্রস্থ)</p>
+      <p>প্রশ্নমতে, <span class="math">2(3x + x) = 40</span></p>
+      <div class="steps">
+        <div>বা, <span class="math">2 × 4x = 40</span></div>
+        <div>বা, <span class="math">8x = 40</span></div>
+        <div>বা, <span class="math">x = <span class="frac"><span>40</span><span>8</span></span></span></div>
+        <div>∴ <span class="math">x = 5</span></div>
+      </div>
+      <p>প্রস্থ = 5 মিটার, দৈর্ঘ্য = 3 × 5 = 15 মিটার</p>
+      <div class="verify"><strong>যাচাই:</strong> পরিসীমা = 2(15 + 5) = 2 × 20 = 40 মিটার ✓</div>
+      <div class="answer">জমিটির দৈর্ঘ্য 15 মিটার এবং প্রস্থ 5 মিটার।</div>
+    </div>
+  </article>
+
+  <footer>ষষ্ঠ শ্রেণি গণিত — অনুশীলনী ৭.২ | NCTB পাঠ্যপুস্তক অনুসারে</footer>
+</main>
+</body>
+</html>
