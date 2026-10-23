@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>অনুশীলনী ৬.১ — বীজগাণিতিক ভগ্নাংশ | সম্পূর্ণ সমাধান (NCTB)</title>
+<meta name="description" content="অধ্যায় ৬ বীজগাণিতিক ভগ্নাংশ, অনুশীলনী ৬.১ এর ১-২০ নং প্রশ্নের ধাপে ধাপে বিস্তারিত সমাধান — লঘিষ্ঠ আকার ও সাধারণ হরবিশিষ্ট ভগ্নাংশ।">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'SolaimanLipi', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #212529;
+    line-height: 1.8;
+    font-size: 17px;
+  }
+  .container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+    background: #f8f9fa;
+  }
+  header.page-header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  header.page-header h1 {
+    font-size: 30px;
+    color: #1e7e34;
+    margin-bottom: 4px;
+  }
+  header.page-header p {
+    color: #6c757d;
+    font-size: 16px;
+  }
+  .section-title {
+    font-size: 21px;
+    font-weight: bold;
+    color: #212529;
+    margin: 32px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dee2e6;
+  }
+  .solution-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    border-left: 6px solid #28a745;
+    margin-bottom: 22px;
+  }
+  .question-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 14px;
+  }
+  .question-number {
+    display: inline-block;
+    background: #28a745;
+    color: #ffffff;
+    padding: 3px 16px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .label {
+    font-weight: bold;
+    color: #1e7e34;
+    margin: 10px 0 6px;
+  }
+  .step {
+    margin: 8px 0;
+    padding-left: 4px;
+    overflow-x: auto;
+  }
+  .step-note {
+    color: #495057;
+    font-size: 15.5px;
+  }
+  .math {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 19px;
+    white-space: nowrap;
+  }
+  .math .up { font-style: normal; }
+  .frac {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    margin: 0 3px;
+    text-align: center;
+  }
+  .frac > span { padding: 0 4px; line-height: 1.35; }
+  .frac > span:first-child { border-bottom: 1.5px solid #212529; }
+  .eq { margin: 0 6px; font-style: normal; }
+  .cancel { text-decoration: line-through; text-decoration-color: #dc3545; text-decoration-thickness: 2px; }
+  .answer {
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: #eaf7ee;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #155724;
+    overflow-x: auto;
+  }
+  .lcm-box {
+    background: #f1f3f5;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 8px 0;
+    overflow-x: auto;
+  }
+  footer {
+    text-align: center;
+    color: #6c757d;
+    font-size: 14px;
+    margin-top: 32px;
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .solution-card { padding: 16px; }
+    header.page-header h1 { font-size: 25px; }
+    .math { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<main class="container">
+
+  <header class="page-header">
+    <h1>অনুশীলনী ৬.১</h1>
+    <p>অধ্যায় ৬ : বীজগাণিতিক ভগ্নাংশ — ধাপে ধাপে সম্পূর্ণ সমাধান</p>
+  </header>
+
+  <!-- ================= Part 1 ================= -->
+  <h2 class="section-title">লঘিষ্ঠ আকারে প্রকাশ করো (১-১০)।</h2>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ১</span>
+      <span class="math"><span class="frac"><span>a<sup>2</sup>b</span><span>a<sup>3</sup>c</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">লব <span class="math">a<sup>2</sup>b</span> এবং হর <span class="math">a<sup>3</sup>c</span> এর সাধারণ গুণনীয়ক <span class="math">a<sup>2</sup></span>। লব ও হরকে <span class="math">a<sup>2</sup></span> দ্বারা ভাগ করি।</p>
+    <p class="step">প্রদত্ত ভগ্নাংশ <span class="math"><span class="eq">=</span><span class="frac"><span>a<sup>2</sup>b</span><span>a<sup>3</sup>c</span></span>
+      <span class="eq">=</span><span class="frac"><span>a<sup>2</sup> × b</span><span>a<sup>2</sup> × ac</span></span>
+      <span class="eq">=</span><span class="frac"><span>b</span><span>ac</span></span></span></p>
+    <p class="answer">নির্ণেয় লঘিষ্ঠ আকার: <span class="math"><span class="frac"><span>b</span><span>ac</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ২</span>
+      <span class="math"><span class="frac"><span>a<sup>2</sup>bc</span><span>ab<sup>2</sup>c</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">লব ও হরের সাধারণ গুণনীয়ক <span class="math">abc</span>। লব ও হরকে <span class="math">abc</span> দ্বারা ভাগ করি।</p>
+    <p class="step">প্রদত্ত ভগ্নাংশ <span class="math"><span class="eq">=</span><span class="frac"><span>a<sup>2</sup>bc</span><span>ab<sup>2</sup>c</span></span>
+      <span class="eq">=</span><span class="frac"><span>abc × a</span><span>abc × b</span></span>
+      <span class="eq">=</span><span class="frac"><span>a</span><span>b</span></span></span></p>
+    <p class="answer">নির্ণেয় লঘিষ্ঠ আকার: <span class="math"><span class="frac"><span>a</span><span>b</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ৩</span>
+      <span class="math"><span class="frac"><span>x<sup>3</sup>y<sup>3</sup>z<sup>3</sup></span><span>x<sup>2</sup>y<sup>2</sup>z<sup>2</sup></span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">লব ও হরের সাধারণ গুণনীয়ক <span class="math">x<sup>2</sup>y<sup>2</sup>z<sup>2</sup></span>। লব ও হরকে এটি দ্বারা ভাগ করি।</p>
+    <p class="step">প্রদত্ত ভগ্নাংশ <span class="math"><span class="eq">=</span><span class="frac"><span>x<sup>3</sup>y<sup>3</sup>z<sup>3</sup></span><span>x<sup>2</sup>y<sup>2</sup>z<sup>2</sup></span></span>
+      <span class="eq">=</span><span class="frac"><span>x<sup>2</sup>y<sup>2</sup>z<sup>2</sup> × xyz</span><span>x<sup>2</sup>y<sup>2</sup>z<sup>2</sup> × 1</span></span>
+      <span class="eq">=</span>xyz</span></p>
+    <p class="answer">নির্ণেয় লঘিষ্ঠ আকার: <span class="math">xyz</span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ৪</span>
+      <span class="math"><span class="frac"><span>x<sup>2</sup> + x</span><span>xy + y</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">লব: <span class="math">x<sup>2</sup> + x = x(x + 1)</span> &nbsp;|&nbsp; হর: <span class="math">xy + y = y(x + 1)</span></p>
+    <p class="step">প্রদত্ত ভগ্নাংশ <span class="math"><span class="eq">=</span><span class="frac"><span>x<sup>2</sup> + x</span><span>xy + y</span></span>
+      <span class="eq">=</span><span class="frac"><span>x(x + 1)</span><span>y(x + 1)</span></span>
+      <span class="eq">=</span><span class="frac"><span>x</span><span>y</span></span></span></p>
+    <p class="step step-note">[লব ও হরকে সাধারণ গুণনীয়ক <span class="math">(x + 1)</span> দ্বারা ভাগ করে]</p>
+    <p class="answer">নির্ণেয় লঘিষ্ঠ আকার: <span class="math"><span class="frac"><span>x</span><span>y</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ৫</span>
+      <span class="math"><span class="frac"><span>4a<sup>2</sup>b</span><span>6a<sup>3</sup>b</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">4 ও 6 এর গ.সা.গু. 2; সুতরাং লব ও হরের সাধারণ গুণনীয়ক <span class="math">2a<sup>2</sup>b</span>।</p>
+    <p class="step">প্রদত্ত ভগ্নাংশ <span class="math"><span class="eq">=</span><span class="frac"><span>4a<sup>2</sup>b</span><span>6a<sup>3</sup>b</span></span>
+      <span class="eq">=</span><span class="frac"><span>2a<sup>2</sup>b × 2</span><span>2a<sup>2</sup>b × 3a</span></span>
+      <span class="eq">=</span><span class="frac"><span>2</span><span>3a</span></span></span></p>
+    <p class="answer">নির্ণেয় লঘিষ্ঠ আকার: <span class="math"><span class="frac"><span>2</span><span>3a</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ৬</span>
+      <span class="math"><span class="frac"><span>2a − 4ab</span><span>1 − 4b<sup>2</sup></span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">লব: <span class="math">2a − 4ab = 2a(1 − 2b)</span></p>
+    <p class="step step-note">হর: <span class="math">1 − 4b<sup>2</sup> = (1)<sup>2</sup> − (2b)<sup>2</sup> = (1 + 2b)(1 − 2b)</span> &nbsp;[<span class="math">a<sup>2</sup> − b<sup>2</sup> = (a + b)(a − b)</span> সূত্র প্রয়োগ করে]</p>
+    <p class="step">প্রদত্ত ভগ্নাংশ <span class="math"><span class="eq">=</span><span class="frac"><span>2a(1 − 2b)</span><span>(1 + 2b)(1 − 2b)</span></span>
+      <span class="eq">=</span><span class="frac"><span>2a</span><span>1 + 2b</span></span></span></p>
+    <p class="step step-note">[লব ও হরকে <span class="math">(1 − 2b)</span> দ্বারা ভাগ করে]</p>
+    <p class="answer">নির্ণেয় লঘিষ্ঠ আকার: <span class="math"><span class="frac"><span>2a</span><span>1 + 2b</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ৭</span>
+      <span class="math"><span class="frac"><span>2a + 3b</span><span>4a<sup>2</sup> − 9b<sup>2</sup></span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">হর: <span class="math">4a<sup>2</sup> − 9b<sup>2</sup> = (2a)<sup>2</sup> − (3b)<sup>2</sup> = (2a + 3b)(2a − 3b)</span></p>
+    <p class="step">প্রদত্ত ভগ্নাংশ <span class="math"><span class="eq">=</span><span class="frac"><span>2a + 3b</span><span>(2a + 3b)(2a − 3b)</span></span>
+      <span class="eq">=</span><span class="frac"><span>1</span><span>2a − 3b</span></span></span></p>
+    <p class="step step-note">[লব ও হরকে <span class="math">(2a + 3b)</span> দ্বারা ভাগ করে]</p>
+    <p class="answer">নির্ণেয় লঘিষ্ঠ আকার: <span class="math"><span class="frac"><span>1</span><span>2a − 3b</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ৮</span>
+      <span class="math"><span class="frac"><span>a<sup>2</sup> + 4a + 4</span><span>a<sup>2</sup> − 4</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">লব: <span class="math">a<sup>2</sup> + 4a + 4 = (a)<sup>2</sup> + 2·a·2 + (2)<sup>2</sup> = (a + 2)<sup>2</sup> = (a + 2)(a + 2)</span></p>
+    <p class="step step-note">হর: <span class="math">a<sup>2</sup> − 4 = (a)<sup>2</sup> − (2)<sup>2</sup> = (a + 2)(a − 2)</span></p>
+    <p class="step">প্রদত্ত ভগ্নাংশ <span class="math"><span class="eq">=</span><span class="frac"><span>(a + 2)(a + 2)</span><span>(a + 2)(a − 2)</span></span>
+      <span class="eq">=</span><span class="frac"><span>a + 2</span><span>a − 2</span></span></span></p>
+    <p class="step step-note">[লব ও হরকে <span class="math">(a + 2)</span> দ্বারা ভাগ করে]</p>
+    <p class="answer">নির্ণেয় লঘিষ্ঠ আকার: <span class="math"><span class="frac"><span>a + 2</span><span>a − 2</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ৯</span>
+      <span class="math"><span class="frac"><span>x<sup>2</sup> − y<sup>2</sup></span><span>(x + y)<sup>2</sup></span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">লব: <span class="math">x<sup>2</sup> − y<sup>2</sup> = (x + y)(x − y)</span> &nbsp;|&nbsp; হর: <span class="math">(x + y)<sup>2</sup> = (x + y)(x + y)</span></p>
+    <p class="step">প্রদত্ত ভগ্নাংশ <span class="math"><span class="eq">=</span><span class="frac"><span>(x + y)(x − y)</span><span>(x + y)(x + y)</span></span>
+      <span class="eq">=</span><span class="frac"><span>x − y</span><span>x + y</span></span></span></p>
+    <p class="step step-note">[লব ও হরকে <span class="math">(x + y)</span> দ্বারা ভাগ করে]</p>
+    <p class="answer">নির্ণেয় লঘিষ্ঠ আকার: <span class="math"><span class="frac"><span>x − y</span><span>x + y</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ১০</span>
+      <span class="math"><span class="frac"><span>x<sup>2</sup> + 2x − 15</span><span>x<sup>2</sup> + 9x + 20</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">লব (মধ্যপদ বিভক্তিকরণ; গুণফল −15, যোগফল 2 → 5 ও −3):</p>
+    <p class="step"><span class="math">x<sup>2</sup> + 2x − 15 = x<sup>2</sup> + 5x − 3x − 15 = x(x + 5) − 3(x + 5) = (x + 5)(x − 3)</span></p>
+    <p class="step step-note">হর (গুণফল 20, যোগফল 9 → 5 ও 4):</p>
+    <p class="step"><span class="math">x<sup>2</sup> + 9x + 20 = x<sup>2</sup> + 5x + 4x + 20 = x(x + 5) + 4(x + 5) = (x + 5)(x + 4)</span></p>
+    <p class="step">প্রদত্ত ভগ্নাংশ <span class="math"><span class="eq">=</span><span class="frac"><span>(x + 5)(x − 3)</span><span>(x + 5)(x + 4)</span></span>
+      <span class="eq">=</span><span class="frac"><span>x − 3</span><span>x + 4</span></span></span></p>
+    <p class="step step-note">[লব ও হরকে <span class="math">(x + 5)</span> দ্বারা ভাগ করে]</p>
+    <p class="answer">নির্ণেয় লঘিষ্ঠ আকার: <span class="math"><span class="frac"><span>x − 3</span><span>x + 4</span></span></span></p>
+  </article>
+
+  <!-- ================= Part 2 ================= -->
+  <h2 class="section-title">সাধারণ হরবিশিষ্ট ভগ্নাংশে প্রকাশ করো (১১-২০)।</h2>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ১১</span>
+      <span class="math"><span class="frac"><span>a</span><span>bc</span></span>, <span class="frac"><span>a</span><span>ac</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <div class="lcm-box">হরগুলো: <span class="math">bc</span> ও <span class="math">ac</span> &nbsp;∴ ল.সা.গু. <span class="math">= abc</span></div>
+    <p class="step step-note">১ম ভগ্নাংশ: <span class="math">abc ÷ bc = a</span>; ২য় ভগ্নাংশ: <span class="math">abc ÷ ac = b</span></p>
+    <p class="step"><span class="math"><span class="frac"><span>a</span><span>bc</span></span><span class="eq">=</span><span class="frac"><span>a × a</span><span>bc × a</span></span><span class="eq">=</span><span class="frac"><span>a<sup>2</sup></span><span>abc</span></span></span></p>
+    <p class="step"><span class="math"><span class="frac"><span>a</span><span>ac</span></span><span class="eq">=</span><span class="frac"><span>a × b</span><span>ac × b</span></span><span class="eq">=</span><span class="frac"><span>ab</span><span>abc</span></span></span></p>
+    <p class="answer">নির্ণেয় ভগ্নাংশ: <span class="math"><span class="frac"><span>a<sup>2</sup></span><span>abc</span></span>, <span class="frac"><span>ab</span><span>abc</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ১২</span>
+      <span class="math"><span class="frac"><span>x</span><span>pq</span></span>, <span class="frac"><span>y</span><span>pr</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <div class="lcm-box">হরগুলো: <span class="math">pq</span> ও <span class="math">pr</span> &nbsp;∴ ল.সা.গু. <span class="math">= pqr</span></div>
+    <p class="step step-note"><span class="math">pqr ÷ pq = r</span>; &nbsp;<span class="math">pqr ÷ pr = q</span></p>
+    <p class="step"><span class="math"><span class="frac"><span>x</span><span>pq</span></span><span class="eq">=</span><span class="frac"><span>x × r</span><span>pq × r</span></span><span class="eq">=</span><span class="frac"><span>rx</span><span>pqr</span></span></span></p>
+    <p class="step"><span class="math"><span class="frac"><span>y</span><span>pr</span></span><span class="eq">=</span><span class="frac"><span>y × q</span><span>pr × q</span></span><span class="eq">=</span><span class="frac"><span>qy</span><span>pqr</span></span></span></p>
+    <p class="answer">নির্ণেয় ভগ্নাংশ: <span class="math"><span class="frac"><span>rx</span><span>pqr</span></span>, <span class="frac"><span>qy</span><span>pqr</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ১৩</span>
+      <span class="math"><span class="frac"><span>2x</span><span>3m</span></span>, <span class="frac"><span>3y</span><span>2n</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <div class="lcm-box">হরগুলো: <span class="math">3m</span> ও <span class="math">2n</span> &nbsp;|&nbsp; 3 ও 2 এর ল.সা.গু. 6 &nbsp;∴ ল.সা.গু. <span class="math">= 6mn</span></div>
+    <p class="step step-note"><span class="math">6mn ÷ 3m = 2n</span>; &nbsp;<span class="math">6mn ÷ 2n = 3m</span></p>
+    <p class="step"><span class="math"><span class="frac"><span>2x</span><span>3m</span></span><span class="eq">=</span><span class="frac"><span>2x × 2n</span><span>3m × 2n</span></span><span class="eq">=</span><span class="frac"><span>4nx</span><span>6mn</span></span></span></p>
+    <p class="step"><span class="math"><span class="frac"><span>3y</span><span>2n</span></span><span class="eq">=</span><span class="frac"><span>3y × 3m</span><span>2n × 3m</span></span><span class="eq">=</span><span class="frac"><span>9my</span><span>6mn</span></span></span></p>
+    <p class="answer">নির্ণেয় ভগ্নাংশ: <span class="math"><span class="frac"><span>4nx</span><span>6mn</span></span>, <span class="frac"><span>9my</span><span>6mn</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ১৪</span>
+      <span class="math"><span class="frac"><span>a</span><span>a − b</span></span>, <span class="frac"><span>b</span><span>a + b</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <div class="lcm-box">হরগুলো: <span class="math">(a − b)</span> ও <span class="math">(a + b)</span> &nbsp;∴ ল.সা.গু. <span class="math">= (a − b)(a + b) = a<sup>2</sup> − b<sup>2</sup></span></div>
+    <p class="step step-note"><span class="math">(a<sup>2</sup> − b<sup>2</sup>) ÷ (a − b) = a + b</span>; &nbsp;<span class="math">(a<sup>2</sup> − b<sup>2</sup>) ÷ (a + b) = a − b</span></p>
+    <p class="step"><span class="math"><span class="frac"><span>a</span><span>a − b</span></span><span class="eq">=</span><span class="frac"><span>a(a + b)</span><span>(a − b)(a + b)</span></span><span class="eq">=</span><span class="frac"><span>a(a + b)</span><span>a<sup>2</sup> − b<sup>2</sup></span></span></span></p>
+    <p class="step"><span class="math"><span class="frac"><span>b</span><span>a + b</span></span><span class="eq">=</span><span class="frac"><span>b(a − b)</span><span>(a + b)(a − b)</span></span><span class="eq">=</span><span class="frac"><span>b(a − b)</span><span>a<sup>2</sup> − b<sup>2</sup></span></span></span></p>
+    <p class="answer">নির্ণেয় ভগ্নাংশ: <span class="math"><span class="frac"><span>a(a + b)</span><span>a<sup>2</sup> − b<sup>2</sup></span></span>, <span class="frac"><span>b(a − b)</span><span>a<sup>2</sup> − b<sup>2</sup></span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ১৫</span>
+      <span class="math"><span class="frac"><span>x<sup>2</sup></span><span>a<sup>2</sup> − 2ab</span></span>, <span class="frac"><span>y<sup>2</sup></span><span>a + 2b</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">১ম হর: <span class="math">a<sup>2</sup> − 2ab = a(a − 2b)</span> &nbsp;|&nbsp; ২য় হর: <span class="math">(a + 2b)</span></p>
+    <div class="lcm-box">∴ ল.সা.গু. <span class="math">= a(a − 2b)(a + 2b) = a(a<sup>2</sup> − 4b<sup>2</sup>)</span></div>
+    <p class="step step-note"><span class="math">a(a − 2b)(a + 2b) ÷ a(a − 2b) = a + 2b</span>; &nbsp;<span class="math">a(a − 2b)(a + 2b) ÷ (a + 2b) = a(a − 2b)</span></p>
+    <p class="step"><span class="math"><span class="frac"><span>x<sup>2</sup></span><span>a(a − 2b)</span></span><span class="eq">=</span><span class="frac"><span>x<sup>2</sup>(a + 2b)</span><span>a(a − 2b)(a + 2b)</span></span><span class="eq">=</span><span class="frac"><span>x<sup>2</sup>(a + 2b)</span><span>a(a<sup>2</sup> − 4b<sup>2</sup>)</span></span></span></p>
+    <p class="step"><span class="math"><span class="frac"><span>y<sup>2</sup></span><span>a + 2b</span></span><span class="eq">=</span><span class="frac"><span>y<sup>2</sup> · a(a − 2b)</span><span>(a + 2b) · a(a − 2b)</span></span><span class="eq">=</span><span class="frac"><span>ay<sup>2</sup>(a − 2b)</span><span>a(a<sup>2</sup> − 4b<sup>2</sup>)</span></span></span></p>
+    <p class="answer">নির্ণেয় ভগ্নাংশ: <span class="math"><span class="frac"><span>x<sup>2</sup>(a + 2b)</span><span>a(a<sup>2</sup> − 4b<sup>2</sup>)</span></span>, <span class="frac"><span>ay<sup>2</sup>(a − 2b)</span><span>a(a<sup>2</sup> − 4b<sup>2</sup>)</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ১৬</span>
+      <span class="math"><span class="frac"><span>3</span><span>a<sup>2</sup> − 4</span></span>, <span class="frac"><span>2</span><span>a(a + 2)</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">১ম হর: <span class="math">a<sup>2</sup> − 4 = (a)<sup>2</sup> − (2)<sup>2</sup> = (a + 2)(a − 2)</span> &nbsp;|&nbsp; ২য় হর: <span class="math">a(a + 2)</span></p>
+    <div class="lcm-box">∴ ল.সা.গু. <span class="math">= a(a + 2)(a − 2) = a(a<sup>2</sup> − 4)</span></div>
+    <p class="step step-note"><span class="math">a(a + 2)(a − 2) ÷ (a + 2)(a − 2) = a</span>; &nbsp;<span class="math">a(a + 2)(a − 2) ÷ a(a + 2) = a − 2</span></p>
+    <p class="step"><span class="math"><span class="frac"><span>3</span><span>a<sup>2</sup> − 4</span></span><span class="eq">=</span><span class="frac"><span>3 × a</span><span>(a<sup>2</sup> − 4) × a</span></span><span class="eq">=</span><span class="frac"><span>3a</span><span>a(a<sup>2</sup> − 4)</span></span></span></p>
+    <p class="step"><span class="math"><span class="frac"><span>2</span><span>a(a + 2)</span></span><span class="eq">=</span><span class="frac"><span>2(a − 2)</span><span>a(a + 2)(a − 2)</span></span><span class="eq">=</span><span class="frac"><span>2(a − 2)</span><span>a(a<sup>2</sup> − 4)</span></span></span></p>
+    <p class="answer">নির্ণেয় ভগ্নাংশ: <span class="math"><span class="frac"><span>3a</span><span>a(a<sup>2</sup> − 4)</span></span>, <span class="frac"><span>2(a − 2)</span><span>a(a<sup>2</sup> − 4)</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ১৭</span>
+      <span class="math"><span class="frac"><span>a</span><span>a<sup>2</sup> − 9</span></span>, <span class="frac"><span>b</span><span>a + 3</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">১ম হর: <span class="math">a<sup>2</sup> − 9 = (a)<sup>2</sup> − (3)<sup>2</sup> = (a + 3)(a − 3)</span> &nbsp;|&nbsp; ২য় হর: <span class="math">(a + 3)</span></p>
+    <div class="lcm-box">∴ ল.সা.গু. <span class="math">= (a + 3)(a − 3) = a<sup>2</sup> − 9</span></div>
+    <p class="step step-note"><span class="math">(a<sup>2</sup> − 9) ÷ (a<sup>2</sup> − 9) = 1</span>; &nbsp;<span class="math">(a<sup>2</sup> − 9) ÷ (a + 3) = a − 3</span></p>
+    <p class="step"><span class="math"><span class="frac"><span>a</span><span>a<sup>2</sup> − 9</span></span><span class="eq">=</span><span class="frac"><span>a × 1</span><span>(a<sup>2</sup> − 9) × 1</span></span><span class="eq">=</span><span class="frac"><span>a</span><span>a<sup>2</sup> − 9</span></span></span></p>
+    <p class="step"><span class="math"><span class="frac"><span>b</span><span>a + 3</span></span><span class="eq">=</span><span class="frac"><span>b(a − 3)</span><span>(a + 3)(a − 3)</span></span><span class="eq">=</span><span class="frac"><span>b(a − 3)</span><span>a<sup>2</sup> − 9</span></span></span></p>
+    <p class="answer">নির্ণেয় ভগ্নাংশ: <span class="math"><span class="frac"><span>a</span><span>a<sup>2</sup> − 9</span></span>, <span class="frac"><span>b(a − 3)</span><span>a<sup>2</sup> − 9</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ১৮</span>
+      <span class="math"><span class="frac"><span>a</span><span>a + b</span></span>, <span class="frac"><span>b</span><span>a − b</span></span>, <span class="frac"><span>c</span><span>a − c</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <div class="lcm-box">হরগুলো: <span class="math">(a + b)</span>, <span class="math">(a − b)</span> ও <span class="math">(a − c)</span> &nbsp;∴ ল.সা.গু. <span class="math">= (a + b)(a − b)(a − c) = (a<sup>2</sup> − b<sup>2</sup>)(a − c)</span></div>
+    <p class="step step-note">ল.সা.গু. ÷ <span class="math">(a + b) = (a − b)(a − c)</span>; &nbsp;ল.সা.গু. ÷ <span class="math">(a − b) = (a + b)(a − c)</span>; &nbsp;ল.সা.গু. ÷ <span class="math">(a − c) = (a + b)(a − b)</span></p>
+    <p class="step"><span class="math"><span class="frac"><span>a</span><span>a + b</span></span><span class="eq">=</span><span class="frac"><span>a(a − b)(a − c)</span><span>(a + b)(a − b)(a − c)</span></span><span class="eq">=</span><span class="frac"><span>a(a − b)(a − c)</span><span>(a<sup>2</sup> − b<sup>2</sup>)(a − c)</span></span></span></p>
+    <p class="step"><span class="math"><span class="frac"><span>b</span><span>a − b</span></span><span class="eq">=</span><span class="frac"><span>b(a + b)(a − c)</span><span>(a − b)(a + b)(a − c)</span></span><span class="eq">=</span><span class="frac"><span>b(a + b)(a − c)</span><span>(a<sup>2</sup> − b<sup>2</sup>)(a − c)</span></span></span></p>
+    <p class="step"><span class="math"><span class="frac"><span>c</span><span>a − c</span></span><span class="eq">=</span><span class="frac"><span>c(a + b)(a − b)</span><span>(a − c)(a + b)(a − b)</span></span><span class="eq">=</span><span class="frac"><span>c(a<sup>2</sup> − b<sup>2</sup>)</span><span>(a<sup>2</sup> − b<sup>2</sup>)(a − c)</span></span></span></p>
+    <p class="answer">নির্ণেয় ভগ্নাংশ: <span class="math"><span class="frac"><span>a(a − b)(a − c)</span><span>(a<sup>2</sup> − b<sup>2</sup>)(a − c)</span></span>, <span class="frac"><span>b(a + b)(a − c)</span><span>(a<sup>2</sup> − b<sup>2</sup>)(a − c)</span></span>, <span class="frac"><span>c(a<sup>2</sup> − b<sup>2</sup>)</span><span>(a<sup>2</sup> − b<sup>2</sup>)(a − c)</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ১৯</span>
+      <span class="math"><span class="frac"><span>a</span><span>a − b</span></span>, <span class="frac"><span>b</span><span>a + b</span></span>, <span class="frac"><span>c</span><span>a(a + b)</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <div class="lcm-box">হরগুলো: <span class="math">(a − b)</span>, <span class="math">(a + b)</span> ও <span class="math">a(a + b)</span> &nbsp;∴ ল.সা.গু. <span class="math">= a(a + b)(a − b) = a(a<sup>2</sup> − b<sup>2</sup>)</span></div>
+    <p class="step step-note">ল.সা.গু. ÷ <span class="math">(a − b) = a(a + b)</span>; &nbsp;ল.সা.গু. ÷ <span class="math">(a + b) = a(a − b)</span>; &nbsp;ল.সা.গু. ÷ <span class="math">a(a + b) = (a − b)</span></p>
+    <p class="step"><span class="math"><span class="frac"><span>a</span><span>a − b</span></span><span class="eq">=</span><span class="frac"><span>a · a(a + b)</span><span>(a − b) · a(a + b)</span></span><span class="eq">=</span><span class="frac"><span>a<sup>2</sup>(a + b)</span><span>a(a<sup>2</sup> − b<sup>2</sup>)</span></span></span></p>
+    <p class="step"><span class="math"><span class="frac"><span>b</span><span>a + b</span></span><span class="eq">=</span><span class="frac"><span>b · a(a − b)</span><span>(a + b) · a(a − b)</span></span><span class="eq">=</span><span class="frac"><span>ab(a − b)</span><span>a(a<sup>2</sup> − b<sup>2</sup>)</span></span></span></p>
+    <p class="step"><span class="math"><span class="frac"><span>c</span><span>a(a + b)</span></span><span class="eq">=</span><span class="frac"><span>c(a − b)</span><span>a(a + b)(a − b)</span></span><span class="eq">=</span><span class="frac"><span>c(a − b)</span><span>a(a<sup>2</sup> − b<sup>2</sup>)</span></span></span></p>
+    <p class="answer">নির্ণেয় ভগ্নাংশ: <span class="math"><span class="frac"><span>a<sup>2</sup>(a + b)</span><span>a(a<sup>2</sup> − b<sup>2</sup>)</span></span>, <span class="frac"><span>ab(a − b)</span><span>a(a<sup>2</sup> − b<sup>2</sup>)</span></span>, <span class="frac"><span>c(a − b)</span><span>a(a<sup>2</sup> − b<sup>2</sup>)</span></span></span></p>
+  </article>
+
+  <article class="solution-card">
+    <h3 class="question-title"><span class="question-number">প্রশ্ন ২০</span>
+      <span class="math"><span class="frac"><span>2</span><span>x<sup>2</sup> − x − 2</span></span>, <span class="frac"><span>3</span><span>x<sup>2</sup> + x − 6</span></span></span></h3>
+    <p class="label">সমাধান:</p>
+    <p class="step step-note">১ম হর (গুণফল −2, যোগফল −1 → −2 ও 1):</p>
+    <p class="step"><span class="math">x<sup>2</sup> − x − 2 = x<sup>2</sup> − 2x + x − 2 = x(x − 2) + 1(x − 2) = (x − 2)(x + 1)</span></p>
+    <p class="step step-note">২য় হর (গুণফল −6, যোগফল 1 → 3 ও −2):</p>
+    <p class="step"><span class="math">x<sup>2</sup> + x − 6 = x<sup>2</sup> + 3x − 2x − 6 = x(x + 3) − 2(x + 3) = (x + 3)(x − 2)</span></p>
+    <div class="lcm-box">∴ ল.সা.গু. <span class="math">= (x − 2)(x + 1)(x + 3)</span></div>
+    <p class="step step-note">ল.সা.গু. ÷ <span class="math">(x − 2)(x + 1) = (x + 3)</span>; &nbsp;ল.সা.গু. ÷ <span class="math">(x − 2)(x + 3) = (x + 1)</span></p>
+    <p class="step"><span class="math"><span class="frac"><span>2</span><span>(x − 2)(x + 1)</span></span><span class="eq">=</span><span class="frac"><span>2(x + 3)</span><span>(x − 2)(x + 1)(x + 3)</span></span></span></p>
+    <p class="step"><span class="math"><span class="frac"><span>3</span><span>(x + 3)(x − 2)</span></span><span class="eq">=</span><span class="frac"><span>3(x + 1)</span><span>(x − 2)(x + 1)(x + 3)</span></span></span></p>
+    <p class="answer">নির্ণেয় ভগ্নাংশ: <span class="math"><span class="frac"><span>2(x + 3)</span><span>(x − 2)(x + 1)(x + 3)</span></span>, <span class="frac"><span>3(x + 1)</span><span>(x − 2)(x + 1)(x + 3)</span></span></span></p>
+  </article>
+
+  <footer>অধ্যায় ৬ : বীজগাণিতিক ভগ্নাংশ — অনুশীলনী ৬.১ (NCTB)</footer>
+</main>
+</body>
+</html>
