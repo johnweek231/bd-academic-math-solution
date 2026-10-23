@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>অনুশীলনী ৭.৩ — সরল সমীকরণ | NCTB গণিত</title>
+<style>
+  :root { --green:#28a745; --ink:#20252b; --muted:#5c6670; --paper:#f8f9fa; --line:#dce6df; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#eef2ef; color:var(--ink); font-family:'SolaimanLipi',Arial,sans-serif; line-height:1.8; }
+  .container { width:calc(100% - 28px); max-width:850px; margin:28px auto; padding:22px; background:#f8f9fa; border-radius:14px; }
+  header { text-align:center; padding:10px 8px 20px; }
+  h1 { margin:0 0 5px; font-size:clamp(1.45rem,4vw,2rem); }
+  header p { margin:0; color:var(--muted); }
+  .section-title { margin:28px 0 14px; padding:0 0 7px; border-bottom:2px solid var(--line); font-size:1.22rem; }
+  .solution-card { background:#ffffff; padding:22px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.06); border-left:6px solid #28a745; margin:0 0 16px; overflow-wrap:anywhere; }
+  .question-title { display:flex; align-items:flex-start; gap:10px; margin:0 0 12px; font-size:1.05rem; line-height:1.65; }
+  .question-number { display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; min-width:38px; padding:2px 12px; border-radius:999px; background:#28a745; color:#fff; font-size:.95rem; font-weight:700; line-height:1.7; }
+  .options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px 14px; margin:10px 0 14px; padding:12px 14px; background:#f5f8f5; border-radius:8px; }
+  .math { font-family:Cambria,"Times New Roman",serif; font-size:1.08em; letter-spacing:.01em; }
+  .work { margin:8px 0; }
+  .formula { background:#f3f8f4; border-radius:7px; padding:9px 12px; margin:10px 0; border-left:3px solid #b6dfbf; }
+  .answer { margin-top:13px; padding:10px 13px; border-radius:8px; background:#eaf7ed; color:#145c28; font-weight:700; }
+  .subpart { margin:14px 0 5px; }
+  .subpart strong { color:#176b30; }
+  .note { margin-top:10px; padding:10px 12px; border-radius:8px; background:#fff7e6; color:#705019; }
+  .graph-wrap { margin:12px 0; padding:10px; border:1px solid #e4eae5; border-radius:8px; background:#fbfdfb; }
+  .graph-wrap svg { display:block; width:100%; max-width:400px; height:auto; margin:auto; }
+  .graph-caption { margin:6px 0 0; text-align:center; color:var(--muted); font-size:.92rem; }
+  .tickline { display:block; width:100%; max-width:390px; height:auto; margin:8px auto; }
+  .footer { text-align:center; color:var(--muted); padding:18px 4px 4px; font-size:.9rem; }
+  @media (max-width:560px) {
+    .container { width:100%; margin:0; padding:14px; border-radius:0; }
+    .solution-card { padding:16px; }
+    .options { grid-template-columns:1fr; }
+    .question-title { font-size:1rem; }
+  }
+  @media print {
+    body { background:#fff; }
+    .container { width:100%; max-width:none; margin:0; padding:0; background:#fff; }
+    .solution-card { box-shadow:none; break-inside:avoid; border:1px solid #ddd; border-left:5px solid #28a745; }
+  }
+</style>
+</head>
+<body>
+<main class="container">
+<header>
+  <h1>অনুশীলনী ৭.৩</h1>
+  <p>অধ্যায় ৭: সরল সমীকরণ — NCTB গণিতের ধাপে ধাপে সমাধান</p>
+</header>
+
+<h2 class="section-title">অনুশীলনী ৭.৩ — বহুনির্বাচনি ও অনুশীলনী</h2>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১</span><span><span class="math">x/3 − 3 = 0</span> সমীকরণের মূল নিচের কোনটি?</span></h3>
+  <div class="options"><div>(ক) −9</div><div>(খ) −3</div><div>(গ) 3</div><div>(ঘ) 9</div></div>
+  <div class="work">প্রদত্ত সমীকরণ, <span class="math">x/3 − 3 = 0</span>। উভয় পাশে 3 যোগ করলে পাই, <span class="math">x/3 = 3</span>।</div>
+  <div class="work">উভয় পাশে 3 গুণ করলে, <span class="math">x = 3 × 3 = 9</span>।</div>
+  <div class="answer">সঠিক উত্তর: (ঘ) 9</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">২</span><span>কোনো সংখ্যার এক-চতুর্থাংশ 4-এর সমান হবে?</span></h3>
+  <div class="options"><div>(ক) 16</div><div>(খ) 4</div><div>(গ) 1/4</div><div>(ঘ) 1/16</div></div>
+  <div class="work">ধরি, সংখ্যাটি <span class="math">x</span>। প্রশ্নমতে, <span class="math">x/4 = 4</span>।</div>
+  <div class="work">উভয় পাশে 4 গুণ করলে, <span class="math">x = 4 × 4 = 16</span>।</div>
+  <div class="answer">সঠিক উত্তর: (ক) 16</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৩</span><span><span class="math">(2, −2)</span> বিন্দুটি কোন চতুর্ভাগে অবস্থিত?</span></h3>
+  <div class="options"><div>(ক) প্রথম</div><div>(খ) দ্বিতীয়</div><div>(গ) তৃতীয়</div><div>(ঘ) চতুর্থ</div></div>
+  <div class="work">স্থানাঙ্ক <span class="math">(x,y) = (2,−2)</span>। এখানে <span class="math">x=2</span> ধনাত্মক এবং <span class="math">y=−2</span> ঋণাত্মক। যে বিন্দুর ভুজ ধনাত্মক ও কোটি ঋণাত্মক, সেটি চতুর্থ চতুর্ভাগে থাকে।</div>
+  <div class="answer">সঠিক উত্তর: (ঘ) চতুর্থ চতুর্ভাগ</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৪</span><span><span class="math">y</span>-অক্ষ বরাবর কোনো বিন্দুর ভুজ কত?</span></h3>
+  <div class="options"><div>(ক) 0</div><div>(খ) 1</div><div>(গ) <span class="math">x</span></div><div>(ঘ) <span class="math">y</span></div></div>
+  <div class="work">কোনো বিন্দু <span class="math">y</span>-অক্ষের ওপর থাকলে তার <span class="math">x</span>-স্থানাঙ্ক বা ভুজ শূন্য হয়। ওই বিন্দুর স্থানাঙ্কের রূপ <span class="math">(0,y)</span>।</div>
+  <div class="answer">সঠিক উত্তর: (ক) 0</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৫</span><span>দুটি সংখ্যার বিয়োগফল <span class="math">y</span>, বড়ো সংখ্যাটি <span class="math">z</span> হলে ছোটো সংখ্যাটি কত?</span></h3>
+  <div class="options"><div>(ক) <span class="math">z − y</span></div><div>(খ) <span class="math">z + y</span></div><div>(গ) <span class="math">−y − z</span></div><div>(ঘ) <span class="math">−z + y</span></div></div>
+  <div class="work">বড়ো সংখ্যা − ছোটো সংখ্যা = বিয়োগফল।</div>
+  <div class="work"><span class="math">z −</span> ছোটো সংখ্যা <span class="math">= y</span>। তাই ছোটো সংখ্যা <span class="math">= z − y</span>।</div>
+  <div class="answer">সঠিক উত্তর: (ক) <span class="math">z − y</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৬</span><span><span class="math">ab/xy</span>-এর সমতুল ভগ্নাংশ নিচের কোনটি?</span></h3>
+  <div class="options"><div>(ক) <span class="math">abc/xyz</span></div><div>(খ) <span class="math">a²b/(x²y)</span></div><div>(গ) <span class="math">2ab/2xy</span></div><div>(ঘ) <span class="math">ab²/(xy²)</span></div></div>
+  <div class="work">সমতুল ভগ্নাংশ পেতে লব ও হরকে একই শূন্য নয় এমন সংখ্যা বা রাশি দিয়ে গুণ করতে হয়।</div>
+  <div class="work"><span class="math">ab/xy × 2/2 = 2ab/2xy</span>। তাই (গ) মূল ভগ্নাংশের সমতুল। অন্য বিকল্পগুলোতে লব ও হর একই গুণক দিয়ে গুণ করা হয়নি।</div>
+  <div class="answer">সঠিক উত্তর: (গ) <span class="math">2ab/2xy</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৭</span><span><span class="math">3x + 1 = 0</span> সমীকরণের মূল কত?</span></h3>
+  <div class="options"><div>(ক) <span class="math">−1/3</span></div><div>(খ) <span class="math">1/3</span></div><div>(গ) 1</div><div>(ঘ) 3</div></div>
+  <div class="work">প্রদত্ত, <span class="math">3x + 1 = 0</span>। উভয় পাশে 1 বিয়োগ করলে <span class="math">3x = −1</span>।</div>
+  <div class="work">উভয় পাশে 3 দিয়ে ভাগ করলে, <span class="math">x = −1/3</span>।</div>
+  <div class="answer">সঠিক উত্তর: (ক) <span class="math">−1/3</span></div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৮</span><span>কোনো সংখ্যার সঙ্গে −5 যোগ করলে 15 হবে?</span></h3>
+  <div class="options"><div>(ক) −20</div><div>(খ) 10</div><div>(গ) −10</div><div>(ঘ) 20</div></div>
+  <div class="work">ধরি, সংখ্যাটি <span class="math">x</span>। তাহলে <span class="math">x + (−5) = 15</span>, অর্থাৎ <span class="math">x − 5 = 15</span>।</div>
+  <div class="work">উভয় পাশে 5 যোগ করলে <span class="math">x = 15 + 5 = 20</span>।</div>
+  <div class="answer">সঠিক উত্তর: (ঘ) 20</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">৯</span><span><span class="math">x</span>-এর কোন মান <span class="math">4x + 1 = 2x + 7</span> সমীকরণটিকে সিদ্ধ করে?</span></h3>
+  <div class="options"><div>(ক) 0</div><div>(খ) 2</div><div>(গ) 3</div><div>(ঘ) 4</div></div>
+  <div class="work"><span class="math">4x + 1 = 2x + 7</span>। উভয় পাশ থেকে <span class="math">2x</span> বিয়োগ করলে <span class="math">2x + 1 = 7</span>।</div>
+  <div class="work">উভয় পাশ থেকে 1 বিয়োগ করলে <span class="math">2x = 6</span>, তাই <span class="math">x = 3</span>।</div>
+  <div class="answer">সঠিক উত্তর: (গ) 3</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১০</span><span>বিন্দুগুলোকে ছক কাগজে স্থানাঙ্ক করে ক্রমানুসারে যোগ করো এবং চিত্রটির জ্যামিতিক নামকরণ করো।</span></h3>
+  <div class="subpart"><strong>(ক)</strong> <span class="math">(2,2) → (6,2) → (6,6) → (2,6) → (2,2)</span></div>
+  <div class="graph-wrap">
+    <svg viewBox="0 0 300 225" role="img" aria-label="বর্গের স্থানাঙ্ক চিত্র">
+      <defs><pattern id="gridSq" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#e3e9e4" stroke-width="1"/></pattern></defs>
+      <rect x="25" y="10" width="250" height="200" fill="url(#gridSq)"/>
+      <line x1="25" y1="185" x2="280" y2="185" stroke="#64716a" stroke-width="1.5"/><line x1="50" y1="210" x2="50" y2="10" stroke="#64716a" stroke-width="1.5"/>
+      <polygon points="100,135 200,135 200,35 100,35" fill="#28a745" fill-opacity=".12" stroke="#28a745" stroke-width="2.5"/>
+      <g fill="#176b30"><circle cx="100" cy="135" r="3.5"/><circle cx="200" cy="135" r="3.5"/><circle cx="200" cy="35" r="3.5"/><circle cx="100" cy="35" r="3.5"/></g>
+      <g font-size="10" fill="#26332a"><text x="82" y="149">(2,2)</text><text x="202" y="149">(6,2)</text><text x="204" y="32">(6,6)</text><text x="76" y="31">(2,6)</text><text x="282" y="198">x</text><text x="37" y="12">y</text><text x="40" y="198">0</text></g>
+    </svg>
+    <p class="graph-caption">চারটি বাহুর দৈর্ঘ্য সমান এবং প্রতিটি কোণ সমকোণ।</p>
+  </div>
+  <div class="answer">চিত্রের নাম: বর্গক্ষেত্র। প্রতিটি বাহু <span class="math">6 − 2 = 4</span> একক।</div>
+  <div class="subpart"><strong>(খ)</strong> <span class="math">(0,0) → (−6,−6) → (8,6) → (0,0)</span></div>
+  <div class="graph-wrap">
+    <svg viewBox="0 0 290 225" role="img" aria-label="ত্রিভুজের স্থানাঙ্ক চিত্র">
+      <defs><pattern id="gridTri" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M18 0H0V18" fill="none" stroke="#e3e9e4" stroke-width="1"/></pattern></defs>
+      <rect x="8" y="10" width="274" height="205" fill="url(#gridTri)"/>
+      <line x1="8" y1="135" x2="282" y2="135" stroke="#64716a" stroke-width="1.5"/><line x1="111" y1="10" x2="111" y2="215" stroke="#64716a" stroke-width="1.5"/>
+      <polygon points="111,135 57,189 183,81" fill="#28a745" fill-opacity=".12" stroke="#28a745" stroke-width="2.5"/>
+      <g fill="#176b30"><circle cx="111" cy="135" r="3.5"/><circle cx="57" cy="189" r="3.5"/><circle cx="183" cy="81" r="3.5"/></g>
+      <g font-size="10" fill="#26332a"><text x="115" y="148">(0,0)</text><text x="15" y="202">(−6,−6)</text><text x="187" y="77">(8,6)</text><text x="281" y="148">x</text><text x="99" y="12">y</text></g>
+    </svg>
+    <p class="graph-caption">তিনটি বিন্দু যোগ করলে একটি ত্রিভুজ পাওয়া যায়।</p>
+  </div>
+  <div class="work">বাহুগুলোর দৈর্ঘ্য: <span class="math">√72 = 6√2</span>, <span class="math">√340 = 2√85</span> এবং <span class="math">√100 = 10</span> একক। তিনটি বাহুর দৈর্ঘ্য আলাদা।</div>
+  <div class="answer">চিত্রের নাম: বিষমবাহু ত্রিভুজ।</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১১</span><span>সমাধান করো এবং সমাধান লেখচিত্রে দেখাও।</span></h3>
+  <div class="subpart"><strong>(ক)</strong> <span class="math">x − 4 = 0</span></div>
+  <div class="work"><span class="math">x = 4</span>।</div>
+  <div class="graph-wrap"><svg class="tickline" viewBox="0 0 330 48" role="img" aria-label="সংখ্যারেখায় x সমান 4"><line x1="15" y1="20" x2="315" y2="20" stroke="#7b887f" stroke-width="2"/><g stroke="#7b887f"><path d="M45 14V26 M95 14V26 M145 14V26 M195 14V26 M245 14V26 M295 14V26"/></g><g font-size="11" fill="#455049"><text x="41" y="41">0</text><text x="91" y="41">1</text><text x="141" y="41">2</text><text x="191" y="41">3</text><text x="241" y="41">4</text><text x="291" y="41">5</text></g><circle cx="245" cy="20" r="5" fill="#28a745"/></svg><p class="graph-caption">সংখ্যারেখায় 4 বিন্দুটি চিহ্নিত।</p></div>
+  <div class="subpart"><strong>(খ)</strong> <span class="math">2x + 4 = 0</span></div>
+  <div class="work"><span class="math">2x = −4</span>, তাই <span class="math">x = −2</span>।</div>
+  <div class="graph-wrap"><svg class="tickline" viewBox="0 0 330 48" role="img" aria-label="সংখ্যারেখায় x সমান ঋণাত্মক 2"><line x1="15" y1="20" x2="315" y2="20" stroke="#7b887f" stroke-width="2"/><g stroke="#7b887f"><path d="M25 14V26 M75 14V26 M125 14V26 M175 14V26 M225 14V26 M275 14V26"/></g><g font-size="11" fill="#455049"><text x="17" y="41">−3</text><text x="67" y="41">−2</text><text x="117" y="41">−1</text><text x="172" y="41">0</text><text x="222" y="41">1</text><text x="272" y="41">2</text></g><circle cx="75" cy="20" r="5" fill="#28a745"/></svg><p class="graph-caption">সংখ্যারেখায় −2 বিন্দুটি চিহ্নিত।</p></div>
+  <div class="subpart"><strong>(গ)</strong> <span class="math">x + 3 = 8</span></div>
+  <div class="work"><span class="math">x = 8 − 3 = 5</span>।</div>
+  <div class="graph-wrap"><svg class="tickline" viewBox="0 0 330 48" role="img" aria-label="সংখ্যারেখায় x সমান 5"><line x1="15" y1="20" x2="315" y2="20" stroke="#7b887f" stroke-width="2"/><g stroke="#7b887f"><path d="M45 14V26 M95 14V26 M145 14V26 M195 14V26 M245 14V26 M295 14V26"/></g><g font-size="11" fill="#455049"><text x="41" y="41">0</text><text x="91" y="41">1</text><text x="141" y="41">2</text><text x="191" y="41">3</text><text x="241" y="41">4</text><text x="291" y="41">5</text></g><circle cx="295" cy="20" r="5" fill="#28a745"/></svg><p class="graph-caption">সংখ্যারেখায় 5 বিন্দুটি চিহ্নিত।</p></div>
+  <div class="subpart"><strong>(ঘ)</strong> <span class="math">2x + 1 = x − 3</span></div>
+  <div class="work">উভয় পাশ থেকে <span class="math">x</span> বিয়োগ করে 1 বিয়োগ করলে <span class="math">x = −4</span>।</div>
+  <div class="graph-wrap"><svg class="tickline" viewBox="0 0 330 48" role="img" aria-label="সংখ্যারেখায় x সমান ঋণাত্মক 4"><line x1="15" y1="20" x2="315" y2="20" stroke="#7b887f" stroke-width="2"/><g stroke="#7b887f"><path d="M25 14V26 M75 14V26 M125 14V26 M175 14V26 M225 14V26 M275 14V26"/></g><g font-size="11" fill="#455049"><text x="17" y="41">−5</text><text x="67" y="41">−4</text><text x="117" y="41">−3</text><text x="167" y="41">−2</text><text x="217" y="41">−1</text><text x="272" y="41">0</text></g><circle cx="75" cy="20" r="5" fill="#28a745"/></svg><p class="graph-caption">সংখ্যারেখায় −4 বিন্দুটি চিহ্নিত।</p></div>
+  <div class="subpart"><strong>(ঙ)</strong> <span class="math">3x + 4 = 5x</span></div>
+  <div class="work">উভয় পাশ থেকে <span class="math">3x</span> বিয়োগ করলে <span class="math">4 = 2x</span>, তাই <span class="math">x = 2</span>।</div>
+  <div class="graph-wrap"><svg class="tickline" viewBox="0 0 330 48" role="img" aria-label="সংখ্যারেখায় x সমান 2"><line x1="15" y1="20" x2="315" y2="20" stroke="#7b887f" stroke-width="2"/><g stroke="#7b887f"><path d="M45 14V26 M95 14V26 M145 14V26 M195 14V26 M245 14V26 M295 14V26"/></g><g font-size="11" fill="#455049"><text x="41" y="41">0</text><text x="91" y="41">1</text><text x="141" y="41">2</text><text x="191" y="41">3</text><text x="241" y="41">4</text><text x="291" y="41">5</text></g><circle cx="145" cy="20" r="5" fill="#28a745"/></svg><p class="graph-caption">সংখ্যারেখায় 2 বিন্দুটি চিহ্নিত।</p></div>
+  <div class="answer">সমাধানগুলো: (ক) <span class="math">x=4</span>, (খ) <span class="math">x=−2</span>, (গ) <span class="math">x=5</span>, (ঘ) <span class="math">x=−4</span>, (ঙ) <span class="math">x=2</span>।</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">১২</span><span>হিমু ও সুমন 475 টাকা নিয়ে বাজারে গিয়ে 75 টাকা দিয়ে একটি খাতা ও একটি কলম কিনল। কলমের মূল্য খাতার মূল্যের 1/4 অংশ। অবশিষ্ট টাকা তারা 2 : 3 অনুপাতে ভাগ করে নিল।</span></h3>
+  <div class="subpart"><strong>(ক) কোন সংখ্যার দ্বিগুণ থেকে 3 বিয়োগ করলে ফল 5 হবে?</strong></div>
+  <div class="work">ধরি, সংখ্যাটি <span class="math">x</span>। তাহলে <span class="math">2x − 3 = 5</span>। উভয় পাশে 3 যোগ করলে <span class="math">2x = 8</span>। উভয় পাশে 2 দিয়ে ভাগ করলে <span class="math">x = 4</span>।</div>
+  <div class="answer">উত্তর: 4</div>
+  <div class="subpart"><strong>(খ) কলমটির মূল্য নির্ণয় করো।</strong></div>
+  <div class="work">ধরি, খাতার মূল্য <span class="math">x</span> টাকা। তাহলে কলমের মূল্য <span class="math">x/4</span> টাকা।</div>
+  <div class="work"><span class="math">x + x/4 = 75</span></div>
+  <div class="work"><span class="math">5x/4 = 75</span>, সুতরাং <span class="math">5x = 300</span> এবং <span class="math">x = 60</span>। খাতার মূল্য 60 টাকা।</div>
+  <div class="work">কলমের মূল্য <span class="math">= 60/4 = 15</span> টাকা।</div>
+  <div class="answer">উত্তর: কলমটির মূল্য 15 টাকা।</div>
+  <div class="subpart"><strong>(গ) হিমু ও সুমন কে কত টাকা পাবে?</strong></div>
+  <div class="work">অবশিষ্ট টাকা <span class="math">= 475 − 75 = 400</span> টাকা। অনুপাতের অংশের যোগফল <span class="math">2 + 3 = 5</span> অংশ।</div>
+  <div class="work">প্রতি অংশের টাকা <span class="math">= 400 ÷ 5 = 80</span> টাকা।</div>
+  <div class="work">প্রথম জনের অংশ <span class="math">= 2 × 80 = 160</span> টাকা এবং দ্বিতীয় জনের অংশ <span class="math">= 3 × 80 = 240</span> টাকা।</div>
+  <div class="answer">উত্তর: 2 অংশের জন পাবে 160 টাকা এবং 3 অংশের জন পাবে 240 টাকা।</div>
+</section>
+
+<h2 class="section-title">নমুনা প্রশ্ন — বহুনির্বাচনি</h2>
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">নমুনা ১</span><span>একটি ত্রিভুজের বাহু তিনটির দৈর্ঘ্য <span class="math">(x+1)</span> সেমি., <span class="math">(x+2)</span> সেমি. ও <span class="math">(x+3)</span> সেমি. (<span class="math">x&gt;0</span>)। ত্রিভুজটির পরিসীমা 15 সেমি. হলে, <span class="math">x</span>-এর মান কত?</span></h3>
+  <div class="options"><div>(ক) 3 সেমি.</div><div>(খ) 6 সেমি.</div><div>(গ) 8 সেমি.</div><div>(ঘ) 9 সেমি.</div></div>
+  <div class="work">পরিসীমা = তিন বাহুর দৈর্ঘ্যের যোগফল।</div>
+  <div class="work"><span class="math">(x+1)+(x+2)+(x+3)=15</span></div>
+  <div class="work"><span class="math">3x+6=15</span>, তাই <span class="math">3x=9</span> এবং <span class="math">x=3</span>।</div>
+  <div class="answer">সঠিক উত্তর: (ক) 3 সেমি.</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">নমুনা ২</span><span><span class="math">2x − 5 = −x + 4</span> সমীকরণের সমাধান কোনটি?</span></h3>
+  <div class="options"><div>(ক) 1</div><div>(খ) 2</div><div>(গ) 3</div><div>(ঘ) 4</div></div>
+  <div class="work"><span class="math">2x − 5 = −x + 4</span>। উভয় পাশে <span class="math">x</span> যোগ এবং 5 যোগ করলে <span class="math">3x = 9</span>।</div>
+  <div class="work">সুতরাং <span class="math">x = 3</span>।</div>
+  <div class="answer">সঠিক উত্তর: (গ) 3</div>
+</section>
+
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">নমুনা ৩</span><span><span class="math">(2,−1)</span> বিন্দু সম্পর্কে—</span></h3>
+  <div class="work"><span class="math">i.</span> বিন্দুটির ভুজ 2</div>
+  <div class="work"><span class="math">ii.</span> বিন্দুটি চতুর্থ চতুর্ভাগে অবস্থিত</div>
+  <div class="work"><span class="math">iii.</span> বিন্দুটি <span class="math">y=2x−5</span> রেখার ওপর অবস্থিত</div>
+  <div class="work">যেহেতু স্থানাঙ্কে <span class="math">x=2</span>, ভুজ 2 — তাই (i) সঠিক। <span class="math">x</span> ধনাত্মক ও <span class="math">y</span> ঋণাত্মক, তাই (ii) সঠিক। রেখায় বসালে <span class="math">y=2(2)−5=−1</span>, তাই (iii)-ও সঠিক।</div>
+  <div class="answer">সঠিক: i, ii ও iii — (ঘ)</div>
+</section>
+
+<h2 class="section-title">নমুনা প্রশ্ন — সৃজনশীল</h2>
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">নমুনা ৪</span><span><span class="math">(3y−2)/5 + (y+7)/4 = (y+1)/10</span> এবং <span class="math">3x−1 = x+1</span> দুটি সমীকরণ।</span></h3>
+  <div class="subpart"><strong>(ক) কোনো ধনাত্মক সংখ্যার সঙ্গে 2 যোগ করলে যোগফল 9 হলে সংখ্যাটি নির্ণয় করো।</strong></div>
+  <div class="work">ধরি, সংখ্যাটি <span class="math">n</span>। তাহলে <span class="math">n+2=9</span>, তাই <span class="math">n=9−2=7</span>।</div>
+  <div class="answer">উত্তর: 7</div>
+  <div class="subpart"><strong>(খ) প্রথম সমীকরণটি সমাধান করে <span class="math">y</span>-এর মান নির্ণয় করো।</strong></div>
+  <div class="work math">(3y−2)/5 + (y+7)/4 = (y+1)/10</div>
+  <div class="work">হরগুলোর ল.সা.গু. 20। উভয় পাশে 20 গুণ করলে,</div>
+  <div class="work math">4(3y−2) + 5(y+7) = 2(y+1)</div>
+  <div class="work math">12y−8 + 5y+35 = 2y+2</div>
+  <div class="work math">17y+27 = 2y+2</div>
+  <div class="work math">15y = −25, তাই y = −25/15 = −5/3</div>
+  <div class="answer">উত্তর: <span class="math">y = −5/3</span></div>
+  <div class="subpart"><strong>(গ) লেখচিত্রের সাহায্যে দ্বিতীয় সমীকরণটি সমাধান করো।</strong></div>
+  <div class="work">সমীকরণ <span class="math">3x−1=x+1</span> থেকে দুটি সরলরেখা পাওয়া যায়: <span class="math">y=3x−1</span> এবং <span class="math">y=x+1</span>। রেখা দুটির ছেদবিন্দুই সমাধান নির্দেশ করে।</div>
+  <div class="graph-wrap">
+    <svg viewBox="0 0 320 230" role="img" aria-label="y সমান 3x বিয়োগ 1 এবং y সমান x যোগ 1 রেখার ছেদবিন্দু">
+      <defs><pattern id="gridLines" width="32.5" height="15" patternUnits="userSpaceOnUse"><path d="M32.5 0H0V15" fill="none" stroke="#e5ebe6" stroke-width="1"/></pattern></defs>
+      <rect x="20" y="25" width="280" height="180" fill="url(#gridLines)"/>
+      <line x1="20" y1="145" x2="300" y2="145" stroke="#66736a" stroke-width="1.5"/>
+      <line x1="95" y1="25" x2="95" y2="205" stroke="#66736a" stroke-width="1.5"/>
+      <line x1="20" y1="205" x2="300" y2="25" stroke="#28a745" stroke-width="2.5"/>
+      <line x1="20" y1="145" x2="300" y2="85" stroke="#2776b8" stroke-width="2.5"/>
+      <circle cx="160" cy="115" r="5" fill="#e28c23" stroke="#fff" stroke-width="1.5"/>
+      <g font-size="10" fill="#3f4a42"><text x="303" y="149">x</text><text x="84" y="17">y</text><text x="163" y="109">(1,2)</text><text x="224" y="40" fill="#176b30">y=3x−1</text><text x="222" y="81" fill="#2776b8">y=x+1</text></g>
+    </svg>
+    <p class="graph-caption">দুটি রেখার ছেদবিন্দু <span class="math">(1,2)</span>; তাই <span class="math">x=1</span>।</p>
+  </div>
+  <div class="answer">উত্তর: <span class="math">x = 1</span></div>
+</section>
+
+<h2 class="section-title">নমুনা প্রশ্ন — সংক্ষিপ্ত-উত্তর</h2>
+<section class="solution-card">
+  <h3 class="question-title"><span class="question-number">নমুনা ৫</span><span>নিচের প্রশ্নগুলোর সমাধান করো।</span></h3>
+  <div class="subpart"><strong>(ক) দুটি ক্রমিক ধনাত্মক পূর্ণ সংখ্যার সমষ্টি 21 হলে বড়ো সংখ্যাটি নির্ণয় করো।</strong></div>
+  <div class="work">ধরি, ছোটো সংখ্যাটি <span class="math">n</span>; তাহলে বড়ো সংখ্যাটি <span class="math">n+1</span>।</div>
+  <div class="work math">n+(n+1)=21 ⇒ 2n+1=21 ⇒ 2n=20 ⇒ n=10</div>
+  <div class="work">বড়ো সংখ্যা <span class="math">=10+1=11</span>।</div>
+  <div class="answer">উত্তর: 11</div>
+
+  <div class="subpart"><strong>(খ) <span class="math">(x+2)/5 − (3−x)/5 = 1</span> হলে <span class="math">x</span>-এর মান নির্ণয় করো।</strong></div>
+  <div class="work math">(x+2)/5 − (3−x)/5 = 1</div>
+  <div class="work math">(x+2−3+x)/5 = 1</div>
+  <div class="work math">(2x−1)/5 = 1 ⇒ 2x−1=5 ⇒ 2x=6 ⇒ x=3</div>
+  <div class="answer">উত্তর: <span class="math">x=3</span></div>
+
+  <div class="subpart"><strong>(গ) কন্যার বয়স মাতার বয়সের এক-তৃতীয়াংশ এবং দুজনের মোট বয়স 48 বছর হলে, মাতার বয়স নির্ণয় করো।</strong></div>
+  <div class="work">ধরি, মাতার বয়স <span class="math">m</span> বছর। তাহলে কন্যার বয়স <span class="math">m/3</span> বছর।</div>
+  <div class="work math">m + m/3 = 48 ⇒ 4m/3 = 48</div>
+  <div class="work math">4m = 144 ⇒ m = 36</div>
+  <div class="answer">উত্তর: মাতার বয়স 36 বছর।</div>
+
+  <div class="subpart"><strong>(ঘ) একটি আয়তক্ষেত্রাকার ক্ষেতের পরিসীমা 34 মিটার। প্রস্থ দৈর্ঘ্য অপেক্ষা 7 মিটার কম হলে প্রস্থ নির্ণয় করো।</strong></div>
+  <div class="work">ধরি, দৈর্ঘ্য <span class="math">l</span> মিটার; তাহলে প্রস্থ <span class="math">l−7</span> মিটার।</div>
+  <div class="work">পরিসীমা <span class="math">=2(দৈর্ঘ্য+প্রস্থ)</span>, তাই <span class="math">2[l+(l−7)]=34</span>।</div>
+  <div class="work math">2(2l−7)=34 ⇒ 4l−14=34 ⇒ 4l=48 ⇒ l=12</div>
+  <div class="work">প্রস্থ <span class="math">=12−7=5</span> মিটার।</div>
+  <div class="answer">উত্তর: প্রস্থ 5 মিটার।</div>
+</section>
+
+<div class="footer">NCTB গণিত • সরল সমীকরণ • ধাপে ধাপে সমাধান</div>
+</main>
+</body>
+</html>
