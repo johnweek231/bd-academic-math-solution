@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>অনুশীলনী ৭.১ — সরল সমীকরণের সমাধান (NCTB গণিত)</title>
+<meta name="description" content="NCTB গণিত অনুশীলনী ৭.১ এর ১ থেকে ২০ নম্বর সমীকরণের ধাপে ধাপে বিস্তারিত সমাধান ও শুদ্ধি পরীক্ষা।">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'SolaimanLipi', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #212529;
+    line-height: 1.75;
+    font-size: 17px;
+  }
+
+  .container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 28px 16px 48px;
+    background: #f8f9fa;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 26px;
+  }
+  .page-header h1 {
+    font-size: 30px;
+    color: #1e7e34;
+    margin-bottom: 4px;
+  }
+  .page-header p {
+    color: #555;
+    font-size: 16px;
+  }
+
+  .info-box {
+    background: #e9f7ef;
+    border: 1px solid #c3e6cb;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+  .info-box h2 {
+    font-size: 18px;
+    color: #1e7e34;
+    margin-bottom: 6px;
+  }
+  .info-box ul { padding-left: 20px; }
+
+  .solution-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border-left: 6px solid #28a745;
+    margin-bottom: 22px;
+  }
+
+  .question-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #dee2e6;
+  }
+
+  .question-number {
+    display: inline-block;
+    background: #28a745;
+    color: #ffffff;
+    padding: 3px 16px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .label {
+    font-weight: bold;
+    color: #1e7e34;
+    margin: 10px 0 4px;
+  }
+
+  .line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 10px;
+    padding: 5px 0;
+  }
+  .lead {
+    min-width: 34px;
+    color: #444;
+  }
+  .m {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 19px;
+    white-space: nowrap;
+  }
+  .m i { font-style: italic; }
+  .note {
+    font-size: 14.5px;
+    color: #6c757d;
+  }
+
+  .fr {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 3px;
+    line-height: 1.25;
+  }
+  .fr > span:first-child {
+    border-bottom: 1.5px solid #212529;
+    padding: 0 4px 1px;
+  }
+  .fr > span:last-child { padding: 1px 4px 0; }
+
+  .answer {
+    margin-top: 12px;
+    background: #e9f7ef;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-weight: bold;
+    color: #155724;
+  }
+
+  .check {
+    margin-top: 12px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 16px;
+  }
+  .check .label { margin-top: 0; }
+
+  footer {
+    text-align: center;
+    color: #6c757d;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 576px) {
+    body { font-size: 16px; }
+    .container { padding: 18px 10px 36px; }
+    .page-header h1 { font-size: 24px; }
+    .solution-card { padding: 16px; }
+    .question-title { font-size: 17px; }
+    .m { font-size: 17px; white-space: normal; }
+  }
+</style>
+</head>
+<body>
+<main class="container">
+
+  <header class="page-header">
+    <h1>অনুশীলনী ৭.১</h1>
+    <p>সমাধান করো (প্রশ্ন ১ – ২০) — ধাপে ধাপে বিস্তারিত সমাধান</p>
+  </header>
+
+  <section class="info-box" aria-label="প্রয়োজনীয় নিয়ম">
+    <h2>সমাধানে ব্যবহৃত নিয়মসমূহ</h2>
+    <ul>
+      <li><b>পক্ষান্তর বিধি:</b> কোনো পদকে সমান চিহ্নের এক পক্ষ থেকে অপর পক্ষে নিলে পদটির চিহ্ন পরিবর্তিত হয় ( + হলে − এবং − হলে + )।</li>
+      <li><b>বর্জন বিধি:</b> সমীকরণের উভয় পক্ষে একই সংখ্যা যোগ, বিয়োগ, গুণ বা (শূন্য ছাড়া) ভাগ করলে সমীকরণের সমতা নষ্ট হয় না।</li>
+      <li><b>আড়গুণন:</b> <span class="m"><span class="fr"><span><i>a</i></span><span><i>b</i></span></span> = <span class="fr"><span><i>c</i></span><span><i>d</i></span></span></span> হলে <span class="m"><i>ad</i> = <i>bc</i></span></li>
+      <li>ভগ্নাংশযুক্ত সমীকরণে উভয় পক্ষকে হরগুলোর ল.সা.গু. দ্বারা গুণ করে ভগ্নাংশমুক্ত করা হয়।</li>
+    </ul>
+  </section>
+
+  <!-- ১ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১</span><span class="m">4<i>x</i> + 1 = 2<i>x</i> + 7</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m">4<i>x</i> + 1 = 2<i>x</i> + 7</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">4<i>x</i> − 2<i>x</i> = 7 − 1</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">2<i>x</i> = 6</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><span class="fr"><span>2<i>x</i></span><span>2</span></span> = <span class="fr"><span>6</span><span>2</span></span></span><span class="note">[উভয় পক্ষকে 2 দ্বারা ভাগ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>x</i> = 3</span></div>
+    <div class="answer">নির্ণেয় সমাধান: x = 3</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = 4 × 3 + 1 = 12 + 1 = 13</span></div>
+      <div class="line"><span class="m">ডানপক্ষ = 2 × 3 + 7 = 6 + 7 = 13</span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ২ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ২</span><span class="m">5<i>x</i> − 3 = 2<i>x</i> + 3</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m">5<i>x</i> − 3 = 2<i>x</i> + 3</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">5<i>x</i> − 2<i>x</i> = 3 + 3</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">3<i>x</i> = 6</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><span class="fr"><span>3<i>x</i></span><span>3</span></span> = <span class="fr"><span>6</span><span>3</span></span></span><span class="note">[উভয় পক্ষকে 3 দ্বারা ভাগ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>x</i> = 2</span></div>
+    <div class="answer">নির্ণেয় সমাধান: x = 2</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = 5 × 2 − 3 = 10 − 3 = 7</span></div>
+      <div class="line"><span class="m">ডানপক্ষ = 2 × 2 + 3 = 4 + 3 = 7</span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ৩ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৩</span><span class="m">3<i>y</i> + 1 = 7<i>y</i> − 1</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m">3<i>y</i> + 1 = 7<i>y</i> − 1</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">1 + 1 = 7<i>y</i> − 3<i>y</i></span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">2 = 4<i>y</i></span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">4<i>y</i> = 2</span><span class="note">[পক্ষদ্বয় স্থান বিনিময় করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>y</i> = <span class="fr"><span>2</span><span>4</span></span></span><span class="note">[উভয় পক্ষকে 4 দ্বারা ভাগ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>y</i> = <span class="fr"><span>1</span><span>2</span></span></span></div>
+    <div class="answer">নির্ণেয় সমাধান: y = ½</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = 3 × <span class="fr"><span>1</span><span>2</span></span> + 1 = <span class="fr"><span>3</span><span>2</span></span> + 1 = <span class="fr"><span>3 + 2</span><span>2</span></span> = <span class="fr"><span>5</span><span>2</span></span></span></div>
+      <div class="line"><span class="m">ডানপক্ষ = 7 × <span class="fr"><span>1</span><span>2</span></span> − 1 = <span class="fr"><span>7</span><span>2</span></span> − 1 = <span class="fr"><span>7 − 2</span><span>2</span></span> = <span class="fr"><span>5</span><span>2</span></span></span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ৪ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৪</span><span class="m">7<i>y</i> − 5 = <i>y</i> − 1</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m">7<i>y</i> − 5 = <i>y</i> − 1</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">7<i>y</i> − <i>y</i> = 5 − 1</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">6<i>y</i> = 4</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>y</i> = <span class="fr"><span>4</span><span>6</span></span></span><span class="note">[উভয় পক্ষকে 6 দ্বারা ভাগ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>y</i> = <span class="fr"><span>2</span><span>3</span></span></span><span class="note">[লঘিষ্ঠ আকারে প্রকাশ করে]</span></div>
+    <div class="answer">নির্ণেয় সমাধান: y = 2/3</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = 7 × <span class="fr"><span>2</span><span>3</span></span> − 5 = <span class="fr"><span>14</span><span>3</span></span> − 5 = <span class="fr"><span>14 − 15</span><span>3</span></span> = −<span class="fr"><span>1</span><span>3</span></span></span></div>
+      <div class="line"><span class="m">ডানপক্ষ = <span class="fr"><span>2</span><span>3</span></span> − 1 = <span class="fr"><span>2 − 3</span><span>3</span></span> = −<span class="fr"><span>1</span><span>3</span></span></span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ৫ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৫</span><span class="m">17 − 2<i>z</i> = 3<i>z</i> + 2</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m">17 − 2<i>z</i> = 3<i>z</i> + 2</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">17 − 2 = 3<i>z</i> + 2<i>z</i></span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">15 = 5<i>z</i></span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">5<i>z</i> = 15</span><span class="note">[পক্ষদ্বয় স্থান বিনিময় করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>z</i> = <span class="fr"><span>15</span><span>5</span></span></span><span class="note">[উভয় পক্ষকে 5 দ্বারা ভাগ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>z</i> = 3</span></div>
+    <div class="answer">নির্ণেয় সমাধান: z = 3</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = 17 − 2 × 3 = 17 − 6 = 11</span></div>
+      <div class="line"><span class="m">ডানপক্ষ = 3 × 3 + 2 = 9 + 2 = 11</span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ৬ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৬</span><span class="m">13<i>z</i> − 5 = 3 − 2<i>z</i></span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m">13<i>z</i> − 5 = 3 − 2<i>z</i></span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">13<i>z</i> + 2<i>z</i> = 3 + 5</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">15<i>z</i> = 8</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>z</i> = <span class="fr"><span>8</span><span>15</span></span></span><span class="note">[উভয় পক্ষকে 15 দ্বারা ভাগ করে]</span></div>
+    <div class="answer">নির্ণেয় সমাধান: z = 8/15</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = 13 × <span class="fr"><span>8</span><span>15</span></span> − 5 = <span class="fr"><span>104</span><span>15</span></span> − 5 = <span class="fr"><span>104 − 75</span><span>15</span></span> = <span class="fr"><span>29</span><span>15</span></span></span></div>
+      <div class="line"><span class="m">ডানপক্ষ = 3 − 2 × <span class="fr"><span>8</span><span>15</span></span> = 3 − <span class="fr"><span>16</span><span>15</span></span> = <span class="fr"><span>45 − 16</span><span>15</span></span> = <span class="fr"><span>29</span><span>15</span></span></span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ৭ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৭</span><span class="m"><span class="fr"><span><i>x</i></span><span>4</span></span> = <span class="fr"><span>1</span><span>3</span></span></span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m"><span class="fr"><span><i>x</i></span><span>4</span></span> = <span class="fr"><span>1</span><span>3</span></span></span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">3 × <i>x</i> = 4 × 1</span><span class="note">[আড়গুণন করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">3<i>x</i> = 4</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>x</i> = <span class="fr"><span>4</span><span>3</span></span></span><span class="note">[উভয় পক্ষকে 3 দ্বারা ভাগ করে]</span></div>
+    <div class="answer">নির্ণেয় সমাধান: x = 4/3</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = <span class="fr"><span>4/3</span><span>4</span></span> = <span class="fr"><span>4</span><span>3</span></span> × <span class="fr"><span>1</span><span>4</span></span> = <span class="fr"><span>1</span><span>3</span></span> = ডানপক্ষ</span></div>
+      <div class="line">∴ সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ৮ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৮</span><span class="m"><span class="fr"><span><i>x</i></span><span>2</span></span> + 1 = 3</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m"><span class="fr"><span><i>x</i></span><span>2</span></span> + 1 = 3</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><span class="fr"><span><i>x</i></span><span>2</span></span> = 3 − 1</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><span class="fr"><span><i>x</i></span><span>2</span></span> = 2</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>x</i> = 2 × 2</span><span class="note">[উভয় পক্ষকে 2 দ্বারা গুণ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>x</i> = 4</span></div>
+    <div class="answer">নির্ণেয় সমাধান: x = 4</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = <span class="fr"><span>4</span><span>2</span></span> + 1 = 2 + 1 = 3 = ডানপক্ষ</span></div>
+      <div class="line">∴ সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ৯ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ৯</span><span class="m"><span class="fr"><span><i>x</i></span><span>3</span></span> + 5 = <span class="fr"><span><i>x</i></span><span>2</span></span> + 7</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m"><span class="fr"><span><i>x</i></span><span>3</span></span> + 5 = <span class="fr"><span><i>x</i></span><span>2</span></span> + 7</span></div>
+    <p class="note">এখানে হর 3 ও 2 এর ল.সা.গু. = 6। উভয় পক্ষকে 6 দ্বারা গুণ করি।</p>
+    <div class="line"><span class="lead">বা,</span><span class="m">6 × <span class="fr"><span><i>x</i></span><span>3</span></span> + 6 × 5 = 6 × <span class="fr"><span><i>x</i></span><span>2</span></span> + 6 × 7</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">2<i>x</i> + 30 = 3<i>x</i> + 42</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">2<i>x</i> − 3<i>x</i> = 42 − 30</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">−<i>x</i> = 12</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>x</i> = −12</span><span class="note">[উভয় পক্ষকে −1 দ্বারা গুণ করে]</span></div>
+    <div class="answer">নির্ণেয় সমাধান: x = −12</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = <span class="fr"><span>−12</span><span>3</span></span> + 5 = −4 + 5 = 1</span></div>
+      <div class="line"><span class="m">ডানপক্ষ = <span class="fr"><span>−12</span><span>2</span></span> + 7 = −6 + 7 = 1</span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ১০ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১০</span><span class="m"><span class="fr"><span><i>y</i></span><span>2</span></span> − <span class="fr"><span><i>y</i></span><span>3</span></span> = <span class="fr"><span><i>y</i></span><span>5</span></span> − <span class="fr"><span>1</span><span>6</span></span></span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m"><span class="fr"><span><i>y</i></span><span>2</span></span> − <span class="fr"><span><i>y</i></span><span>3</span></span> = <span class="fr"><span><i>y</i></span><span>5</span></span> − <span class="fr"><span>1</span><span>6</span></span></span></div>
+    <p class="note">এখানে হর 2, 3, 5 ও 6 এর ল.সা.গু. = 30। উভয় পক্ষকে 30 দ্বারা গুণ করি।</p>
+    <div class="line"><span class="lead">বা,</span><span class="m">30 × <span class="fr"><span><i>y</i></span><span>2</span></span> − 30 × <span class="fr"><span><i>y</i></span><span>3</span></span> = 30 × <span class="fr"><span><i>y</i></span><span>5</span></span> − 30 × <span class="fr"><span>1</span><span>6</span></span></span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">15<i>y</i> − 10<i>y</i> = 6<i>y</i> − 5</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">5<i>y</i> = 6<i>y</i> − 5</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">5<i>y</i> − 6<i>y</i> = −5</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">−<i>y</i> = −5</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>y</i> = 5</span><span class="note">[উভয় পক্ষকে −1 দ্বারা গুণ করে]</span></div>
+    <div class="answer">নির্ণেয় সমাধান: y = 5</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = <span class="fr"><span>5</span><span>2</span></span> − <span class="fr"><span>5</span><span>3</span></span> = <span class="fr"><span>15 − 10</span><span>6</span></span> = <span class="fr"><span>5</span><span>6</span></span></span></div>
+      <div class="line"><span class="m">ডানপক্ষ = <span class="fr"><span>5</span><span>5</span></span> − <span class="fr"><span>1</span><span>6</span></span> = 1 − <span class="fr"><span>1</span><span>6</span></span> = <span class="fr"><span>5</span><span>6</span></span></span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ১১ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১১</span><span class="m"><span class="fr"><span><i>y</i></span><span>5</span></span> − <span class="fr"><span>2</span><span>7</span></span> = <span class="fr"><span>5<i>y</i></span><span>7</span></span> − <span class="fr"><span>4</span><span>5</span></span></span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m"><span class="fr"><span><i>y</i></span><span>5</span></span> − <span class="fr"><span>2</span><span>7</span></span> = <span class="fr"><span>5<i>y</i></span><span>7</span></span> − <span class="fr"><span>4</span><span>5</span></span></span></div>
+    <p class="note">এখানে হর 5 ও 7 এর ল.সা.গু. = 35। উভয় পক্ষকে 35 দ্বারা গুণ করি।</p>
+    <div class="line"><span class="lead">বা,</span><span class="m">35 × <span class="fr"><span><i>y</i></span><span>5</span></span> − 35 × <span class="fr"><span>2</span><span>7</span></span> = 35 × <span class="fr"><span>5<i>y</i></span><span>7</span></span> − 35 × <span class="fr"><span>4</span><span>5</span></span></span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">7<i>y</i> − 10 = 25<i>y</i> − 28</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">7<i>y</i> − 25<i>y</i> = −28 + 10</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">−18<i>y</i> = −18</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>y</i> = <span class="fr"><span>−18</span><span>−18</span></span></span><span class="note">[উভয় পক্ষকে −18 দ্বারা ভাগ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>y</i> = 1</span></div>
+    <div class="answer">নির্ণেয় সমাধান: y = 1</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = <span class="fr"><span>1</span><span>5</span></span> − <span class="fr"><span>2</span><span>7</span></span> = <span class="fr"><span>7 − 10</span><span>35</span></span> = −<span class="fr"><span>3</span><span>35</span></span></span></div>
+      <div class="line"><span class="m">ডানপক্ষ = <span class="fr"><span>5</span><span>7</span></span> − <span class="fr"><span>4</span><span>5</span></span> = <span class="fr"><span>25 − 28</span><span>35</span></span> = −<span class="fr"><span>3</span><span>35</span></span></span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ১২ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১২</span><span class="m"><span class="fr"><span>2<i>z</i> − 1</span><span>3</span></span> = 5</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m"><span class="fr"><span>2<i>z</i> − 1</span><span>3</span></span> = 5</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">2<i>z</i> − 1 = 5 × 3</span><span class="note">[উভয় পক্ষকে 3 দ্বারা গুণ করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">2<i>z</i> − 1 = 15</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">2<i>z</i> = 15 + 1</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">2<i>z</i> = 16</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>z</i> = <span class="fr"><span>16</span><span>2</span></span></span><span class="note">[উভয় পক্ষকে 2 দ্বারা ভাগ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>z</i> = 8</span></div>
+    <div class="answer">নির্ণেয় সমাধান: z = 8</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = <span class="fr"><span>2 × 8 − 1</span><span>3</span></span> = <span class="fr"><span>15</span><span>3</span></span> = 5 = ডানপক্ষ</span></div>
+      <div class="line">∴ সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ১৩ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১৩</span><span class="m"><span class="fr"><span>5<i>x</i></span><span>7</span></span> + <span class="fr"><span>4</span><span>5</span></span> = <span class="fr"><span><i>x</i></span><span>5</span></span> + <span class="fr"><span>2</span><span>7</span></span></span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m"><span class="fr"><span>5<i>x</i></span><span>7</span></span> + <span class="fr"><span>4</span><span>5</span></span> = <span class="fr"><span><i>x</i></span><span>5</span></span> + <span class="fr"><span>2</span><span>7</span></span></span></div>
+    <p class="note">এখানে হর 7 ও 5 এর ল.সা.গু. = 35। উভয় পক্ষকে 35 দ্বারা গুণ করি।</p>
+    <div class="line"><span class="lead">বা,</span><span class="m">35 × <span class="fr"><span>5<i>x</i></span><span>7</span></span> + 35 × <span class="fr"><span>4</span><span>5</span></span> = 35 × <span class="fr"><span><i>x</i></span><span>5</span></span> + 35 × <span class="fr"><span>2</span><span>7</span></span></span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">25<i>x</i> + 28 = 7<i>x</i> + 10</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">25<i>x</i> − 7<i>x</i> = 10 − 28</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">18<i>x</i> = −18</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>x</i> = <span class="fr"><span>−18</span><span>18</span></span></span><span class="note">[উভয় পক্ষকে 18 দ্বারা ভাগ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>x</i> = −1</span></div>
+    <div class="answer">নির্ণেয় সমাধান: x = −1</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = <span class="fr"><span>5(−1)</span><span>7</span></span> + <span class="fr"><span>4</span><span>5</span></span> = <span class="fr"><span>−25 + 28</span><span>35</span></span> = <span class="fr"><span>3</span><span>35</span></span></span></div>
+      <div class="line"><span class="m">ডানপক্ষ = <span class="fr"><span>−1</span><span>5</span></span> + <span class="fr"><span>2</span><span>7</span></span> = <span class="fr"><span>−7 + 10</span><span>35</span></span> = <span class="fr"><span>3</span><span>35</span></span></span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ১৪ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১৪</span><span class="m"><span class="fr"><span><i>y</i> − 2</span><span>4</span></span> + <span class="fr"><span>2<i>y</i> − 1</span><span>3</span></span> = <i>y</i> − <span class="fr"><span>1</span><span>3</span></span></span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m"><span class="fr"><span><i>y</i> − 2</span><span>4</span></span> + <span class="fr"><span>2<i>y</i> − 1</span><span>3</span></span> = <i>y</i> − <span class="fr"><span>1</span><span>3</span></span></span></div>
+    <p class="note">এখানে হর 4 ও 3 এর ল.সা.গু. = 12। উভয় পক্ষকে 12 দ্বারা গুণ করি।</p>
+    <div class="line"><span class="lead">বা,</span><span class="m">12 × <span class="fr"><span><i>y</i> − 2</span><span>4</span></span> + 12 × <span class="fr"><span>2<i>y</i> − 1</span><span>3</span></span> = 12<i>y</i> − 12 × <span class="fr"><span>1</span><span>3</span></span></span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">3(<i>y</i> − 2) + 4(2<i>y</i> − 1) = 12<i>y</i> − 4</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">3<i>y</i> − 6 + 8<i>y</i> − 4 = 12<i>y</i> − 4</span><span class="note">[বন্ধনী খুলে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">11<i>y</i> − 10 = 12<i>y</i> − 4</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">11<i>y</i> − 12<i>y</i> = −4 + 10</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">−<i>y</i> = 6</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>y</i> = −6</span><span class="note">[উভয় পক্ষকে −1 দ্বারা গুণ করে]</span></div>
+    <div class="answer">নির্ণেয় সমাধান: y = −6</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = <span class="fr"><span>−6 − 2</span><span>4</span></span> + <span class="fr"><span>2(−6) − 1</span><span>3</span></span> = −2 − <span class="fr"><span>13</span><span>3</span></span> = <span class="fr"><span>−6 − 13</span><span>3</span></span> = −<span class="fr"><span>19</span><span>3</span></span></span></div>
+      <div class="line"><span class="m">ডানপক্ষ = −6 − <span class="fr"><span>1</span><span>3</span></span> = <span class="fr"><span>−18 − 1</span><span>3</span></span> = −<span class="fr"><span>19</span><span>3</span></span></span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ১৫ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১৫</span><span class="m"><span class="fr"><span>3<i>y</i> + 1</span><span>5</span></span> = <span class="fr"><span>3<i>y</i> − 7</span><span>3</span></span></span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m"><span class="fr"><span>3<i>y</i> + 1</span><span>5</span></span> = <span class="fr"><span>3<i>y</i> − 7</span><span>3</span></span></span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">3(3<i>y</i> + 1) = 5(3<i>y</i> − 7)</span><span class="note">[আড়গুণন করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">9<i>y</i> + 3 = 15<i>y</i> − 35</span><span class="note">[বন্ধনী খুলে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">9<i>y</i> − 15<i>y</i> = −35 − 3</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">−6<i>y</i> = −38</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>y</i> = <span class="fr"><span>−38</span><span>−6</span></span></span><span class="note">[উভয় পক্ষকে −6 দ্বারা ভাগ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>y</i> = <span class="fr"><span>19</span><span>3</span></span></span><span class="note">[লঘিষ্ঠ আকারে প্রকাশ করে]</span></div>
+    <div class="answer">নির্ণেয় সমাধান: y = 19/3</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = <span class="fr"><span>3 × <span class="fr"><span>19</span><span>3</span></span> + 1</span><span>5</span></span> = <span class="fr"><span>19 + 1</span><span>5</span></span> = <span class="fr"><span>20</span><span>5</span></span> = 4</span></div>
+      <div class="line"><span class="m">ডানপক্ষ = <span class="fr"><span>3 × <span class="fr"><span>19</span><span>3</span></span> − 7</span><span>3</span></span> = <span class="fr"><span>19 − 7</span><span>3</span></span> = <span class="fr"><span>12</span><span>3</span></span> = 4</span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ১৬ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১৬</span><span class="m"><span class="fr"><span><i>x</i> + 1</span><span>2</span></span> − <span class="fr"><span><i>x</i> − 2</span><span>3</span></span> − <span class="fr"><span><i>x</i> − 3</span><span>5</span></span> = 2</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m"><span class="fr"><span><i>x</i> + 1</span><span>2</span></span> − <span class="fr"><span><i>x</i> − 2</span><span>3</span></span> − <span class="fr"><span><i>x</i> − 3</span><span>5</span></span> = 2</span></div>
+    <p class="note">এখানে হর 2, 3 ও 5 এর ল.সা.গু. = 30। উভয় পক্ষকে 30 দ্বারা গুণ করি।</p>
+    <div class="line"><span class="lead">বা,</span><span class="m">15(<i>x</i> + 1) − 10(<i>x</i> − 2) − 6(<i>x</i> − 3) = 60</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">15<i>x</i> + 15 − 10<i>x</i> + 20 − 6<i>x</i> + 18 = 60</span><span class="note">[বন্ধনী খুলে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">(15<i>x</i> − 10<i>x</i> − 6<i>x</i>) + (15 + 20 + 18) = 60</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">−<i>x</i> + 53 = 60</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">−<i>x</i> = 60 − 53</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">−<i>x</i> = 7</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>x</i> = −7</span><span class="note">[উভয় পক্ষকে −1 দ্বারা গুণ করে]</span></div>
+    <div class="answer">নির্ণেয় সমাধান: x = −7</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = <span class="fr"><span>−7 + 1</span><span>2</span></span> − <span class="fr"><span>−7 − 2</span><span>3</span></span> − <span class="fr"><span>−7 − 3</span><span>5</span></span></span></div>
+      <div class="line"><span class="m">= <span class="fr"><span>−6</span><span>2</span></span> − <span class="fr"><span>−9</span><span>3</span></span> − <span class="fr"><span>−10</span><span>5</span></span> = −3 + 3 + 2 = 2 = ডানপক্ষ</span></div>
+      <div class="line">∴ সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ১৭ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১৭</span><span class="m">2(<i>x</i> + 3) = 10</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m">2(<i>x</i> + 3) = 10</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">2<i>x</i> + 6 = 10</span><span class="note">[বন্ধনী খুলে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">2<i>x</i> = 10 − 6</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">2<i>x</i> = 4</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>x</i> = <span class="fr"><span>4</span><span>2</span></span></span><span class="note">[উভয় পক্ষকে 2 দ্বারা ভাগ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>x</i> = 2</span></div>
+    <div class="answer">নির্ণেয় সমাধান: x = 2</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = 2(2 + 3) = 2 × 5 = 10 = ডানপক্ষ</span></div>
+      <div class="line">∴ সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ১৮ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১৮</span><span class="m">5(<i>x</i> − 2) = 3(<i>x</i> − 4)</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m">5(<i>x</i> − 2) = 3(<i>x</i> − 4)</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">5<i>x</i> − 10 = 3<i>x</i> − 12</span><span class="note">[বন্ধনী খুলে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">5<i>x</i> − 3<i>x</i> = −12 + 10</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">2<i>x</i> = −2</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>x</i> = <span class="fr"><span>−2</span><span>2</span></span></span><span class="note">[উভয় পক্ষকে 2 দ্বারা ভাগ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>x</i> = −1</span></div>
+    <div class="answer">নির্ণেয় সমাধান: x = −1</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = 5(−1 − 2) = 5 × (−3) = −15</span></div>
+      <div class="line"><span class="m">ডানপক্ষ = 3(−1 − 4) = 3 × (−5) = −15</span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ১৯ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ১৯</span><span class="m">7(3 − 2<i>y</i>) + 5(<i>y</i> − 1) = 34</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m">7(3 − 2<i>y</i>) + 5(<i>y</i> − 1) = 34</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">21 − 14<i>y</i> + 5<i>y</i> − 5 = 34</span><span class="note">[বন্ধনী খুলে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">16 − 9<i>y</i> = 34</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">−9<i>y</i> = 34 − 16</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">−9<i>y</i> = 18</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>y</i> = <span class="fr"><span>18</span><span>−9</span></span></span><span class="note">[উভয় পক্ষকে −9 দ্বারা ভাগ করে]</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>y</i> = −2</span></div>
+    <div class="answer">নির্ণেয় সমাধান: y = −2</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = 7{3 − 2(−2)} + 5(−2 − 1) = 7(3 + 4) + 5(−3)</span></div>
+      <div class="line"><span class="m">= 7 × 7 − 15 = 49 − 15 = 34 = ডানপক্ষ</span></div>
+      <div class="line">∴ সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <!-- ২০ -->
+  <article class="solution-card">
+    <h2 class="question-title"><span class="question-number">প্রশ্ন ২০</span><span class="m">(<i>z</i> − 1)(<i>z</i> + 2) = (<i>z</i> + 4)(<i>z</i> − 2)</span></h2>
+    <p class="label">সমাধান:</p>
+    <div class="line"><span class="lead"></span><span class="m">(<i>z</i> − 1)(<i>z</i> + 2) = (<i>z</i> + 4)(<i>z</i> − 2)</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>z</i>(<i>z</i> + 2) − 1(<i>z</i> + 2) = <i>z</i>(<i>z</i> − 2) + 4(<i>z</i> − 2)</span><span class="note">[গুণ করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>z</i>² + 2<i>z</i> − <i>z</i> − 2 = <i>z</i>² − 2<i>z</i> + 4<i>z</i> − 8</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>z</i>² + <i>z</i> − 2 = <i>z</i>² + 2<i>z</i> − 8</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>z</i> − 2 = 2<i>z</i> − 8</span><span class="note">[উভয় পক্ষ থেকে z² বাদ দিয়ে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m"><i>z</i> − 2<i>z</i> = −8 + 2</span><span class="note">[পক্ষান্তর করে]</span></div>
+    <div class="line"><span class="lead">বা,</span><span class="m">−<i>z</i> = −6</span></div>
+    <div class="line"><span class="lead">∴</span><span class="m"><i>z</i> = 6</span><span class="note">[উভয় পক্ষকে −1 দ্বারা গুণ করে]</span></div>
+    <div class="answer">নির্ণেয় সমাধান: z = 6</div>
+    <div class="check">
+      <p class="label">শুদ্ধি পরীক্ষা:</p>
+      <div class="line"><span class="m">বামপক্ষ = (6 − 1)(6 + 2) = 5 × 8 = 40</span></div>
+      <div class="line"><span class="m">ডানপক্ষ = (6 + 4)(6 − 2) = 10 × 4 = 40</span></div>
+      <div class="line">∴ বামপক্ষ = ডানপক্ষ। সমাধান শুদ্ধ হয়েছে।</div>
+    </div>
+  </article>
+
+  <footer>অনুশীলনী ৭.১ — NCTB গণিত পাঠ্যপুস্তক অনুসারে সমাধান</footer>
+</main>
+</body>
+</html>
