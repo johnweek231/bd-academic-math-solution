@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f9fa">
+  <meta name="description" content="NCTB গণিত, অধ্যায় ৯: ত্রিভুজ, অনুশীলনী ৯.২-এর ধাপে ধাপে সমাধান।">
+  <title>অনুশীলনী ৯.২ — ত্রিভুজ | NCTB গণিত</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f8f9fa;
+      --card: #ffffff;
+      --green: #28a745;
+      --green-dark: #1f7d36;
+      --green-soft: #f0faf2;
+      --ink: #24302a;
+      --muted: #66736b;
+      --line: #e5ebe7;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #f8f9fa;
+      color: var(--ink);
+      font-family: 'SolaimanLipi', Arial, sans-serif;
+      line-height: 1.8;
+    }
+
+    .container {
+      width: min(850px, calc(100% - 32px));
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 28px 0 52px;
+      background: #f8f9fa;
+    }
+
+    .page-header {
+      margin: 0 0 22px;
+      padding: 22px 24px;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 5px;
+      color: var(--green-dark);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 0;
+      color: #18231c;
+      font-size: clamp(25px, 5vw, 34px);
+      line-height: 1.35;
+    }
+
+    .page-header p {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .solution-card {
+      margin: 16px 0;
+      padding: 22px;
+      border-left: 6px solid #28a745;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .solution-card h2 {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin: 0 0 14px;
+      color: #1d2b22;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    .question-number {
+      display: inline-flex;
+      flex: 0 0 36px;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: #28a745;
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .question-text { margin: 0 0 12px; }
+    .muted { color: var(--muted); }
+
+    .given-data {
+      margin: 13px 0 16px;
+      padding: 12px 14px;
+      border: 1px solid #d9efde;
+      border-radius: 8px;
+      background: var(--green-soft);
+    }
+
+    .given-data strong { color: var(--green-dark); }
+
+    .diagram {
+      margin: 14px auto 16px;
+      max-width: 430px;
+      padding: 10px 12px 6px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: #fff;
+    }
+
+    .diagram svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+
+    .diagram figcaption {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin: 12px 0 16px;
+    }
+
+    .option {
+      min-height: 40px;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+    }
+
+    .option.correct {
+      border-color: #9bd7a7;
+      background: var(--green-soft);
+      color: #1b6d30;
+      font-weight: 700;
+    }
+
+    .solution-label {
+      margin: 15px 0 7px;
+      color: var(--green-dark);
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .steps {
+      margin: 6px 0 0;
+      padding-left: 25px;
+    }
+
+    .steps li { padding-left: 3px; }
+    .steps li + li { margin-top: 6px; }
+
+    .math-display {
+      margin: 9px 0;
+      padding: 2px 0;
+      overflow-x: auto;
+    }
+
+    mjx-container[display="true"] {
+      margin: 0.45rem 0 !important;
+      text-align: left !important;
+    }
+
+    .answer {
+      margin: 14px 0 0;
+      padding: 9px 12px;
+      border-radius: 7px;
+      background: var(--green-soft);
+      color: #1b6d30;
+      font-weight: 700;
+    }
+
+    .subpart + .subpart { margin-top: 16px; }
+
+    .subpart h3 {
+      margin: 0 0 5px;
+      color: #26352b;
+      font-size: 16px;
+    }
+
+    .note {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .page-footer {
+      padding: 14px 4px 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(850px, calc(100% - 24px)); padding-top: 14px; }
+      .page-header { padding: 18px 16px; }
+      .options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 380px) {
+      .solution-card h2 { gap: 9px; font-size: 17px; }
+      .question-number { flex-basis: 32px; width: 32px; height: 32px; }
+      .options { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body, .container { background: #ffffff; }
+      .container { width: 100%; padding: 0; }
+      .page-header, .solution-card { box-shadow: none; }
+      .solution-card { break-inside: avoid; border: 1px solid #d8ded9; border-left: 6px solid #28a745; }
+      .page-footer { display: none; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { displayMath: [['$$', '$$'], ['\\[', '\\]']] },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">NCTB · গণিত · অধ্যায় ৯: ত্রিভুজ</p>
+      <h1>অনুশীলনী ৯.২</h1>
+      <p>বহুনির্বাচনি ও সৃজনশীল প্রশ্নের ধাপে ধাপে সমাধান</p>
+    </header>
+
+    <article class="solution-card" aria-labelledby="q1-title">
+      <h2 id="q1-title"><span class="question-number">১</span> ∠BAC-এর মান নিচের কোনটি?</h2>
+      <p class="question-text">প্রশ্ন ১–৩-এর জন্য দেওয়া চিত্র ও তথ্য: CE, ∠ACD-এর সমদ্বিখণ্ডক; AB ∥ CE এবং ∠ECD = ৬০°।</p>
+      <figure class="diagram">
+        <svg viewBox="0 0 360 185" role="img" aria-labelledby="diagram-1-title diagram-1-desc">
+          <title id="diagram-1-title">প্রশ্ন ১–৩-এর জ্যামিতিক চিত্র</title>
+          <desc id="diagram-1-desc">ABC ত্রিভুজ, B-C-D একই সরলরেখায়, CE কোণ ACD-কে সমদ্বিখণ্ডিত করে এবং AB ও CE সমান্তরাল।</desc>
+          <g fill="none" stroke="#46534a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M42 150 L126 28 L199 150 Z" />
+            <path d="M199 150 L315 150" />
+            <path d="M199 150 L270 50" />
+            <path d="M225 150 A26 26 0 0 0 214 128" stroke="#28a745" stroke-width="1.8" />
+          </g>
+          <g fill="#26352b" font-family="Arial, sans-serif" font-size="16" font-style="italic">
+            <text x="31" y="155">B</text>
+            <text x="122" y="21">A</text>
+            <text x="194" y="169">C</text>
+            <text x="319" y="155">D</text>
+            <text x="275" y="47">E</text>
+            <text x="224" y="128" font-size="13" font-style="normal">৬০°</text>
+          </g>
+        </svg>
+        <figcaption>প্রদত্ত চিত্র: CE হলো ∠ACD-এর সমদ্বিখণ্ডক।</figcaption>
+      </figure>
+      <div class="options" role="list" aria-label="বিকল্পসমূহ">
+        <div class="option" role="listitem">ক. ৩০°</div>
+        <div class="option" role="listitem">খ. ৪৫°</div>
+        <div class="option correct" role="listitem">গ. ৬০°</div>
+        <div class="option" role="listitem">ঘ. ১২০°</div>
+      </div>
+      <p class="solution-label">সমাধান</p>
+      <ol class="steps">
+        <li>CE, ∠ACD-এর সমদ্বিখণ্ডক এবং ∠ECD = ৬০°। তাই $$\angle ACE = \angle ECD = 60^\circ.$$</li>
+        <li>AB ∥ CE এবং AC একটি ছেদক; তাই একান্তর কোণ $$\angle BAC = \angle ACE.$$</li>
+        <li>অতএব $$\angle BAC = 60^\circ.$$</li>
+      </ol>
+      <p class="answer">সঠিক উত্তর: গ. ৬০°</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q2-title">
+      <h2 id="q2-title"><span class="question-number">২</span> ∠ACD-এর মান নিচের কোনটি?</h2>
+      <p class="question-text muted">প্রশ্ন ১–৩-এর একই চিত্র ও প্রদত্ত তথ্য ব্যবহার করো।</p>
+      <div class="options" role="list" aria-label="বিকল্পসমূহ">
+        <div class="option" role="listitem">ক. ৬০°</div>
+        <div class="option" role="listitem">খ. ৯০°</div>
+        <div class="option correct" role="listitem">গ. ১২০°</div>
+        <div class="option" role="listitem">ঘ. ১৮০°</div>
+      </div>
+      <p class="solution-label">সমাধান</p>
+      <p>CE, ∠ACD-কে দুই সমান কোণে ভাগ করে। প্রথম প্রশ্নের প্রদত্ত মান অনুযায়ী দুই অংশই ৬০°। সুতরাং</p>
+      <div class="math-display">$$\angle ACD = \angle ACE + \angle ECD = 60^\circ + 60^\circ = 120^\circ.$$</div>
+      <p class="answer">সঠিক উত্তর: গ. ১২০°</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q3-title">
+      <h2 id="q3-title"><span class="question-number">৩</span> ΔABC কোন ধরনের ত্রিভুজ?</h2>
+      <p class="question-text muted">প্রশ্ন ১–৩-এর একই চিত্র ও প্রদত্ত তথ্য ব্যবহার করো।</p>
+      <div class="options" role="list" aria-label="বিকল্পসমূহ">
+        <div class="option" role="listitem">ক. স্থূলকোণী</div>
+        <div class="option" role="listitem">খ. সমদ্বিবাহু</div>
+        <div class="option correct" role="listitem">গ. সমবাহু</div>
+        <div class="option" role="listitem">ঘ. সমকোণী</div>
+      </div>
+      <p class="solution-label">সমাধান</p>
+      <ol class="steps">
+        <li>আগের ফল অনুযায়ী ∠BAC = ৬০° এবং ∠ACD = ১২০°। B, C, D একই সরলরেখায়; তাই $$\angle ACB + \angle ACD = 180^\circ,$$ ফলে ∠ACB = ৬০°।</li>
+        <li>ত্রিভুজের তিন কোণের সমষ্টি ১৮০°। তাই $$\angle ABC = 180^\circ - 60^\circ - 60^\circ = 60^\circ.$$</li>
+        <li>তিনটি কোণই ৬০°; ফলে তিনটি বাহুও সমান এবং ত্রিভুজটি সমবাহু।</li>
+      </ol>
+      <p class="answer">সঠিক উত্তর: গ. সমবাহু</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q4-title">
+      <h2 id="q4-title"><span class="question-number">৪</span> ত্রিভুজের তৃতীয় বাহুর দৈর্ঘ্য কোনটি হতে পারে?</h2>
+      <p class="question-text">একটি ত্রিভুজের দুটি বাহু যথাক্রমে ৫ সেমি ও ৪ সেমি।</p>
+      <div class="options" role="list" aria-label="বিকল্পসমূহ">
+        <div class="option" role="listitem">ক. ১ সেমি</div>
+        <div class="option correct" role="listitem">খ. ৪ সেমি</div>
+        <div class="option" role="listitem">গ. ৯ সেমি</div>
+        <div class="option" role="listitem">ঘ. ১০ সেমি</div>
+      </div>
+      <p class="solution-label">সমাধান</p>
+      <ol class="steps">
+        <li>তৃতীয় বাহুর দৈর্ঘ্য x সেমি ধরি। ত্রিভুজের অসমতা অনুযায়ী, তৃতীয় বাহু অপর দুই বাহুর অন্তরের চেয়ে বড় এবং যোগফলের চেয়ে ছোট হবে।</li>
+        <li><div class="math-display">$$|5-4| < x < 5+4 \quad\Longrightarrow\quad 1 < x < 9.$$</div></li>
+        <li>১ সেমি ও ৯ সেমি সীমান্ত মান হওয়ায় সম্ভব নয়; ১০ সেমি ৯ সেমির চেয়ে বড়। ৪ সেমি শর্তটি পূরণ করে।</li>
+      </ol>
+      <p class="answer">সঠিক উত্তর: খ. ৪ সেমি</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q5-title">
+      <h2 id="q5-title"><span class="question-number">৫</span> অপর সূক্ষ্মকোণটির মান কত?</h2>
+      <p class="question-text">সমকোণী ত্রিভুজের একটি সূক্ষ্মকোণ ৪০°।</p>
+      <div class="options" role="list" aria-label="বিকল্পসমূহ">
+        <div class="option" role="listitem">ক. ৪০°</div>
+        <div class="option correct" role="listitem">খ. ৫০°</div>
+        <div class="option" role="listitem">গ. ৬০°</div>
+        <div class="option" role="listitem">ঘ. ১৪০°</div>
+      </div>
+      <p class="solution-label">সমাধান</p>
+      <p>ত্রিভুজের তিন কোণের সমষ্টি ১৮০°। একটি কোণ ৯০° হওয়ায় বাকি দুই সূক্ষ্মকোণের সমষ্টি ৯০°।</p>
+      <div class="math-display">$$\text{অপর সূক্ষ্মকোণ} = 90^\circ - 40^\circ = 50^\circ.$$</div>
+      <p class="answer">সঠিক উত্তর: খ. ৫০°</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q6-title">
+      <h2 id="q6-title"><span class="question-number">৬</span> ত্রিভুজটি কী ধরনের হবে?</h2>
+      <p class="question-text">কোনো ত্রিভুজের একটি কোণ অপর দুটি কোণের সমষ্টির সমান।</p>
+      <div class="options" role="list" aria-label="বিকল্পসমূহ">
+        <div class="option" role="listitem">ক. সমবাহু</div>
+        <div class="option" role="listitem">খ. সূক্ষ্মকোণী</div>
+        <div class="option correct" role="listitem">গ. সমকোণী</div>
+        <div class="option" role="listitem">ঘ. স্থূলকোণী</div>
+      </div>
+      <p class="solution-label">সমাধান</p>
+      <ol class="steps">
+        <li>ধরি, একটি কোণ A এবং অন্য দুটি কোণ B ও C। শর্ত অনুযায়ী $$A = B+C.$$</li>
+        <li>ত্রিভুজের কোণসমষ্টি থেকে $$A+B+C=180^\circ.$$</li>
+        <li>B+C-এর স্থলে A বসালে $$2A=180^\circ \quad\Longrightarrow\quad A=90^\circ.$$</li>
+      </ol>
+      <p class="answer">সঠিক উত্তর: গ. সমকোণী</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q7-title">
+      <h2 id="q7-title"><span class="question-number">৭</span> প্রমাণ কর যে, PB &gt; PC</h2>
+      <p class="question-text">ΔABC-তে AB &gt; AC এবং ∠B ও ∠C-এর সমদ্বিখণ্ডকদ্বয় P বিন্দুতে ছেদ করেছে।</p>
+      <p class="solution-label">প্রমাণ</p>
+      <ol class="steps">
+        <li>ত্রিভুজে বড় বাহুর বিপরীত কোণ বড়। AB, ∠C-এর বিপরীত এবং AC, ∠B-এর বিপরীত; AB &gt; AC হওয়ায় $$\angle ACB > \angle ABC.$$</li>
+        <li>BP ও CP যথাক্রমে ∠B ও ∠C-এর সমদ্বিখণ্ডক। তাই $$\angle PBC=\tfrac12\angle ABC, \qquad \angle BCP=\tfrac12\angle ACB.$$</li>
+        <li>অতএব ∠BCP &gt; ∠PBC। ΔBPC-তে বড় কোণের বিপরীত বাহু বড়; ∠BCP-এর বিপরীত বাহু BP এবং ∠PBC-এর বিপরীত বাহু PC।</li>
+      </ol>
+      <p class="answer">সুতরাং, PB &gt; PC — প্রমাণিত।</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q8-title">
+      <h2 id="q8-title"><span class="question-number">৮</span> প্রমাণ কর যে, AD &gt; AB</h2>
+      <p class="question-text">ABC একটি সমদ্বিবাহু ত্রিভুজ, AB = AC এবং BC বাহুকে C-এর পর D পর্যন্ত বাড়ানো হয়েছে।</p>
+      <p class="solution-label">প্রমাণ</p>
+      <ol class="steps">
+        <li>AB = AC, তাই সমদ্বিবাহু ত্রিভুজের ভূমিসংলগ্ন কোণদ্বয় সমান। ধরি, $$\angle ABC = \angle ACB = x.$$</li>
+        <li>B, C, D একই সরলরেখায় বলে ∠ACD ও ∠ACB একটি সরলকোণ গঠন করে। সুতরাং $$\angle ACD = 180^\circ - x.$$</li>
+        <li>ত্রিভুজের কোণসমষ্টি থেকে $$2x + \angle BAC = 180^\circ;$$ ∠BAC ধনাত্মক বলে x &lt; ৯০°। তাই ∠ACD = ১৮০° − x &gt; ৯০°। ΔACD-তে ∠ADC অবশ্যই ৯০°-এর কম; ফলে $$\angle ACD > \angle ADC.$$</li>
+        <li>বড় কোণের বিপরীত বাহু বড়। ∠ACD-এর বিপরীত বাহু AD এবং ∠ADC-এর বিপরীত বাহু AC; তাই AD &gt; AC।</li>
+        <li>আবার AC = AB। অতএব AD &gt; AB।</li>
+      </ol>
+      <p class="answer">AD &gt; AB — প্রমাণিত।</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q9-title">
+      <h2 id="q9-title"><span class="question-number">৯</span> প্রমাণ কর যে, ∠DAB &gt; ∠BCD</h2>
+      <p class="question-text">ABCD চতুর্ভুজে AB = AD, BC = CD এবং CD &gt; AD।</p>
+      <p class="solution-label">প্রমাণ</p>
+      <ol class="steps">
+        <li>AC কর্ণ আঁকি। ΔABC ও ΔADC-তে AB = AD, BC = CD এবং AC সাধারণ বাহু। তাই SSS সূত্রে $$\triangle ABC \cong \triangle ADC.$$</li>
+        <li>সর্বসম ত্রিভুজের অনুরূপ কোণ সমান: $$\angle BAC = \angle CAD, \qquad \angle BCA = \angle ACD.$$</li>
+        <li>BC = CD এবং AB = AD। দেওয়া আছে CD &gt; AD; তাই BC &gt; AB। ΔABC-তে BC বাহু ∠BAC-এর বিপরীত এবং AB বাহু ∠BCA-এর বিপরীত। ফলে $$\angle BAC > \angle BCA.$$</li>
+        <li>কর্ণ AC দুই কোণকে সমান দুই ভাগ করেছে। সুতরাং $$\angle DAB=2\angle BAC, \qquad \angle BCD=2\angle BCA.$$</li>
+        <li>অতএব ∠DAB &gt; ∠BCD।</li>
+      </ol>
+      <p class="answer">∠DAB &gt; ∠BCD — প্রমাণিত।</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q10-title">
+      <h2 id="q10-title"><span class="question-number">১০</span> মধ্যমা AD-কে নিয়ে প্রমাণ</h2>
+      <p class="question-text">ΔABC-তে ∠ABC &gt; ∠ACB এবং D, BC বাহুর মধ্যবিন্দু।</p>
+      <section class="subpart" aria-labelledby="q10a-title">
+        <h3 id="q10a-title">(ক) তথ্যের আলোকে চিত্র আঁকি</h3>
+        <p>∠B-কে ∠C-এর চেয়ে বড় রেখে ΔABC আঁকি, BC-এর মধ্যবিন্দু D চিহ্নিত করি এবং A-কে D-এর সঙ্গে যোগ করি।</p>
+        <figure class="diagram">
+          <svg viewBox="0 0 360 205" role="img" aria-labelledby="diagram-10-title diagram-10-desc">
+            <title id="diagram-10-title">প্রশ্ন ১০-এর ত্রিভুজ ও মধ্যমা</title>
+            <desc id="diagram-10-desc">ত্রিভুজ ABC-তে D হলো BC-এর মধ্যবিন্দু এবং AD একটি মধ্যমা। B কোণ C কোণের চেয়ে বড়।</desc>
+            <g fill="none" stroke="#46534a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M44 166 L118 34 L316 166 Z" />
+              <path d="M118 34 L180 166" stroke="#28a745" />
+              <path d="M110 142 L120 147 M238 147 L248 142" stroke="#28a745" stroke-width="1.8" />
+            </g>
+            <g fill="#26352b" font-family="Arial, sans-serif" font-size="16" font-style="italic">
+              <text x="31" y="174">B</text>
+              <text x="114" y="26">A</text>
+              <text x="319" y="174">C</text>
+              <text x="176" y="185">D</text>
+            </g>
+          </svg>
+          <figcaption>D হলো BC-এর মধ্যবিন্দু, তাই BD = DC।</figcaption>
+        </figure>
+      </section>
+      <section class="subpart" aria-labelledby="q10b-title">
+        <h3 id="q10b-title">(খ) দেখাও যে, AC &gt; AB</h3>
+        <ol class="steps">
+          <li>∠ABC &gt; ∠ACB — দেওয়া আছে।</li>
+          <li>ত্রিভুজে বড় কোণের বিপরীত বাহু বড়। ∠ABC-এর বিপরীত বাহু AC এবং ∠ACB-এর বিপরীত বাহু AB।</li>
+        </ol>
+        <p class="answer">অতএব AC &gt; AB।</p>
+      </section>
+      <section class="subpart" aria-labelledby="q10c-title">
+        <h3 id="q10c-title">(গ) প্রমাণ কর যে, AB + AC &gt; 2AD</h3>
+        <ol class="steps">
+          <li>AD সরলরেখাকে D-এর পর E পর্যন্ত বাড়াই, যেন DE = AD হয়। D, BC-এরও মধ্যবিন্দু; অর্থাৎ D হলো AE ও BC—দুই কর্ণেরই মধ্যবিন্দু।</li>
+          <li>যে চতুর্ভুজের কর্ণদ্বয় পরস্পরকে সমদ্বিখণ্ডিত করে, সেটি সামান্তরিক। তাই ABEC একটি সামান্তরি�� এবং এর বিপরীত বাহু $$BE = AC.$$</li>
+          <li>ΔABE-তে ত্রিভুজের দুই বাহুর যোগফল তৃতীয় বাহুর চেয়ে বড়: $$AB + BE > AE.$$</li>
+          <li>BE = AC এবং AE = AD + DE = 2AD বসালে $$AB + AC > 2AD.$$</li>
+        </ol>
+        <p class="answer">AB + AC &gt; 2AD — প্রমাণিত।</p>
+      </section>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q11-title">
+      <h2 id="q11-title"><span class="question-number">১১</span> প্রমাণ কর যে, AB &gt; AD</h2>
+      <p class="question-text">ΔABC-তে AB = AC এবং D, BC-এর উপর একটি অন্তর্বর্তী বিন্দু।</p>
+      <p class="solution-label">প্রমাণ</p>
+      <ol class="steps">
+        <li>A থেকে BC-এর উপর লম্ব AH আঁকি। ΔABH ও ΔACH সমকোণী; AB = AC (প্রদত্ত) এবং AH সাধারণ বাহু। অতএব RHS সূত্রে ত্রিভুজ দুটি সর্বসম; ফলে BH = HC। অর্থাৎ H, BC-এর মধ্যবিন্দু।</li>
+        <li>D, BC-এর অন্তর্বর্তী বিন্দু হওয়ায় মধ্যবিন্দু H থেকে D-এর দূরত্ব অর্ধভূমির চেয়ে কম: HD &lt; HB।</li>
+        <li>সমকোণী ΔAHD ও ΔAHB-তে পিথাগোরাসের উপপাদ্য প্রয়োগ করি:</li>
+      </ol>
+      <div class="math-display">$$AD^2 = AH^2 + HD^2 < AH^2 + HB^2 = AB^2.$$</div>
+      <p>দৈর্ঘ্য ধনাত্মক; তাই AD &lt; AB, অর্থাৎ</p>
+      <p class="answer">AB &gt; AD — প্রমাণিত।</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q12-title">
+      <h2 id="q12-title"><span class="question-number">১২</span> প্রমাণ কর যে, BC &gt; BD</h2>
+      <p class="question-text">ΔABC-তে AB ⟂ AC এবং D, AC বাহুর উপর এ��ন একটি বিন্দু যে D, A ও C-এর মাঝখানে অবস্থিত।</p>
+      <p class="solution-label">প্রমাণ</p>
+      <ol class="steps">
+        <li>যেহেতু D, AC-এর উপর, তাই AC &gt; AD।</li>
+        <li>ΔABC ও ΔABD—দুটিই A-তে সমকোণী। পিথাগোরাসের উপপাদ্য থেকে $$BC^2 = AB^2 + AC^2, \qquad BD^2 = AB^2 + AD^2.$$</li>
+        <li>AC &gt; AD এবং উভয়ই ধনাত্মক; তাই AC² &gt; AD²। ফলে BC² &gt; BD²। দুই দৈর্ঘ্যই ধনাত্মক বলে BC &gt; BD।</li>
+      </ol>
+      <p class="answer">BC &gt; BD — প্রমাণিত।</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q13-title">
+      <h2 id="q13-title"><span class="question-number">১৩</span> প্রমাণ কর যে, সমকোণী ত্রিভুজের অতিভুজই বৃহত্তম বাহু</h2>
+      <p class="solution-label">প্রমাণ</p>
+      <ol class="steps">
+        <li>ধরি, ΔABC-তে ∠A = ৯০°। তাই BC হলো অতিভুজ।</li>
+        <li>পিথাগোরাসের উপপাদ্য অনুযায়ী $$BC^2 = AB^2 + AC^2.$$</li>
+        <li>AC² ধনাত্মক, তাই BC² &gt; AB²; একইভাবে AB² ধনাত্মক, তাই BC² &gt; AC²। দৈর্ঘ্য ধনাত্মক বলে $$BC > AB \quad\text{এবং}\quad BC > AC.$$</li>
+      </ol>
+      <p class="answer">অতএব সমকোণী ত্রিভুজের অতিভুজই বৃহত্তম বাহু — প্রমাণিত।</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q14-title">
+      <h2 id="q14-title"><span class="question-number">১৪</span> প্রমাণ কর যে, ত্রিভুজের বৃহত্তম বাহুর বিপরীত কোণ বৃহত্তম</h2>
+      <p class="solution-label">প্রমাণ</p>
+      <ol class="steps">
+        <li>ধরি, ΔABC-এর বৃহত্তম বাহু BC। তাহলে BC &gt; AC এবং BC &gt; AB।</li>
+        <li>প্রথমে BC &gt; AC ব্যবহার করি। BC-এর উপর এমন D নিই যেন CD = AC; BC &gt; AC বলে D, B ও C-এর মাঝখানে পড়ে। ΔACD-তে AC = CD, তাই সমদ্বিবাহু ত্রিভুজের ভূমি-কোণদ্বয় সমান: $$\angle CAD = \angle ADC.$$</li>
+        <li>B, D, C একই সরলরেখায়; তাই ΔABD-এর D শীর্ষে বহিঃকোণ ∠ADC। বহিঃকোণ উপপাদ্য থেকে $$\angle ADC = \angle BAD + \angle ABD.$$</li>
+        <li>∠BAC = ∠BAD + ∠DAC এবং ∠DAC = ∠CAD। অতএব $$\angle BAC = \angle BAD + \angle ADC = 2\angle BAD + \angle ABD > \angle ABC,$$ কারণ ∠ABD = ∠ABC (B, D, C একই সরলরেখায়)।</li>
+        <li>একই যুক্তি B ও C অদলবদল করে BC &gt; AB থেকে পাওয়া যায় ∠BAC &gt; ∠ACB।</li>
+        <li>সুতরাং ∠BAC দুই অপর কোণের চেয়ে বড়; অর্থাৎ বৃহত্তম বাহু BC-এর বিপরীত কোণ ∠A-ই বৃহত্তম।</li>
+      </ol>
+      <p class="answer">বৃহত্তম বাহুর বিপরীত কোণ বৃহত্তম — প্রমাণিত।</p>
+    </article>
+
+    <article class="solution-card" aria-labelledby="q15-title">
+      <h2 id="q15-title"><span class="question-number">১৫</span> চিত্রের তথ্য থেকে কোণ ও PR নির্ণয়</h2>
+      <p class="question-text">চিত্রে ∠QPM = ∠RPM, ∠QPR = ৯০° এবং PQ = ৬ সেমি। M, QR-এর উপর এবং PM ⟂ QR।</p>
+      <figure class="diagram">
+        <svg viewBox="0 0 330 230" role="img" aria-labelledby="diagram-15-title diagram-15-desc">
+          <title id="diagram-15-title">সমকোণী ত্রিভুজ QPR-এর চিত্র</title>
+          <desc id="diagram-15-desc">P বিন্দুতে সমকোণ, M বিন্দু QR-এর উপর, PM হলো QR-এর উপর লম্ব এবং PM কোণ QPR-কে সমদ্বিখণ্ডিত করে।</desc>
+          <g fill="none" stroke="#46534a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M55 205 L255 205 L255 5 Z" />
+            <path d="M255 205 L155 105" />
+            <path d="M255 205 L242 205 L242 192 L255 192" stroke="#28a745" stroke-width="1.8" />
+            <path d="M155 105 L164 96 L173 105 L164 114 Z" stroke="#28a745" stroke-width="1.8" />
+          </g>
+          <g fill="#26352b" font-family="Arial, sans-serif" font-size="16" font-style="italic">
+            <text x="42" y="224">Q</text>
+            <text x="260" y="222">P</text>
+            <text x="258" y="14">R</text>
+            <text x="143" y="101">M</text>
+          </g>
+          <text x="84" y="194" fill="#66736b" font-family="Arial, sans-serif" font-size="13" font-style="normal">৬ সেমি</text>
+        </svg>
+        <figcaption>PM, ∠QPR-এর সমদ্বিখণ্ডক এবং QR-এর উপর লম্ব।</figcaption>
+      </figure>
+      <section class="subpart" aria-labelledby="q15a-title">
+        <h3 id="q15a-title">(ক) ∠QPM-এর মান</h3>
+        <p>PM কোণ QPR-কে সমদ্বিখণ্ডিত করে এবং ∠QPR = ৯০°।</p>
+        <div class="math-display">$$\angle QPM = \frac{90^\circ}{2} = 45^\circ.$$</div>
+      </section>
+      <section class="subpart" aria-labelledby="q15b-title">
+        <h3 id="q15b-title">(খ) ∠PQM ও ∠PRM-এর মান</h3>
+        <p>PM ⟂ QR বলে M-এ দুই কোণই ৯০°। ΔQPM-এ কোণসমষ্টি প্রয়োগ করলে</p>
+        <div class="math-display">$$\angle PQM = 180^\circ - 90^\circ - 45^\circ = 45^\circ.$$</div>
+        <p>একইভাবে ΔPRM-এ</p>
+        <div class="math-display">$$\angle PRM = 180^\circ - 90^\circ - 45^\circ = 45^\circ.$$</div>
+      </section>
+      <section class="subpart" aria-labelledby="q15c-title">
+        <h3 id="q15c-title">(গ) PR-এর দৈর্ঘ্য</h3>
+        <p>ΔQPM ও ΔRPM-এ ∠QMP = ∠PMR = ৯০°, ∠QPM = ∠RPM = ৪৫° এবং PM সাধারণ বাহু। তাই ASA সূত্রে ত্রিভুজ দুটি সর্বসম। তাদের অনুরূপ বাহু QP ও PR সমান।</p>
+        <div class="math-display">$$PR = QP = 6\text{ cm}.$$</div>
+        <p class="answer">(ক) ৪৫°; (খ) ∠PQM = ৪৫° এবং ∠PRM = ৪৫°; (গ) PR = ৬ সেমি।</p>
+      </section>
+    </article>
+
+    <footer class="page-footer">NCTB গণিত · অধ্যায় ৯: ত্রিভুজ · অনুশীলনী ৯.২</footer>
+  </main>
+</body>
+</html>
