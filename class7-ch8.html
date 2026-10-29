@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f9fa">
+  <meta name="description" content="NCTB গণিতের সমান্তরাল সরলরেখা ও কোণ অধ্যায়ের অনুশীলনী ৮ এবং নমুনা প্রশ্নের ধাপে ধাপে সমাধান।">
+  <title>সমান্তরাল সরলরেখা ও কোণ | NCTB গণিত সমাধান</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f8f9fa;
+      --paper: #ffffff;
+      --ink: #20262d;
+      --muted: #5e6872;
+      --green: #28a745;
+      --green-soft: #edf8ef;
+      --line: #e3e8ec;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #eef1f3;
+      color: var(--ink);
+      font-family: 'SolaimanLipi', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .page-shell {
+      width: min(100%, 850px);
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+      background: var(--page);
+    }
+
+    .site-header {
+      margin: 0 0 26px;
+      padding: 6px 2px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 4px;
+      color: #29763b;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(25px, 5vw, 34px);
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    .intro {
+      max-width: 68ch;
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .section-heading {
+      margin: 28px 2px 14px;
+      font-size: 22px;
+      line-height: 1.4;
+    }
+
+    .section-heading small {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .solution-card {
+      margin: 0 0 18px;
+      padding: 22px;
+      border-left: 6px solid #28a745;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .question-title {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin: 0 0 13px;
+      font-size: 19px;
+      line-height: 1.5;
+    }
+
+    .question-number {
+      display: inline-flex;
+      flex: 0 0 auto;
+      min-width: 42px;
+      min-height: 34px;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 12px;
+      border-radius: 999px;
+      background: #28a745;
+      color: #ffffff;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .question-type {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .question-text {
+      margin: 0 0 12px;
+    }
+
+    .diagram-frame {
+      margin: 14px 0 16px;
+      padding: 12px 10px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    .diagram-svg {
+      display: block;
+      width: min(100%, 520px);
+      height: auto;
+      margin-inline: auto;
+      color: #20262d;
+      font-family: 'SolaimanLipi', Arial, sans-serif;
+    }
+
+    .diagram-frame figcaption {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+      gap: 5px 12px;
+      margin: 12px 0 16px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .options li {
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fbfcfc;
+    }
+
+    .solution-label {
+      margin: 15px 0 5px;
+      color: #26763a;
+      font-size: 17px;
+    }
+
+    .solution-steps {
+      margin: 6px 0 12px;
+      padding-inline-start: 24px;
+    }
+
+    .solution-steps li {
+      margin: 4px 0;
+      padding-inline-start: 3px;
+    }
+
+    .equation {
+      display: inline-block;
+      margin: 3px 0;
+      padding: 2px 8px;
+      border-radius: 5px;
+      background: #f4f6f7;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .answer {
+      display: inline-block;
+      margin: 5px 0 0;
+      padding: 5px 11px;
+      border-radius: 7px;
+      background: var(--green-soft);
+      color: #1f5f30;
+      font-weight: 700;
+    }
+
+    .subpart {
+      margin-top: 17px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .subpart:first-of-type {
+      margin-top: 12px;
+    }
+
+    .subpart h3 {
+      margin: 0 0 7px;
+      color: #26763a;
+      font-size: 17px;
+    }
+
+    .note {
+      margin: 10px 0;
+      padding: 9px 12px;
+      border-left: 3px solid #8ec99a;
+      border-radius: 4px;
+      background: #f6fbf7;
+      color: #34413a;
+    }
+
+    .mini-diagrams {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 12px 0 6px;
+    }
+
+    .mini-diagrams .diagram-frame {
+      margin: 0;
+      padding: 8px;
+    }
+
+    .mini-diagrams .diagram-svg {
+      width: 100%;
+      min-width: 180px;
+    }
+
+    .page-footer {
+      margin: 28px 2px 0;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 560px) {
+      .page-shell {
+        padding: 24px 14px 42px;
+      }
+
+      .solution-card {
+        padding: 22px;
+      }
+
+      .question-title {
+        align-items: flex-start;
+        font-size: 18px;
+      }
+
+      .options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .mini-diagrams {
+        grid-template-columns: 1fr;
+      }
+
+      .mini-diagrams .diagram-svg {
+        max-width: 300px;
+        min-width: 0;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .page-shell {
+        width: 100%;
+        padding: 18px;
+      }
+
+      .solution-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid var(--line);
+        border-left: 6px solid #28a745;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <p class="eyebrow">NCTB গণিত · জ্যামিতি</p>
+      <h1>সমান্তরাল সরলরেখা ও কোণ</h1>
+      <p class="intro">আপলোড করা তিনটি পাতার অনুশীলনী ৮ ও নমুনা প্রশ্নের দৃশ্যমান প্রশ্নগুলোকে মূল তথ্য, বিকল্প এবং ধাপে ধাপে সমাধানসহ সাজানো হয়েছে।</p>
+    </header>
+
+    <main>
+      <section aria-labelledby="exercise-heading">
+        <h2 class="section-heading" id="exercise-heading">অনুশীলনী ৮ <small>সমান্তরাল রেখা, ছেদক ও কোণের সম্পর্ক</small></h2>
+
+        <article class="solution-card" id="exercise-8-q1">
+          <h3 class="question-title"><span class="question-number">১</span><span>বহুনির্বাচনি প্রশ্ন</span></h3>
+          <p class="question-text">চিত্রে, ∠PQR = 55°, ∠LRN = 90° এবং PQ ∥ MR হলে, ∠MRN-এর মান নিচের কোনটি?</p>
+          <figure class="diagram-frame">
+            <svg class="diagram-svg" viewBox="0 0 420 150" role="img" aria-labelledby="q1-title">
+              <title id="q1-title">সমান্তরাল PQ ও MR, QRL সরলরেখা এবং R-এ সমকোণ</title>
+              <g fill="none" stroke="#3d454d" stroke-width="2">
+                <path d="M55 120 L130 25 L205 120 Z" />
+                <path d="M205 120 H370" />
+                <path d="M205 120 V25" />
+                <path d="M205 120 L282 53" />
+              </g>
+              <g fill="#20262d" font-size="16">
+                <text x="42" y="137">Q</text><text x="128" y="20">P</text><text x="199" y="139">R</text>
+                <text x="373" y="125">L</text><text x="211" y="28">N</text><text x="286" y="50">M</text>
+                <text x="82" y="105">55°</text><text x="218" y="105">90°</text>
+              </g>
+            </svg>
+            <figcaption>চিত্রটি প্রশ্নের রশ্মি ও সমান্তরাল সম্পর্ক বোঝাতে সরলভাবে পুনর্অঙ্কিত।</figcaption>
+          </figure>
+          <ul class="options" aria-label="বিকল্পসমূহ">
+            <li>(ক) 35°</li><li>(খ) 45°</li><li>(গ) 55°</li><li>(ঘ) 90°</li>
+          </ul>
+          <h4 class="solution-label">ধাপে ধাপে সমাধান</h4>
+          <ol class="solution-steps">
+            <li>PQ ∥ MR এবং Q, R, L একই সরলরেখায় অবস্থিত। তাই অনুরূপ কোণের নিয়মে, ∠MRL = ∠PQR = 55°।</li>
+            <li>R বিন্দুতে RM রশ্মি ∠LRN সমকোণের ভেতরে আছে। অতএব, ∠LRM + ∠MRN = ∠LRN = 90°।</li>
+            <li>∠LRM = ∠MRL = 55°। সুতরাং, ∠MRN = 90° − 55° = 35°।</li>
+          </ol>
+          <p class="answer">সঠিক উত্তর: (ক) 35°</p>
+        </article>
+
+        <article class="solution-card" id="exercise-8-q2">
+          <h3 class="question-title"><span class="question-number">২</span><span>বহুনির্বাচনি প্রশ্ন</span></h3>
+          <p class="question-text">চিত্রে, PQ ∥ SR, PQ = PR এবং ∠PRQ = 50° হলে, ∠LRS-এর মান নিচের কোনটি?</p>
+          <figure class="diagram-frame">
+            <svg class="diagram-svg" viewBox="0 0 420 150" role="img" aria-labelledby="q2-title">
+              <title id="q2-title">PQ সমান PR বিশিষ্ট ত্রিভুজ এবং R থেকে SR সমান্তরাল রশ্মি</title>
+              <g fill="none" stroke="#3d454d" stroke-width="2">
+                <path d="M70 120 L150 25 L225 120 Z" />
+                <path d="M225 120 H375" />
+                <path d="M225 120 L292 34" />
+              </g>
+              <g fill="#20262d" font-size="16">
+                <text x="56" y="138">Q</text><text x="148" y="20">P</text><text x="220" y="138">R</text>
+                <text x="378" y="126">L</text><text x="296" y="32">S</text><text x="196" y="105">50°</text>
+              </g>
+            </svg>
+            <figcaption>PQ = PR, তাই △PQR একটি সমদ্বিবাহু ত্রিভুজ।</figcaption>
+          </figure>
+          <ul class="options" aria-label="বিকল্পসমূহ">
+            <li>(ক) 80°</li><li>(খ) 75°</li><li>(গ) 55°</li><li>(ঘ) 50°</li>
+          </ul>
+          <h4 class="solution-label">ধাপে ধাপে সমাধান</h4>
+          <ol class="solution-steps">
+            <li>PQ = PR; তাই সমদ্বিবাহু ত্রিভুজের সমান বাহুর বিপরীত কোণ সমান: ∠PQR = ∠PRQ = 50°।</li>
+            <li>QR ও RL একই সরলরেখার অংশ এবং PQ ∥ SR। তাই অনুরূপ কোণ ∠LRS = ∠PQR।</li>
+            <li>অতএব, ∠LRS = 50°। যাচাই হিসেবে, শীর্ষকোণ ∠QPR = 180° − 50° − 50° = 80°।</li>
+          </ol>
+          <p class="answer">সঠিক উত্তর: (ঘ) 50°</p>
+        </article>
+
+        <article class="solution-card" id="exercise-8-q3">
+          <h3 class="question-title"><span class="question-number">৩</span><span>চিত্রভিত্তিক বহুনির্বাচনি প্রশ্ন</span></h3>
+          <p class="question-text">চিত্রে AB ∥ CD ∥ EF। প্রদত্ত তথ্যের আলোকে (i), (ii) ও (iii) নং প্রশ্নের উত্তর দাও।</p>
+          <figure class="diagram-frame">
+            <svg class="diagram-svg" viewBox="0 0 420 205" role="img" aria-labelledby="q3-title">
+              <title id="q3-title">তিনটি সমান্তরাল রেখাকে দুটি ছেদক ছেদ করেছে; দেওয়া কোণ 45° ও 32°</title>
+              <g fill="none" stroke="#3d454d" stroke-width="2">
+                <path d="M28 48 H392 M28 103 H392 M28 158 H392" />
+                <path d="M112 10 L212 103" />
+                <path d="M155 190 L367 72" />
+                <path d="M150 48 A18 18 0 0 0 137 33" stroke-width="1.4" />
+                <path d="M202 103 A27 27 0 1 0 237 103" stroke-width="1.4" />
+                <path d="M286 103 A19 19 0 0 0 303 113" stroke-width="1.4" />
+                <path d="M211 158 A18 18 0 0 1 225 143" stroke-width="1.4" />
+                <path d="M211 158 A18 18 0 0 0 225 173" stroke-width="1.4" />
+              </g>
+              <g fill="#20262d" font-size="15">
+                <text x="12" y="43">A</text><text x="396" y="53">B</text>
+                <text x="214" y="98">C</text><text x="396" y="108">D</text>
+                <text x="12" y="163">E</text><text x="396" y="163">F</text>
+                <text x="117" y="40">45°</text><text x="185" y="126">y</text>
+                <text x="280" y="124">x</text><text x="235" y="148">z</text>
+                <text x="178" y="184">32°</text>
+              </g>
+            </svg>
+            <figcaption>y চিত্রে চিহ্নিত প্রবৃদ্ধ কোণ; x ও z ছেদকের সঙ্গে গঠিত কোণ।</figcaption>
+          </figure>
+
+          <div class="subpart">
+            <h3>(i) ∠x-এর মান নিচের কোনটি?</h3>
+            <ul class="options" aria-label="x-এর বিকল্পসমূহ">
+              <li>(ক) 28°</li><li>(খ) 32°</li><li>(গ) 45°</li><li>(ঘ) 58°</li>
+            </ul>
+            <ol class="solution-steps">
+              <li>CD ∥ EF এবং তির্যক রেখাটি ছেদক। চিত্রে ∠x ও 32° একই অবস্থানের অনুরূপ কোণ।</li>
+              <li>অনুরূপ কোণ সমান, তাই <span class="equation">x = 32°</span>।</li>
+            </ol>
+            <p class="answer">সঠিক উত্তর: (খ) 32°</p>
+          </div>
+
+          <div class="subpart">
+            <h3>(ii) ∠z-এর মান নিচের কোনটি?</h3>
+            <ul class="options" aria-label="z-এর বিকল্পসমূহ">
+              <li>(ক) 58°</li><li>(খ) 103°</li><li>(গ) 122°</li><li>(ঘ) 148°</li>
+            </ul>
+            <ol class="solution-steps">
+              <li>চিত্রে z ও 32° একটি সরলজোড়া কোণ; তাদের অ-সাধারণ বাহু দুটি বিপরীত রশ্মি।</li>
+              <li>সরলজোড়া কোণের সমষ্টি 180°। তাই <span class="equation">z + 32° = 180°</span>।</li>
+              <li><span class="equation">z = 180° − 32° = 148°</span>।</li>
+            </ol>
+            <p class="answer">সঠিক উত্তর: (ঘ) 148°</p>
+          </div>
+
+          <div class="subpart">
+            <h3>(iii) y − z-এর মান নিচের কোনটি?</h3>
+            <ul class="options" aria-label="y minus z-এর বিকল্পসমূহ">
+              <li>(ক) 58°</li><li>(খ) 77°</li><li>(গ) 103°</li><li>(ঘ) 122°</li>
+            </ul>
+            <ol class="solution-steps">
+              <li>AB ∥ CD। উপরের 45° কোণের অনুরূপ কোণ C-তে 45°। C-তে এর সংলগ্ন ক্ষুদ্র কোণটি সরলজোড়া হওয়ায় <span class="equation">180° − 45° = 135°</span>।</li>
+              <li>চিত্রে y ক্ষুদ্র কোণটি নয়, তার প্রবৃদ্ধ কোণ। পূর্ণকোণ 360°, তাই <span class="equation">y = 360° − 135° = 225°</span>।</li>
+              <li>আগের অংশে z = 148° পেয়েছি। সুতরাং <span class="equation">y − z = 225° − 148° = 77°</span>।</li>
+            </ol>
+            <p class="answer">সঠিক উত্তর: (খ) 77°</p>
+          </div>
+        </article>
+
+        <article class="solution-card" id="exercise-8-q4">
+          <h3 class="question-title"><span class="question-number">৪</span><span>বহুনির্বাচনি প্রশ্ন</span></h3>
+          <p class="question-text">∥ চিহ্ন দ্বারা কী বোঝায়?</p>
+          <ul class="options" aria-label="বিকল্পসমূহ">
+            <li>(ক) সমান</li><li>(খ) সর্বসম</li><li>(গ) সমান্তরাল</li><li>(ঘ) লম্ব</li>
+          </ul>
+          <h4 class="solution-label">সমাধান</h4>
+          <p>∥ প্রতীকটি দুটি সরলরেখা সমান্তরাল—এই সম্পর্ক বোঝাতে ব্যবহৃত হয়। যেমন, AB ∥ CD অর্থ AB ও CD সমান্তরাল সরলরেখা।</p>
+          <p class="answer">সঠিক উত্তর: (গ) সমান্তরাল</p>
+        </article>
+
+        <article class="solution-card" id="exercise-8-q5">
+          <h3 class="question-title"><span class="question-number">৫</span><span>চিত্রভিত্তিক বহুনির্বাচনি প্রশ্ন</span></h3>
+          <p class="question-text">নিচের চিত্রের আলোকে x = কত?</p>
+          <figure class="diagram-frame">
+            <svg class="diagram-svg" viewBox="0 0 420 180" role="img" aria-labelledby="q5-title">
+              <title id="q5-title">দুটি ছেদক ও একটি সরলরেখা দিয়ে গঠিত ত্রিভুজ; বাম পাশে 105 ডিগ্রি এবং ডানে 55 ডিগ্রি</title>
+              <g fill="none" stroke="#3d454d" stroke-width="2">
+                <path d="M35 126 L385 108" />
+                <path d="M82 176 L252 18" />
+                <path d="M340 176 L188 18" />
+                <path d="M177 35 A25 25 0 0 0 158 54" stroke-width="1.4" />
+                <path d="M177 35 A25 25 0 0 1 198 39" stroke-width="1.4" />
+                <path d="M138 122 A20 20 0 0 1 157 109" stroke-width="1.4" />
+                <path d="M274 115 A20 20 0 0 0 260 101" stroke-width="1.4" />
+              </g>
+              <g fill="#20262d" font-size="16">
+                <text x="122" y="67">105°</text><text x="184" y="30">x</text>
+                <text x="142" y="105">y</text><text x="242" y="101">55°</text>
+              </g>
+            </svg>
+            <figcaption>105° ও x সংলগ্ন কোণ; y এবং 55° ত্রিভুজের ভূমি-কোণ।</figcaption>
+          </figure>
+          <ul class="options" aria-label="বিকল্পসমূহ">
+            <li>(ক) 75°</li><li>(খ) 55°</li><li>(গ) 50°</li><li>(ঘ) 45°</li>
+          </ul>
+          <h4 class="solution-label">ধাপে ধাপে সমাধান</h4>
+          <ol class="solution-steps">
+            <li>105° ও x একটি সরলজোড়া কোণ। তাই <span class="equation">x + 105° = 180°</span>।</li>
+            <li><span class="equation">x = 180° − 105° = 75°</span>।</li>
+          </ol>
+          <p class="answer">সঠিক উত্তর: (ক) 75°</p>
+        </article>
+
+        <article class="solution-card" id="exercise-8-q6">
+          <h3 class="question-title"><span class="question-number">৬</span><span>চিত্রভিত্তিক বহুনির্বাচনি প্রশ্ন</span></h3>
+          <p class="question-text">আগের চিত্রের আলোকে x + y = কত?</p>
+          <ul class="options" aria-label="বিকল্পসমূহ">
+            <li>(ক) 160°</li><li>(খ) 125°</li><li>(গ) 100°</li><li>(ঘ) 85°</li>
+          </ul>
+          <h4 class="solution-label">ধাপে ধাপে সমাধান</h4>
+          <ol class="solution-steps">
+            <li>আগের প্রশ্নে x = 75° নির্ণয় করেছি। ছেদকারী সরলরেখার বিপ্রতীপ কোণ সমান, তাই ত্রিভুজের শীর্ষকোণও 75°।</li>
+            <li>ত্রিভুজের তিন কোণের সমষ্টি 180°। তাই <span class="equation">y + 55° + 75° = 180°</span>।</li>
+            <li><span class="equation">y = 180° − 130° = 50°</span>।</li>
+            <li>অতএব, <span class="equation">x + y = 75° + 50° = 125°</span>।</li>
+          </ol>
+          <p class="answer">সঠিক উত্তর: (খ) 125°</p>
+        </article>
+
+        <article class="solution-card" id="exercise-8-q7">
+          <h3 class="question-title"><span class="question-number">৭</span><span>সৃজনশীল প্রশ্ন</span></h3>
+          <p class="question-text">চিত্রে AB ∥ CD, ∠BPE = 60° এবং PQ = PR।</p>
+          <figure class="diagram-frame">
+            <svg class="diagram-svg" viewBox="0 0 440 190" role="img" aria-labelledby="q7-title">
+              <title id="q7-title">AB ও CD সমান্তরাল; P, Q, F একই ছেদকে এবং PQR ত্রিভুজে PQ সমান PR</title>
+              <g fill="none" stroke="#3d454d" stroke-width="2">
+                <path d="M35 55 H405 M35 137 H405" />
+                <path d="M145 180 L245 10" />
+                <path d="M218 55 L170 137 L300 137 Z" />
+                <path d="M239 55 A22 22 0 0 0 229 37" stroke-width="1.4" />
+              </g>
+              <g fill="#20262d" font-size="15">
+                <text x="20" y="60">A</text><text x="410" y="60">B</text>
+                <text x="20" y="142">C</text><text x="410" y="142">D</text>
+                <text x="254" y="15">E</text><text x="100" y="185">F</text>
+                <text x="213" y="50">P</text><text x="164" y="133">Q</text><text x="303" y="153">R</text>
+                <text x="240" y="39">60°</text>
+              </g>
+            </svg>
+            <figcaption>P, Q, F একই সরলরেখায়; Q ও R নিচের সমান্তরাল রেখায় অবস্থিত।</figcaption>
+          </figure>
+
+          <div class="subpart">
+            <h3>(ক) দেখাও যে, ½∠APE = 60°।</h3>
+            <ol class="solution-steps">
+              <li>A, P, B একই সরলরেখায়, তাই PA ও PB বিপরীত রশ্মি। ফলে ∠APE এবং ∠BPE একটি সরলজোড়া: <span class="equation">∠APE + ∠BPE = 180°</span>।</li>
+              <li>∠BPE = 60° বসালে, <span class="equation">∠APE = 180° − 60° = 120°</span>।</li>
+              <li>অতএব, <span class="equation">½∠APE = ½ × 120° = 60°</span>।</li>
+            </ol>
+            <p class="answer">প্রমাণিত।</p>
+          </div>
+
+          <div class="subpart">
+            <h3>(খ) ∠CQF-এর মান নির্ণয় করো।</h3>
+            <ol class="solution-steps">
+              <li>AB ∥ CD এবং EPQF একটি ছেদক। তাই ∠BPE-এর অনুরূপ কোণ ∠PQD = 60°।</li>
+              <li>∠PQD ও ∠CQF বিপ্রতীপ কোণ; বিপ্রতীপ কোণ সমান।</li>
+              <li>সুতরাং, <span class="equation">∠CQF = 60°</span>।</li>
+            </ol>
+            <p class="answer">উত্তর: 60°</p>
+          </div>
+
+          <div class="subpart">
+            <h3>(গ) প্রমাণ করো যে, △PQR একটি সমবাহু ত্রিভুজ।</h3>
+            <ol class="solution-steps">
+              <li>AB ∥ CD হওয়ায়, ∠BPE-এর অনুরূপ কোণ ∠PQD = 60°। Q, R, D একই সরলরেখায়, তাই ∠PQR = ∠PQD = 60°।</li>
+              <li>PQ = PR। তাই △PQR সমদ্বিবাহু এবং ভূমির কোণ দুটি সমান: <span class="equation">∠PQR = ∠PRQ = 60°</span>।</li>
+              <li>ত্রিভুজের কোণ-সমষ্টি থেকে, <span class="equation">∠QPR = 180° − 60° − 60° = 60°</span>।</li>
+              <li>তিনটি কোণই 60°; অতএব △PQR সমবাহু।</li>
+            </ol>
+            <p class="answer">প্রমাণিত: △PQR সমবাহু।</p>
+          </div>
+        </article>
+      </section>
+
+      <section aria-labelledby="sample-heading">
+        <h2 class="section-heading" id="sample-heading">নমুনা প্রশ্ন <small>বহুনির্বাচনি, সৃজনশীল ও সংক্ষিপ্ত-উত্তর</small></h2>
+
+        <article class="solution-card" id="sample-q1">
+          <h3 class="question-title"><span class="question-number">১</span><span>বহুনির্বাচনি প্রশ্ন</span></h3>
+          <p class="question-text">ABC ত্রিভুজে ∠B + ∠C = 90° হলে, ∠A কত ডিগ্রি?</p>
+          <ul class="options" aria-label="বিকল্পসমূহ">
+            <li>(ক) 90°</li><li>(খ) 110°</li><li>(গ) 120°</li><li>(ঘ) 160°</li>
+          </ul>
+          <h4 class="solution-label">ধাপে ধাপে সমাধান</h4>
+          <ol class="solution-steps">
+            <li>ত্রিভুজের অন্তঃকোণগুলোর সমষ্টি 180°। তাই <span class="equation">∠A + ∠B + ∠C = 180°</span>।</li>
+            <li>∠B + ∠C = 90° দেওয়া আছে। সুতরাং <span class="equation">∠A = 180° − 90° = 90°</span>।</li>
+          </ol>
+          <p class="answer">সঠিক উত্তর: (ক) 90°</p>
+        </article>
+
+        <article class="solution-card" id="sample-q2">
+          <h3 class="question-title"><span class="question-number">২</span><span>বহুনির্বাচনি প্রশ্ন · কোণের সম্পর্ক</span></h3>
+          <p class="question-text">চিত্রে AB ∥ CD এবং PQ ছেদকটি AB ও CD-কে যথাক্রমে R ও S বিন্দুতে ছেদ করেছে। বিবৃতিগুলো বিবেচনা করো:</p>
+          <ol class="solution-steps">
+            <li>∠PRB-এর অনুরূপ কোণ ∠RSD।</li>
+            <li>∠ARS-এর একান্তর অন্তঃস্থ কোণ ∠RSD।</li>
+            <li>∠CSQ + ∠CSR = 180°।</li>
+          </ol>
+          <figure class="diagram-frame">
+            <svg class="diagram-svg" viewBox="0 0 420 160" role="img" aria-labelledby="sample-q2-title">
+              <title id="sample-q2-title">AB ও CD সমান্তরাল রেখাকে PQ ছেদক R ও S বিন্দুতে ছেদ করেছে</title>
+              <g fill="none" stroke="#3d454d" stroke-width="2">
+                <path d="M30 45 H390 M30 112 H390" />
+                <path d="M112 145 L277 15" />
+              </g>
+              <g fill="#20262d" font-size="16">
+                <text x="16" y="50">A</text><text x="394" y="50">B</text>
+                <text x="16" y="117">C</text><text x="394" y="117">D</text>
+                <text x="279" y="18">P</text><text x="101" y="154">Q</text>
+                <text x="220" y="40">R</text><text x="177" y="107">S</text>
+              </g>
+            </svg>
+          </figure>
+          <ul class="options" aria-label="বিকল্পসমূহ">
+            <li>(ক) i ও ii</li><li>(খ) i ও iii</li><li>(গ) ii ও iii</li><li>(ঘ) i, ii ও iii</li>
+          </ul>
+          <h4 class="solution-label">বিবৃতি যাচাই</h4>
+          <ol class="solution-steps">
+            <li>i সত্য: R ও S ছেদবিন্দুতে ∠PRB এবং ∠RSD একই অবস্থানে আছে; তাই তারা অনুরূপ কোণ।</li>
+            <li>ii সত্য: ∠ARS ও ∠RSD সমান্তরাল রেখার অন্তঃস্থ অংশে এবং ছেদকের বিপরীত পাশে; তাই তারা একান্তর অন্তঃস্থ কোণ।</li>
+            <li>iii সত্য: SQ ও SR বিপরীত রশ্মি। তাই ∠CSQ ও ∠CSR একটি সরলজোড়া, এবং তাদের সমষ্টি 180°।</li>
+          </ol>
+          <p class="answer">সঠিক উত্তর: (ঘ) i, ii ও iii</p>
+        </article>
+
+        <article class="solution-card" id="sample-q3">
+          <h3 class="question-title"><span class="question-number">৩</span><span>বহুনির্বাচনি প্রশ্ন</span></h3>
+          <p class="question-text">চিত্রে AB ∥ CD। E ও F হলো ছেদকের সঙ্গে রেখাদ্বয়ের ছেদবিন্দু। ∠PEA কত ডিগ্রি?</p>
+          <figure class="diagram-frame">
+            <svg class="diagram-svg" viewBox="0 0 420 160" role="img" aria-labelledby="sample-q3-title">
+              <title id="sample-q3-title">দুটি সমান্তরাল রেখাকে একটি ছেদক ছেদ করেছে; E বিন্দুতে 50 ডিগ্রি কোণ</title>
+              <g fill="none" stroke="#3d454d" stroke-width="2">
+                <path d="M30 42 H390 M30 112 H390" />
+                <path d="M113 150 L273 8" />
+                <path d="M214 42 A21 21 0 0 0 222 57" stroke-width="1.4" />
+              </g>
+              <g fill="#20262d" font-size="15">
+                <text x="15" y="47">A</text><text x="394" y="47">B</text>
+                <text x="15" y="117">C</text><text x="394" y="117">D</text>
+                <text x="276" y="12">P</text><text x="104" y="157">Q</text>
+                <text x="237" y="39">E</text><text x="156" y="120">F</text>
+                <text x="181" y="77">50°</text>
+              </g>
+            </svg>
+          </figure>
+          <ul class="options" aria-label="বিকল্পসমূহ">
+            <li>(ক) 40°</li><li>(খ) 50°</li><li>(গ) 90°</li><li>(ঘ) 130°</li>
+          </ul>
+          <h4 class="solution-label">ধাপে ধাপে সমাধান</h4>
+          <ol class="solution-steps">
+            <li>চিত্রে ∠AEF = 50°। EP ও EF একই সরলরেখার বিপরীত রশ্মি।</li>
+            <li>তাই ∠PEA ও ∠AEF একটি সরলজোড়া: <span class="equation">∠PEA + 50° = 180°</span>।</li>
+            <li><span class="equation">∠PEA = 180° − 50° = 130°</span>।</li>
+          </ol>
+          <p class="answer">সঠিক উত্তর: (ঘ) 130°</p>
+        </article>
+
+        <article class="solution-card" id="sample-q4">
+          <h3 class="question-title"><span class="question-number">৪</span><span>বহুনির্বাচনি প্রশ্ন</span></h3>
+          <p class="question-text">একই চিত্রে ∠EFD-এর মান কত?</p>
+          <ul class="options" aria-label="বিকল্পসমূহ">
+            <li>(ক) 30°</li><li>(খ) 40°</li><li>(গ) 50°</li><li>(ঘ) 90°</li>
+          </ul>
+          <h4 class="solution-label">ধাপে ধাপে সমাধান</h4>
+          <ol class="solution-steps">
+            <li>∠AEF = 50°-এর বিপ্রতীপ কোণ ∠PEB; তাই ∠PEB = 50°।</li>
+            <li>AB ∥ CD হওয়ায় ∠PEB ও ∠EFD অনুরূপ কোণ; অনুরূপ কোণ সমান।</li>
+            <li>অতএব, <span class="equation">∠EFD = 50°</span>।</li>
+          </ol>
+          <p class="answer">সঠিক উত্তর: (গ) 50°</p>
+        </article>
+
+        <article class="solution-card" id="sample-q5">
+          <h3 class="question-title"><span class="question-number">৫</span><span>সৃজনশীল প্রশ্ন</span></h3>
+          <p class="question-text">চিত্রে PQ ∥ RS এবং AB তাদের ছেদক।</p>
+          <figure class="diagram-frame">
+            <svg class="diagram-svg" viewBox="0 0 420 160" role="img" aria-labelledby="sample-q5-title">
+              <title id="sample-q5-title">PQ ও RS সমান্তরাল রেখাকে AB ছেদক E ও F বিন্দুতে ছেদ করেছে</title>
+              <g fill="none" stroke="#3d454d" stroke-width="2">
+                <path d="M30 42 H390 M30 112 H390" />
+                <path d="M112 150 L285 8" />
+                <path d="M224 42 A20 20 0 0 0 230 56" stroke-width="1.4" />
+                <path d="M178 112 A20 20 0 0 0 174 97" stroke-width="1.4" />
+              </g>
+              <g fill="#20262d" font-size="15">
+                <text x="15" y="47">P</text><text x="394" y="47">Q</text>
+                <text x="15" y="117">R</text><text x="394" y="117">S</text>
+                <text x="287" y="12">A</text><text x="101" y="157">B</text>
+                <text x="244" y="39">E</text><text x="158" y="120">F</text>
+              </g>
+            </svg>
+          </figure>
+
+          <div class="subpart">
+            <h3>(ক) ∠x-এর পূরক কোণ 25° হলে, ∠x নির্ণয় করো।</h3>
+            <ol class="solution-steps">
+              <li>পূরক দুই কোণের সমষ্টি 90°।</li>
+              <li><span class="equation">x + 25° = 90°</span>, তাই <span class="equation">x = 90° − 25° = 65°</span>।</li>
+            </ol>
+            <p class="answer">উত্তর: ∠x = 65°</p>
+          </div>
+
+          <div class="subpart">
+            <h3>(খ) প্রমাণ করো যে, ∠PEF = ∠EFS।</h3>
+            <ol class="solution-steps">
+              <li>PQ ∥ RS এবং EF ছেদক। ∠PEF হলো উপরের রেখার নিচে, আর ∠EFS হলো নিচের রেখার উপরে অবস্থিত অন্তঃস্থ কোণ।</li>
+              <li>এই দুই কোণ ছেদকের বিপরীত পাশে; তাই তারা একান্তর অন্তঃস্থ কোণ। সমান্তরাল রেখার একান্তর অন্তঃস্থ কোণ সমান।</li>
+              <li>অতএব, <span class="equation">∠PEF = ∠EFS</span>।</li>
+            </ol>
+            <p class="answer">প্রমাণিত।</p>
+          </div>
+
+          <div class="subpart">
+            <h3>(গ) দেখাও যে, ∠PEF + ∠EFR = 180°।</h3>
+            <ol class="solution-steps">
+              <li>∠PEF এবং ∠EFR, PQ ও RS সমান্তরাল রেখার অন্তঃস্থ কোণ এবং ছেদক AB-এর একই পাশে অবস্থিত।</li>
+              <li>একই পাশে অবস্থিত অন্তঃস্থ কোণের সমষ্টি 180°।</li>
+              <li>সুতরাং, <span class="equation">∠PEF + ∠EFR = 180°</span>।</li>
+            </ol>
+            <p class="answer">প্রমাণিত।</p>
+          </div>
+        </article>
+
+        <article class="solution-card" id="sample-q6">
+          <h3 class="question-title"><span class="question-number">৬</span><span>সংক্ষিপ্ত-উত্তর প্রশ্ন</span></h3>
+          <p class="question-text">প্রতিটি ক্ষেত্রে নির্দেশিত রেখা ও ছেদকের চিত্র কল্পনা/অঙ্কন করে চাওয়া কোণগুলো প্রকাশ করো।</p>
+
+          <div class="subpart">
+            <h3>(ক) BC ও DE দুটি সমান্তরাল সরলরেখাকে PQ ছেদক যথাক্রমে L ও M বিন্দুতে ছেদ করে। L ও M-এ উৎপন্ন একজোড়া একান্তর কোণ প্রকাশ করো।</h3>
+            <figure class="diagram-frame">
+              <svg class="diagram-svg" viewBox="0 0 360 150" role="img" aria-labelledby="sample-q6a-title">
+                <title id="sample-q6a-title">BC ও DE সমান্তরাল; PQ ছেদক তাদের L ও M বিন্দুতে ছেদ করেছে</title>
+                <g fill="none" stroke="#3d454d" stroke-width="2">
+                  <path d="M25 38 H335 M25 102 H335" />
+                  <path d="M95 8 L190 137" />
+                </g>
+                <g fill="#20262d" font-size="14">
+                  <text x="10" y="43">B</text><text x="339" y="43">C</text>
+                  <text x="10" y="107">D</text><text x="339" y="107">E</text>
+                  <text x="84" y="12">P</text><text x="192" y="145">Q</text>
+                  <text x="111" y="42">L</text><text x="158" y="103">M</text>
+                </g>
+              </svg>
+            </figure>
+            <ol class="solution-steps">
+              <li>একটি সম্ভাব্য একান্তর অন্তঃস্থ কোণ-জোড়া হলো <span class="equation">∠CLM</span> ও <span class="equation">∠DML</span>।</li>
+              <li>এরা সমান্তরাল রেখাদ্বয়ের অন্তঃস্থ অঞ্চলে এবং ছেদক PQ-এর বিপরীত পাশে; তাই <span class="equation">∠CLM = ∠DML</span>।</li>
+            </ol>
+            <p class="answer">একজোড়া একান্তর কোণ: ∠CLM ও ∠DML</p>
+          </div>
+
+          <div class="subpart">
+            <h3>(খ) PQ সরলরেখা ও AB সরলরেখা B বিন্দুতে ছেদ করলে, ছেদবিন্দুতে উৎপন্ন একজোড়া সন্নিহিত কোণ প্রকাশ করো।</h3>
+            <figure class="diagram-frame">
+              <svg class="diagram-svg" viewBox="0 0 360 150" role="img" aria-labelledby="sample-q6b-title">
+                <title id="sample-q6b-title">AB সরলরেখার সঙ্গে PQ সরলরেখার ছেদবিন্দু B এবং AB-এর প্রসারিত অংশ C</title>
+                <g fill="none" stroke="#3d454d" stroke-width="2">
+                  <path d="M25 82 H335" />
+                  <path d="M104 140 L250 20" />
+                </g>
+                <g fill="#20262d" font-size="14">
+                  <text x="10" y="87">A</text><text x="339" y="87">C</text>
+                  <text x="251" y="19">P</text><text x="92" y="148">Q</text>
+                  <text x="174" y="78">B</text>
+                </g>
+              </svg>
+            </figure>
+            <ol class="solution-steps">
+              <li>AB-কে B-এর পর C পর্যন্ত প্রসারিত করে এবং PQ ছেদককে B দিয়ে ধরলে, <span class="equation">∠ABP</span> ও <span class="equation">∠PBC</span> এ   টি সন্নিহিত কোণ-জোড়া।</li>
+              <li>দুটি কোণের সাধারণ বাহু BP; অপর বাহু BA ও BC বিপরীত রশ্মি। তাই এরা সরলজোড়াও: <span class="equation">∠ABP + ∠PBC = 180°</span>।</li>
+            </ol>
+            <p class="answer">একজোড়া সন্নিহিত কোণ: ∠ABP ও ∠PBC</p>
+          </div>
+
+          <div class="subpart">
+            <h3>(গ) AC ∥ BD এবং LM ছেদক তাদের যথাক্রমে P ও Q বিন্দুতে ছেদ করে। LM-এর ডান পাশে অবস্থিত অন্তঃস্থ কোণদ্বয়ের সমষ্টি নির্ণয় করো।</h3>
+            <figure class="diagram-frame">
+              <svg class="diagram-svg" viewBox="0 0 360 150" role="img" aria-labelledby="sample-q6c-title">
+                <title id="sample-q6c-title">AC ও BD সমান্তরাল; LM ছেদক P ও Q বিন্দুতে ছেদ করেছে</title>
+                <g fill="none" stroke="#3d454d" stroke-width="2">
+                  <path d="M25 38 H335 M25 102 H335" />
+                  <path d="M107 8 L214 137" />
+                </g>
+                <g fill="#20262d" font-size="14">
+                  <text x="10" y="43">A</text><text x="339" y="43">C</text>
+                  <text x="10" y="107">B</text><text x="339" y="107">D</text>
+                  <text x="96" y="12">L</text><text x="216" y="145">M</text>
+                  <text x="126" y="42">P</text><text x="179" y="103">Q</text>
+                </g>
+              </svg>
+            </figure>
+            <ol class="solution-steps">
+              <li>চিত্রে LM-এর ডান পাশে থাকা অন্তঃস্থ কোণদুটি একই পাশে অন্তঃস্থ কোণ। উদাহরণস্বরূপ, এরা ∠APQ ও ∠BQP।</li>
+              <li>সমান্তরাল সরলরেখার একই পাশে অবস্থিত অন্তঃস্থ কোণের সমষ্টি 180°।</li>
+              <li><span class="equation">∠APQ + ∠BQP = 180°</span>।</li>
+            </ol>
+            <p class="answer">সমষ্টি: 180°</p>
+          </div>
+        </article>
+      </section>
+
+      <footer class="page-footer">
+        <strong>ব্যবহৃত NCTB জ্যামিতিক নিয়ম:</strong> ত্রিভুজের অন্তঃকোণ-সমষ্টি 180°, সরলজোড়া কোণের সমষ্টি 180°, বিপ্রতীপ কোণ সমান, এবং সমান্তরাল রেখাকে ছেদক ছেদ করলে অনুরূপ ও একান্তর অন্তঃস্থ কোণ সমান হয়; একই পাশে অন্তঃস্থ কোণের সমষ্টি 180°।
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
