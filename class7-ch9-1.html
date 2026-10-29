@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>অনুশীলনী ৯.১ — জ্যামিতি | NCTB গণিত</title>
+<style>
+:root{--green:#28a745;--dark:#176b30;--ink:#20252b;--muted:#5d6872;--paper:#f8f9fa;--line:#dfe8e1}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:#edf1ee;font-family:'SolaimanLipi',Arial,sans-serif;line-height:1.85}
+.container{width:calc(100% - 28px);max-width:850px;margin:28px auto;padding:22px;background:#f8f9fa;border-radius:14px}
+header{text-align:center;padding:10px 8px 22px}
+h1{margin:0 0 5px;font-size:clamp(1.5rem,4vw,2rem)}
+header p{margin:0;color:var(--muted)}
+.section-title{margin:24px 0 14px;padding-bottom:7px;border-bottom:2px solid var(--line);font-size:1.2rem}
+.solution-card{background:#fff;padding:22px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.06);border-left:6px solid #28a745;margin:0 0 17px;overflow-wrap:anywhere}
+.question-title{display:flex;align-items:flex-start;gap:10px;margin:0 0 13px;font-size:1.05rem;line-height:1.7}
+.question-number{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;min-width:38px;padding:2px 12px;border-radius:999px;color:#fff;background:#28a745;font-size:.95rem;font-weight:700;line-height:1.7}
+.math{font-family:Cambria,"Times New Roman",serif;font-size:1.08em}
+.work{margin:9px 0}
+.formula{margin:11px 0;padding:10px 13px;border-left:3px solid #b6dfbf;border-radius:7px;background:#f3f8f4}
+.answer{margin-top:14px;padding:11px 13px;border-radius:8px;background:#eaf7ed;color:#145c28;font-weight:700}
+.diagram{margin:14px 0;padding:12px;border:1px solid #e2e9e4;border-radius:9px;background:#fcfdfc}
+.diagram svg{display:block;width:100%;max-width:470px;height:auto;margin:auto}
+.caption{margin:7px 0 0;text-align:center;color:var(--muted);font-size:.92rem}
+.footer{text-align:center;padding:17px 4px 4px;color:var(--muted);font-size:.9rem}
+@media(max-width:560px){.container{width:100%;margin:0;padding:14px;border-radius:0}.solution-card{padding:16px}.question-title{font-size:1rem}}
+@media print{body{background:#fff}.container{width:100%;max-width:none;margin:0;padding:0;background:#fff}.solution-card{box-shadow:none;break-inside:avoid;border:1px solid #ddd;border-left:5px solid #28a745}}
+</style>
+</head>
+<body><main class="container">
+<header><h1>অনুশীলনী ৯.১</h1><p>NCTB গণিত · জ্যামিতি · ধাপে ধাপে সমাধান ও প্রমাণ</p></header>
+
+<section class="solution-card">
+<h2 class="question-title"><span class="question-number">১</span><span>চিত্রে <span class="math">∠ABD</span>, <span class="math">∠CBD</span> এবং <span class="math">∠BCD</span>-এর মান নির্ণয় করো।</span></h2>
+<div class="diagram">
+<svg viewBox="0 0 390 235" role="img" aria-label="ABC সমকোণী ত্রিভুজে B সমকোণ, A কোণ 48 ডিগ্রি এবং BD AC-এর উপর লম্ব">
+<g fill="none" stroke="#27332b" stroke-width="2"><path d="M65 25 L65 200 L345 200 Z"/><path d="M65 200 L125 105"/><path d="M65 183 L82 183 L82 200" stroke-width="1.5"/></g>
+<path d="M114 100 L124 106 L130 97" fill="none" stroke="#27332b" stroke-width="1.5"/>
+<path d="M65 52 A27 27 0 0 0 84 44" fill="none" stroke="#28a745" stroke-width="2"/>
+<g font-family="Arial,sans-serif" font-size="15" fill="#20252b"><text x="48" y="20">A</text><text x="46" y="218">B</text><text x="350" y="218">C</text><text x="127" y="101">D</text><text x="83" y="57" fill="#176b30">48°</text></g>
+</svg><p class="caption">চিত্রে <span class="math">∠ABC=90°</span>, <span class="math">∠BAC=48°</span> এবং <span class="math">BD ⟂ AC</span>।</p></div>
+<div class="work">প্রথমে <span class="math">△ABC</span>-এর তিন কোণের সমষ্টি ব্যবহার করি। ত্রিভুজের তিনটি অন্তঃকোণের সমষ্টি <span class="math">180°</span>।</div>
+<div class="formula math">∠BAC + ∠ABC + ∠ACB = 180°</div>
+<div class="work">প্রদত্ত মান বসালে, <span class="math">48° + 90° + ∠ACB = 180°</span>।</div>
+<div class="work math">∠ACB = 180° − 138° = 42°</div>
+<div class="work"><span class="math">BD ⟂ AC</span> বলে <span class="math">∠ADB=90°</span>। আবার <span class="math">D</span> বিন্দু <span class="math">AC</span>-এর ওপর, তাই <span class="math">∠BAD=∠BAC=48°</span>। <span class="math">△ABD</span>-এ,</div>
+<div class="formula math">∠BAD + ∠ADB + ∠ABD = 180°</div>
+<div class="work math">48° + 90° + ∠ABD = 180°</div><div class="work math">∠ABD = 180° − 138° = 42°</div>
+<div class="work"><span class="math">BD</span> রেখাটি সমকোণ <span class="math">∠ABC</span>-কে দুই ভাগে বিভক্ত করেছে। তাই, <span class="math">∠ABD + ∠CBD = ∠ABC</span>।</div>
+<div class="work math">42° + ∠CBD = 90° ⇒ ∠CBD = 48°</div>
+<div class="work"><span class="math">A,D,C</span> একই সরলরেখায়, তাই <span class="math">∠BCD=∠BCA=42°</span>।</div>
+<div class="answer">উত্তর: <span class="math">∠ABD=42°</span>, <span class="math">∠CBD=48°</span> এবং <span class="math">∠BCD=42°</span>।</div>
+</section>
+
+<section class="solution-card">
+<h2 class="question-title"><span class="question-number">২</span><span>একটি সমদ্বিবাহু ত্রিভুজের শীর্ষবিন্দুতে অবস্থিত কোণের মান <span class="math">50°</span>। অবশিষ্ট কোণ দুটির মান নির্ণয় করো।</span></h2>
+<div class="diagram"><svg viewBox="0 0 390 205" role="img" aria-label="সমদ্বিবাহু ত্রিভুজের শীর্ষ কোণ 50 ডিগ্রি">
+<g fill="none" stroke="#27332b" stroke-width="2"><path d="M195 25 L65 175 L325 175 Z"/><path d="M176 48 A27 27 0 0 0 214 48" stroke="#28a745" stroke-width="1.8"/></g>
+<g font-family="Arial,sans-serif" font-size="15" fill="#20252b"><text x="188" y="18">A</text><text x="49" y="192">B</text><text x="329" y="192">C</text><text x="184" y="59" fill="#176b30">50°</text><text x="96" y="157" fill="#2776b8">x</text><text x="285" y="157" fill="#2776b8">x</text></g></svg><p class="caption">সমদ্বিবাহু ত্রিভুজে ভূমিসংলগ্ন কোণ দুটি সমান।</p></div>
+<div class="work">ধরি, অবশিষ্ট দুই সমান কোণের প্রত্যেকটি <span class="math">x°</span>। ত্রিভুজের তিন কোণের সমষ্টি <span class="math">180°</span>।</div>
+<div class="formula math">x° + x° + 50° = 180°</div><div class="work math">2x° = 180° − 50° = 130°</div><div class="work math">x = 130° ÷ 2 = 65°</div>
+<div class="answer">উত্তর: অবশিষ্ট কোণ দুটি প্রত্যেকটি <span class="math">65°</span>।</div>
+</section>
+
+<section class="solution-card">
+<h2 class="question-title"><span class="question-number">৩</span><span>প্রমাণ করো যে, চতুর্ভুজের চারটি কোণের সমষ্টি চার সমকোণের সমান।</span></h2>
+<div class="diagram"><svg viewBox="0 0 390 230" role="img" aria-label="চতুর্ভুজ ABCD-তে কর্ণ AC আঁকা হয়েছে">
+<g fill="none" stroke="#27332b" stroke-width="2"><path d="M75 50 L300 35 L335 172 L105 195 Z"/><path d="M75 50 L335 172" stroke="#28a745" stroke-dasharray="5 4" stroke-width="1.8"/></g>
+<g font-family="Arial,sans-serif" font-size="15" fill="#20252b"><text x="57" y="45">A</text><text x="307" y="30">B</text><text x="341" y="186">C</text><text x="88" y="211">D</text></g>
+<text x="208" y="95" font-family="Arial,sans-serif" font-size="13" fill="#176b30">কর্ণ AC</text></svg><p class="caption">কর্ণ <span class="math">AC</span> আঁকলে চতুর্ভুজটি দুটি ত্রিভুজে বিভক্ত হয়।</p></div>
+<div class="work"><strong>প্রমাণ:</strong> ধরা যাক, <span class="math">ABCD</span> একটি চতুর্ভুজ। <span class="math">A</span> ও <span class="math">C</span> শীর্ষবিন্দু যোগ করে কর্ণ <span class="math">AC</span> আঁকি। ফলে চতুর্ভুজটি <span class="math">△ABC</span> ও <span class="math">△ACD</span> — দুটি ত্রিভুজে বিভক্ত হয়।</div>
+<div class="work"><span class="math">△ABC</span>-এর কোণগুলোর সমষ্টি থেকে পাই,</div><div class="formula math">∠BAC + ∠ABC + ∠BCA = 180° … (১)</div>
+<div class="work">একইভাবে <span class="math">△ACD</span>-এর জন্য,</div><div class="formula math">∠CAD + ∠ACD + ∠CDA = 180° … (২)</div>
+<div class="work">(১) ও (২) যোগ করলে,</div><div class="formula math">∠BAC + ∠CAD + ∠ABC + ∠BCA + ∠ACD + ∠CDA = 360°</div>
+<div class="work"><span class="math">∠BAC + ∠CAD = ∠DAB</span> এবং <span class="math">∠BCA + ∠ACD = ∠BCD</span>। সুতরাং,</div><div class="formula math">∠DAB + ∠ABC + ∠BCD + ∠CDA = 360°</div>
+<div class="work">এক সমকোণ <span class="math">90°</span>; চার সমকোণ <span class="math">4 × 90° = 360°</span>।</div>
+<div class="answer">অতএব, চতুর্ভুজের চারটি কোণের সমষ্টি চার সমকোণ (অর্থাৎ <span class="math">360°</span>)। প্রমাণিত।</div>
+</section>
+
+<section class="solution-card">
+<h2 class="question-title"><span class="question-number">৪</span><span><span class="math">△ABC</span>-এর <span class="math">AC ⟂ BC</span>; <span class="math">E</span>, <span class="math">AC</span>-এর বর্ধিতাংশের ওপর যেকোনো বিন্দু এবং <span class="math">ED ⟂ AB</span>। <span class="math">ED</span> এবং <span class="math">BC</span> পরস্পরকে <span class="math">O</span> বিন্দুতে ছেদ করে। প্রমাণ করো যে, <span class="math">∠CEO = ∠DBO</span>।</span></h2>
+<div class="diagram"><svg viewBox="0 0 390 255" role="img" aria-label="সমকোণী ABC ত্রিভুজ, E AC-এর বর্ধিতাংশে; ED লম্ব AB এবং O হল ED ও BC এর ছেদবিন্দু">
+<g fill="none" stroke="#27332b" stroke-width="2"><path d="M55 65 L245 65 L245 220 Z"/><path d="M245 65 L315 65"/><path d="M315 65 L205 186"/></g>
+<g fill="none" stroke="#28a745" stroke-width="2"><path d="M315 65 L205 186"/></g>
+<g fill="none" stroke="#27332b" stroke-width="1.5"><path d="M235 65 L235 75 L245 75"/><path d="M207 174 L216 182 L224 172"/></g>
+<g fill="#20252b" font-family="Arial,sans-serif" font-size="15"><text x="39" y="61">A</text><text x="250" y="235">B</text><text x="250" y="61">C</text><text x="320" y="61">E</text><text x="196" y="199">D</text><text x="250" y="147">O</text></g>
+</svg><p class="caption">প্রদত্ত: <span class="math">AC ⟂ BC</span>, <span class="math">ED ⟂ AB</span>; <span class="math">O</span> হলো <span class="math">ED</span> ও <span class="math">BC</span>-এর ছেদবিন্দু।</p></div>
+<div class="work"><strong>প্রমাণ:</strong> প্রদত্ত, <span class="math">AC ⟂ BC</span> এবং <span class="math">ED ⟂ AB</span>। তাই <span class="math">CE ⟂ CO</span> এবং <span class="math">DE ⟂ DB</span>।</div>
+<div class="work">অতএব, <span class="math">△CEO</span> ও <span class="math">△DBO</span>-তে,</div>
+<div class="formula math">∠ECO = 90° এবং ∠BDO = 90°</div>
+<div class="work">ত্রিভুজের তিন কোণের সমষ্টি <span class="math">180°</span> হওয়ায়, সমকোণী <span class="math">△CEO</span>-তে</div>
+<div class="formula math">∠CEO + ∠COE = 90° … (১)</div>
+<div class="work">সমকোণী <span class="math">△DBO</span>-তে</div>
+<div class="formula math">∠DBO + ∠BDO = 90°</div>
+<div class="work">যেহেতু <span class="math">∠BDO=90°</span>, তাই সমকোণী <span class="math">△DBO</span>-এর বাকি দুই কোণের সমষ্টি <span class="math">90°</span>; অর্থাৎ</div><div class="formula math">∠DBO + ∠DOB = 90° … (২)</div>
+<div class="work"><span class="math">C,O,B</span> একই সরলরেখায় এবং <span class="math">E,O,D</span> একই সরলরেখায় অবস্থিত। তাই <span class="math">∠COE</span> ও <span class="math">∠DOB</span> বিপ্রতীপ কোণ; ফলে <span class="math">∠COE = ∠DOB</span>।</div>
+<div class="work">(১) ও (২)-এ সমান কোণ বাদ দিলে,</div><div class="formula math">∠CEO = ∠DBO</div>
+<div class="answer">অতএব, <span class="math">∠CEO = ∠DBO</span>। প্রমাণিত।</div>
+</section>
+
+<div class="footer">NCTB গণিত · অনুশীলনী ৯.১ · জ্যামিতির সমাধান</div>
+</main></body></html>
